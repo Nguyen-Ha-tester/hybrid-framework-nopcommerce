@@ -2,7 +2,7 @@ package java_basic;
 
 import java.util.Scanner;
 
-public class MainProgram {
+public class main_program {
 	public static void main(String[] args) {
 		System.out.println("Huy cum inside Ha. Do ha biet ten tuoi cua Huy?????");
 //		Human Huy = new Human();
@@ -23,7 +23,7 @@ public class MainProgram {
 		String ageString = scanner2.nextLine();
 		int age = Integer.parseInt(ageString);
 		
-		Human newHuman = new Human(name, age);
+		human newHuman = new human(name, age);
 		System.out.println("Ha name:" + newHuman.Name);
 		System.out.println("Ha age:" + newHuman.Age);
 	}

@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class Topic_02_Data_Type {
+public class topic_02_data_type {
 	// Primitive type (nguyên thuỷ): có 8 loại
 	byte bNumber = 127;
 	
@@ -37,7 +37,7 @@ public class Topic_02_Data_Type {
 	Integer[] studentNumber = {33,33}; // mảng int
 	
 	//Class
-	Topic_02_Data_Type topic;
+	topic_02_data_type topic;
 	
 	//Interface
 	

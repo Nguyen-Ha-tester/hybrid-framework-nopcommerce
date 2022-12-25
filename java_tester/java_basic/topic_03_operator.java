@@ -2,11 +2,12 @@ package java_basic;
 
 import org.testng.annotations.Test;
 
-public class Topic_03_Operator { // Phép toán học
+public class topic_03_operator { // Phép toán học
 
 	public static void main(String[] args) {
 
-		int number = 16;
+		int number = 16; //Phép gán
+		 
 
 		number += 5; // nghĩa là number = number + 5
 		number -= 5; // nghĩa là number = number -5
@@ -18,7 +19,7 @@ public class Topic_03_Operator { // Phép toán học
 		++number; // nghĩa là
 
 		System.out.println(number);
-		if (number == 5) { // Biểu thức quan hệ (true/false)
+		if (number == 5) { // Phép toán tử
 			System.out.println("true");
 		} else {
 			System.out.println("false");
@@ -35,7 +36,7 @@ public class Topic_03_Operator { // Phép toán học
 		System.out.println(status);
 
 		// Gọi chạy các hàm public khác
-		Topic_03_Operator run = new Topic_03_Operator();
+		topic_03_operator run = new topic_03_operator();
 		run.Exercise_01();
 		run.Exercise_02();
 		run.Exercise_03();

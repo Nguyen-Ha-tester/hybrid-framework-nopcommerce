@@ -1,6 +1,6 @@
 package java_basic;
 
-public class Topic_04_Primitive_Casting {
+public class topic_04_primitive_casting {
 
 	public static void main (String[] arg) {
 		

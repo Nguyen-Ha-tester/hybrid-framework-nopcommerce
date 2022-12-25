@@ -2,7 +2,7 @@ package java_basic;
 
 import java.util.Scanner;
 
-public class Topic_01_Variable {
+public class topic_01_variable {
 	String bienToanCuc = "ha"; // Biến toàn cục: sử dụng trong phạm vi class (bao gồm cả method, trừ static method) và sử dụng bên ngoài class được (tuỳ theo access modifier)
 
 	static final String BROWSER_NAME = "HA"; //Biến final (const)
@@ -17,7 +17,7 @@ public class Topic_01_Variable {
 		String bienCucbo = ""; // Biến cục bộ (local variable): chỉ sử dụng trong phạm vi của 1 method (testcase) thôi hoặc 1 khối lệnh, k sử dụng bên ngoài được
 		System.out.println(bienCucbo);
 		
-		Topic_01_Variable huy = new Topic_01_Variable(); // this dòng. không có cái này làm sao nó chạy vào hàm khởi tạo này
+		topic_01_variable huy = new topic_01_variable(); // this dòng. không có cái này làm sao nó chạy vào hàm khởi tạo này
 		huy.KhongGoiChacChanTaoDeoChay();
 		huy.KhongGoiChacChanTaoDeoChay();
 		
@@ -28,7 +28,7 @@ public class Topic_01_Variable {
 		}
 	}
 	
-	public Topic_01_Variable() {
+	public topic_01_variable() {
 	 // đây gọi là HẢM KHỞI TẠO. Hàm khởi tạo có cùng tên hàm với tên class
 				
 		Scanner scanner = new Scanner(System.in);
