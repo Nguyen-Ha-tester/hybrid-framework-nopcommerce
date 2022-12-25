@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="javatester"/>
-	<classpathentry kind="src" path="testcases"/>
-	<classpathentry kind="src" path="testdata"/>
+	<classpathentry kind="src" path="java_tester"/>
+	<classpathentry kind="src" path="test_cases"/>
+	<classpathentry kind="src" path="test_data"/>
 	<classpathentry kind="src" path="actions"/>
 	<classpathentry kind="src" path="interfaces"/>
 	<classpathentry kind="src" path="resources"/>
