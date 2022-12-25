@@ -1,14 +1,15 @@
 package java_basic;
 
+import java.util.Scanner;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-import com.beust.jcommander.Parameter;
-
 public class topic_05_condition_statement {
+	Scanner scanner = new Scanner(System.in);
 	WebDriver driver = new FirefoxDriver();
 
 
@@ -91,6 +92,86 @@ public class topic_05_condition_statement {
 			
 		}		
 		
+	public void exercise_01() {
+
+		int number = scanner.nextInt();
+
+		if (number % 2 == 0) {
+			System.out.println(number + " là số chẵn");
+		} else {
+			System.out.println(number + " là số lẻ");
+		}
 
 	}
 
+	public void exercise_02() {
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		if (a > b) {
+			System.out.println(a + " lớn hơn " + b);
+		} else if (a == b) {
+			System.out.println(a + " bằng " + b);
+		} else {
+			System.out.println(a + " nhỏ hơn " + b);
+		}
+	}
+
+	public void exercise_03() {
+		String nguoiA = scanner.nextLine();
+		String nguoiB = scanner.nextLine();
+		if (nguoiA.equals(nguoiB)) {
+			System.out.println("2 người là cùng tên");
+		} else {
+			System.out.println("2 người là khác tên");
+		}
+	}
+
+	public void exercies_04() {
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		int c = scanner.nextInt();
+		if (a > b && a > c) {
+			System.out.println(a + " là số lớn nhất");
+		} else if (b > c) {
+			System.out.println(b + " là số lớn nhất");
+		} else {
+			System.out.println(c + " là số lớn nhất");
+		}
+	}
+
+	public void exercies_05() {
+		int a = scanner.nextInt();
+
+		if (a >= 10 && a <= 100) {
+			System.out.println(a + " nằm trong [10,100]");
+		} else {
+			System.out.println(a + " không nằm trong [10,100]");
+		}
+	}
+
+	public void exercies_06() {
+		int diemXepLoaiSinhVien = scanner.nextInt();
+
+		if (diemXepLoaiSinhVien >= 0 && diemXepLoaiSinhVien < 5) {
+			System.out.println("Điểm D");
+		} else if (diemXepLoaiSinhVien >= 5 && diemXepLoaiSinhVien < 7.5) {
+			System.out.println("Điểm C");
+		} else if (diemXepLoaiSinhVien >= 7.5 && diemXepLoaiSinhVien < 8.5) {
+			System.out.println("Điểm B");
+		} else {
+			System.out.println("Điểm A");
+		}
+	}
+
+	@Test
+	public void exercies_07() {
+	int thang = scanner.nextInt();
+	if(thang == 1 || thang == 3 || thang == 5 ||thang == 7 || thang == 8 || thang == 10 || thang == 12) {
+		System.out.println("Thang nay cos 31 ngay");
+	}else if (thang == 4 ||thang == 6 ||thang == 9 || thang == 11) {
+		System.out.println("thang nay co 30 ngay");
+	}else {
+		System.out.println("thang nay co 28 hoac 29 ngay");
+	}
+}
+}
