@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 public class Topic_02_Data_Type {
 	// Primitive type (nguyên thuỷ): có 8 loại
@@ -47,7 +48,7 @@ public class Topic_02_Data_Type {
 	Object haxinhgai; // cũng là 1 class và convert qua kiểu dữ liệu khác đều được
 	
 	//Collection: Set, Queue, List
-    List <WebElement> checkboxes = driver.findElements (By.cssSelector("Aixinhnhat1"));
+    List <WebElement> checkboxes = driver.findElements(By.cssSelector("haxinhgai"));
     
  // Sự khác biệt giữa kiểu tham chiếu và nguyên thuỷ: 
     //nguyên thuỷ k thay đổi giá trị, còn tham chiếu thì thay đổi
@@ -56,7 +57,27 @@ public class Topic_02_Data_Type {
     // Có 2 biến x=y khởi tạo bằng nhau. Nếu x,y là kiểu nguyên thuỷ -> x thay đổi k làm y thay đổi, mỗi thằng có 1 vùng nhớ riêng. Nếu x,y là kiểu tham chiếu -> x thay đổi y cũng thay đổi theo vì cùng tham chiếu 1 vùng nhớ
     
 
-			
-	public  void main(String[] args) {
+	@Test
+    public void Exercise_01() {
+		int a = 6;
+		int b = 2;
+		System.out.println("Tong = " + (a + b));
+		System.out.println("Hieu = " + (a - b));
+		System.out.println("Tich = " + (a * b));
+		System.out.println("Thuong = " + (a / b));
+		System.out.println("Thuong lay du = " + (a%b));
+	}
+	
+	@Test
+	public void Exercise_02() {
+		float weight = 7.5f;
+		float hight = 3.8f;
+		System.out.println("Dien tich hinh chu nhat = " + (weight*hight));
+	}
+	
+	@Test
+	public void Exercise_03() {
+		String name = "Automation Testing";
+		System.out.println("Hello " + name);
 	}
 }

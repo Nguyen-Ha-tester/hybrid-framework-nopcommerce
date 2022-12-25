@@ -16,6 +16,7 @@ public class Topic_01_Variable {
 		//System.out.println(bienToanCuc); //biến toàn cục (global variable) mà k có static ở trước là k đc dùng trong hàm static
 		String bienCucbo = ""; // Biến cục bộ (local variable): chỉ sử dụng trong phạm vi của 1 method (testcase) thôi hoặc 1 khối lệnh, k sử dụng bên ngoài được
 		System.out.println(bienCucbo);
+		
 		Topic_01_Variable huy = new Topic_01_Variable(); // this dòng. không có cái này làm sao nó chạy vào hàm khởi tạo này
 		huy.KhongGoiChacChanTaoDeoChay();
 		huy.KhongGoiChacChanTaoDeoChay();
