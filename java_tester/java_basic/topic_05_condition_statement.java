@@ -12,55 +12,54 @@ public class topic_05_condition_statement {
 	Scanner scanner = new Scanner(System.in);
 	WebDriver driver = new FirefoxDriver();
 
-
 	public void tc_01_if() {
 		boolean status = 10 < 0;
-		
+
 //I - Mệnh đề if:
 		if (status) { // kiểm tra 1 điều kiện
 			System.out.println("Đi vào phần thân của mệnh đề if");
-		} 
+		}
 		// Hàm if sẽ nhận vào 1 hoặc nhiều điều kiện (condition)
 		// Kiểm tra condition
-			// Nếu điều kiện này đúng thì đi vào phần thân
-			// Nếu điều kiện này sai thì bỏ qua
-	
-		//điều kiện cho element hiển thị hay không
+		// Nếu điều kiện này đúng thì đi vào phần thân
+		// Nếu điều kiện này sai thì bỏ qua
+
+		// điều kiện cho element hiển thị hay không
 		WebElement element = driver.findElement(By.className(""));
 		if (element.isDisplayed() && element.isSelected()) { // kiểm tra nhiều điều kiện
 			System.out.println("Element có hiển thị và được chọn");
 		}
-		}
-		// các toán tử tham gia vào mệnh đề if
-		// >
-		// <
-		// >=
-		// <= 
-		// && và
-		// || hoặc
-		// == so sánh bằng
-		// ! phủ định
-		
-		@Test
-		public void tc_02_if_else() {		
+	}
+	// các toán tử tham gia vào mệnh đề if
+	// >
+	// <
+	// >=
+	// <=
+	// && và
+	// || hoặc
+	// == so sánh bằng
+	// ! phủ định
+
+	@Test
+	public void tc_02_if_else() {
 
 // II - Mệnh đề if else: trong trường hợp có 2 điều kiện
 //		if (status) {
 //			
 //		} else {
 //
-		}
-		
-		//Có tới 2 điều kiện nhận vào
-		//Kiểm tra condition
-			//nếu nhu đúng thì vào if
-			// Nếu như sai thì vào else
-		
-		@Test
-		public void tc_03_if_else_if_else(String browserName) {		
-			
+	}
+
+	// Có tới 2 điều kiện nhận vào
+	// Kiểm tra condition
+	// nếu nhu đúng thì vào if
+	// Nếu như sai thì vào else
+
+	@Test
+	public void tc_03_if_else_if_else(String browserName) {
+
 // II - Mệnh đề if else if else: trong trường hợp dùng nhiều hơn 2 điều kiện
-	//		if (browserName.equals("firefox")) {
+		// if (browserName.equals("firefox")) {
 //				if (osName.contains("Mac OS")) {
 //					System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver");
 //					
@@ -85,13 +84,13 @@ public class topic_05_condition_statement {
 //					System.setProperty("webdriver.msedge.driver", projectPath + "\\browserDrivers\\msedgedriver.exe");
 //				}
 //				driver = new EdgeDriver();
-	//
+		//
 //			} else {
 //				throw new RuntimeException ("Please input with correct browser name."); //RuntimeException có nghĩa là chạy lỗi phát là throw ngay
 //			}
-			
-		}		
-		
+
+	}
+
 	public void exercise_01() {
 
 		int number = scanner.nextInt();
@@ -165,13 +164,13 @@ public class topic_05_condition_statement {
 
 	@Test
 	public void exercies_07() {
-	int thang = scanner.nextInt();
-	if(thang == 1 || thang == 3 || thang == 5 ||thang == 7 || thang == 8 || thang == 10 || thang == 12) {
-		System.out.println("Thang nay cos 31 ngay");
-	}else if (thang == 4 ||thang == 6 ||thang == 9 || thang == 11) {
-		System.out.println("thang nay co 30 ngay");
-	}else {
-		System.out.println("thang nay co 28 hoac 29 ngay");
+		int month = scanner.nextInt();
+		if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+			System.out.println("month nay cos 31 ngay");
+		} else if (month == 4 || month == 6 || month == 9 || month == 11) {
+			System.out.println("month nay co 30 ngay");
+		} else {
+			System.out.println("month nay co 28 hoac 29 ngay");
+		}
 	}
-}
 }
