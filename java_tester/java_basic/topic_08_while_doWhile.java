@@ -59,8 +59,43 @@ public class topic_08_while_doWhile {
 		}
 	}
 
-	@Test
 	public void exercise_03() {
+		int n = scanner.nextInt();
+		int i = 0;
+		while (n > 0) {
+			if (n % 2 != 0) {
+				i += n;
+			}
+			n--;
+		}
+		System.out.println(i);
+	}
+
+	public void exercise_04() {
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+
+		while (a < b) {
+			if (a % 3 == 0) {
+				System.out.println(a);
+			}
+			a++;
+		}
+	}
+
+	public void exercise_05() {
+		int n = scanner.nextInt();
+		int i = 1;
+		while (n > 0) {
+			i *= n;
+			n--;
+		}
+		System.out.println(i);
+	}
+
+	@Test
+
+	public void exercise_06() {
 
 	}
 }
