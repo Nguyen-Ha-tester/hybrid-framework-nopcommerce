@@ -2,8 +2,6 @@ package java_basic;
 
 import java.util.Scanner;
 
-import org.testng.annotations.Test;
-
 public class Topic_01_Variable {
 	String bienToanCuc = "ha"; // Biến toàn cục: sử dụng trong phạm vi class (bao gồm cả method, trừ static method) và sử dụng bên ngoài class được (tuỳ theo access modifier)
 
@@ -32,12 +30,12 @@ public class Topic_01_Variable {
 	public Topic_01_Variable() {
 	 // đây gọi là HẢM KHỞI TẠO. Hàm khởi tạo có cùng tên hàm với tên class
 				
-//		Scanner scanner = new Scanner(System.in);
-//		String name = scanner.nextLine();
-//		System.out.println(name);
-//		System.out.println(name);
-//		System.out.print(name);
-//		System.out.print(name);
+		Scanner scanner = new Scanner(System.in);
+		String name = scanner.nextLine();
+		System.out.println(name);
+		System.out.println(name);
+		System.out.print(name);
+		System.out.print(name);
 	}
 	
 		public void KhongGoiChacChanTaoDeoChay() {
