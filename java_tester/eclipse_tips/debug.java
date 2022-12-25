@@ -8,10 +8,12 @@ import org.testng.annotations.Test;
 
 public class debug {
 	WebDriver driver;
+	String projectPath = System.getProperty("user.dir");
+	String osName = System.getProperty("os.name");
 
 	@Test
 	public void tc_01() {
-		System.setProperty("webdriver.chrome.driver", ".\\browserDrivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDrivers\\chromedriver.exe");
 		driver = new ChromeDriver(); 
 		
 		driver.get("https://www.facebook.com/");
