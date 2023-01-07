@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-public class topic_05_condition_statement {
+public class topic_05_if_ifelse {
 	Scanner scanner = new Scanner(System.in);
 	WebDriver driver = new FirefoxDriver();
 
