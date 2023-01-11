@@ -11,5 +11,6 @@ public class UserBasePageUI {
 	public static final String DYNAMIC_PAGES_IN_MY_ACCOUNT_PAGE = "xpath=//div[@class='block block-account-navigation']//a[text()='%s']";
 	public static final String DYNAMIC_TEXTBOX_BY_ID = "xpath=//input[@id='%s']";
 	public static final String DYNAMIC_LOGIN_BUTTON_BY_TEXT = null;
+	public static final String DYNAMIC_DROPDOWN_BY_NAME = null;
 
 }
