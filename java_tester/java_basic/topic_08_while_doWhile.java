@@ -19,6 +19,7 @@ public class topic_08_while_doWhile {
 		while (i < 5) {
 			System.out.println("While:" + i);
 			i++;
+			break; // Nên thoát khỏi vòng lặp để tránh lỗi + tránh mất thời gian. Trong trường hợp cần apply điều kiện cho tất cả các element trong vòng lặp thì cần break
 		}
 
 		// Vòng lặp do-while: cho chạy phần thân trước 1 lần rồi mới kiểm tra điều kiện
@@ -94,8 +95,13 @@ public class topic_08_while_doWhile {
 	}
 
 	@Test
-
 	public void exercise_06() {
-
+		int number = 1;
+		while (number <= 10 && number >= 1) {
+			if (number % 2 == 0) {
+				System.out.println(number);
+			}
+			number++;
+		}
 	}
 }
