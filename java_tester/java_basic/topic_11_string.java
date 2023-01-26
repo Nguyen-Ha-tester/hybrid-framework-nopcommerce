@@ -96,10 +96,17 @@ public class topic_11_string {
 		System.out.println("Click to Register button: " + dynamicXpath.format(dynamicXpath, "register"));
 	}
 
+	@Test
 	public void exercise_01() {
-		String automationCourse[] = new String("Automation Selenium Webdriver");
-		for (iterable_type iterable_element : iterable) {
-
+		String automationCourse = "Automation Selenium Webdriver";
+		String[] subAutomationCource = automationCourse.split("");
+		char firstValue = 'A';
+		char secondValue = 'B';
+		for (String kiTu : subAutomationCource) {
+			int compareKitu = Character.compare(firstValue, secondValue);
+			if (compareKitu > firstValue && compareKitu < secondValue) {
+				System.out.println("UpperCase is: " + kiTu);
+			}
 		}
 	}
 }
