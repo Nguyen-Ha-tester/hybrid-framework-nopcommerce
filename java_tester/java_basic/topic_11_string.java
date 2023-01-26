@@ -95,4 +95,11 @@ public class topic_11_string {
 		System.out.println("Click to Search button: " + dynamicXpath.format(dynamicXpath, "search"));
 		System.out.println("Click to Register button: " + dynamicXpath.format(dynamicXpath, "register"));
 	}
+
+	public void exercise_01() {
+		String automationCourse[] = new String("Automation Selenium Webdriver");
+		for (iterable_type iterable_element : iterable) {
+
+		}
+	}
 }
