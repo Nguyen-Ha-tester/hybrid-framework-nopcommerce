@@ -1,13 +1,12 @@
 package java_basic;
 
-import org.testng.annotations.Test;
+import java.util.Scanner;
 
 public class topic_11_string {
-	// System.setProperty ("webdriver.gecko.driver", "./browser_drivers/geckodriver")
-	// WebDriver driver = new FirefoxDriver();
-	//
-	public void introduce_string() {
 
+	public void introduce_string() {
+		// System.setProperty ("webdriver.gecko.driver", "./browser_drivers/geckodriver")
+		// WebDriver driver = new FirefoxDriver();
 		String string1 = "cat";
 		String string2 = "dog";
 		String string3 = new String("cat");
@@ -19,7 +18,6 @@ public class topic_11_string {
 		System.out.println(string2);
 	}
 
-	@Test
 	public void string_method() {
 
 		String schoolName = "Automation Testing Advanced";
@@ -96,17 +94,79 @@ public class topic_11_string {
 		System.out.println("Click to Register button: " + dynamicXpath.format(dynamicXpath, "register"));
 	}
 
-	@Test
 	public void exercise_01() {
-		String automationCourse = "Automation Selenium Webdriver";
-		String[] subAutomationCource = automationCourse.split("");
-		char firstValue = 'A';
-		char secondValue = 'B';
-		for (String kiTu : subAutomationCource) {
-			int compareKitu = Character.compare(firstValue, secondValue);
-			if (compareKitu > firstValue && compareKitu < secondValue) {
-				System.out.println("UpperCase is: " + kiTu);
+		Scanner scanner = new Scanner(System.in);
+		String exercise01 = scanner.nextLine();
+		int countUpperCase = 0;
+		char exerciseArray[] = exercise01.toCharArray();
+		for (char character : exerciseArray) {
+			if (character <= 'Z' && character >= 'A') {
+				countUpperCase++;
 			}
 		}
+		System.out.println("The number of UpperCase is: " + countUpperCase);
+	}
+
+	public void exercise_02() {
+		String string = "Automation Testing 345 Tutorials Online 789";
+
+		// 1
+		char stringArray1[] = string.toCharArray();
+		char x;
+		int count1 = 0;
+		for (int i = 0; i < stringArray1.length; i++) {
+			x = stringArray1[i];
+			if (x == 'a' || x == 'A') {
+				count1++;
+			}
+		}
+		System.out.println(count1);
+
+		// 2
+		// String stringArray2[] = string.split(" ");
+		// for (String string2 : stringArray2) {
+		// if (string2.equals("Testing")) {
+		// System.out.println(string2.equals("Testing"));
+		// }
+		//
+		// }
+		System.out.println(string.contains("Testing"));
+
+		// 3
+		System.out.println(string.startsWith("Automation"));
+
+		// 4
+		System.out.println(string.endsWith("Online"));
+
+		// 5
+		System.out.println(string.indexOf("Tutorials"));
+
+		// 6
+		System.out.println(string.replace("Online", "Offline"));
+
+		// 7
+		int count7 = 0;
+		for (int i = 0; i < stringArray1.length; i++) {
+			x = stringArray1[i];
+			if (x >= '0' && x <= '9') { // Phải để chữ số trong dấu '' để đưa về cùng 1 kiểu dữ liệu là char để so sánh vì hiện tại y đang ở kiểu char
+				count7++;
+			}
+		}
+		System.out.println(count7);
+
+	}
+
+	public void exercise_03() {
+		Scanner scanner = new Scanner(System.in);
+		String exercise03 = scanner.nextLine();
+
+		char ch;
+		String newString = "";
+		for (int i = 0; i < exercise03.length(); i++) {
+			ch = exercise03.charAt(i); // Returns the char value at the specified index
+			newString = ch + newString; // Thêm từng ký tự vào đằng trước string mới
+		}
+
+		System.out.println(newString);
 	}
 }
