@@ -86,8 +86,13 @@ public class topic_11_string {
 
 		// Blank khác với Empty:
 		String abc = "     ";
-		System.out.println("Empty: " + abc.isEmpty());
-		System.out.println("Blank: " + abc.isBlank());
+		System.out.println("Empty: " + abc.isEmpty()); // Vì trong string này vẫn có khoảng trắng nên sẽ tính là 1 kí tự => length() >0 => không empty
+		System.out.println("Blank: " + abc.isBlank()); // Vì trong string này vẫn có khoảng trắng nên sẽ gọi là blank
 
+		// Dynamic Locator: đại diện cho 1 chuỗi %s %b %t %d....Không cần phải viết nhiều xpath tương tự nhau, lặp đi lặp lại
+		String dynamicXpath = "//button[@id='%s']";
+		System.out.println("Click to Login button: " + dynamicXpath.format(dynamicXpath, "login"));
+		System.out.println("Click to Search button: " + dynamicXpath.format(dynamicXpath, "search"));
+		System.out.println("Click to Register button: " + dynamicXpath.format(dynamicXpath, "register"));
 	}
 }
