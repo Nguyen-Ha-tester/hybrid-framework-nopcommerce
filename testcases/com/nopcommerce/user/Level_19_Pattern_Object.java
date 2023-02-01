@@ -37,19 +37,19 @@ public class Level_19_Pattern_Object extends BaseTest {
 		homePage = PageGeneratorManagerNopCommerce.getUserHomePage(driver);
 		registerPage = homePage.openRegisterPage();
 		log.info("Register - Step 02: Enter to firstname textbox with value is" + firstName + "'");
-		registerPage.inputFirstName(firstName);
+		registerPage.inputToTextboxByID(driver, "FirstName", "firstName");
 		log.info("Register - Step 03: Enter to lastname textbox with value is" + lastName + "'");
-		registerPage.inputLastName(lastName);
+		registerPage.inputToTextboxByID(driver, "LastName", "lastName");
 		log.info("Register - Step 04: Enter to emailAddress textbox with value is" + emailAddress + "'");
-		registerPage.inputEmail(emailAddress);
+		registerPage.inputToTextboxByID(driver, "Email", "emailAddress");
 		log.info("Register - Step 05: Enter to password textbox with value is" + password + "'");
-		registerPage.inputPassword(password);
+		registerPage.inputToTextboxByID(driver, "Password", "password");
 		log.info("Register - Step 06: Enter to confirm password textbox with value is" + password + "'");
-		registerPage.inputConfirmPassword(password);
+		registerPage.inputToTextboxByID(driver, "ConfirmPassword", "password");
 		log.info("Register - Step 07: Click to register button");
 		registerPage.clickRegisterButton();
 		log.info("Register - Step 08: Verify register success message display ");
-		verifyEquals(registerPage.getSuccessMessage(), "Your registration completed...");
+		verifyEquals(registerPage.getSuccessMessage(), "Your registration completed");
 
 	}
 
@@ -58,9 +58,9 @@ public class Level_19_Pattern_Object extends BaseTest {
 		log.info("Login - Step 01: Navigate to login page ");
 		loginPage = registerPage.clickLoginLink();
 		log.info("Login - Step 02: enter to email textbox with value is" + emailAddress + "'");
-		loginPage.inputEmail(emailAddress);
+		loginPage.inputToTextboxByID(driver, "Email", "emailAddress");
 		log.info("Login - Step 03: enter to password textbox with value is" + password + "'");
-		loginPage.inputPassword(password);
+		loginPage.inputToTextboxByID(driver, "Password", "password");
 		log.info("Login - Step 04: Click to login button");
 		homePage = loginPage.clickLoginButton();
 		log.info("Login - Step 05: Verify logout button is displayed.");
@@ -70,7 +70,7 @@ public class Level_19_Pattern_Object extends BaseTest {
 
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+		closeBrowserDriver();
 	}
 
 	public int generateFakeNumber() {

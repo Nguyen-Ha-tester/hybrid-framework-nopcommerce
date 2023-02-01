@@ -504,6 +504,29 @@ public class BasePage {
 		return PageGeneratorManagerNopCommerce.getAdminLoginPage(driver);
 	}
 
+	/**
+	 * Enter to dymamic textbox by ID
+	 * 
+	 * @param driver
+	 * @param textboxID
+	 * @param value
+	 */
+	public void inputToTextboxByID(WebDriver driver, String textboxID, String value) {
+		waitForElementClickable(driver, UserBasePageUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
+		sendkeyToElement(driver, UserBasePageUI.DYNAMIC_TEXTBOX_BY_ID, value, textboxID);
+	}
+
+	/**
+	 * Click to dynamic button by text
+	 * 
+	 * @param driver
+	 * @param textboxID
+	 */
+	public void clickToButtonByText(WebDriver driver, String textboxID) {
+		waitForElementClickable(driver, UserBasePageUI.DYNAMIC_LOGIN_BUTTON_BY_TEXT, textboxID);
+		clickToElement(driver, UserBasePageUI.DYNAMIC_LOGIN_BUTTON_BY_TEXT, textboxID);
+	}
+
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
 
