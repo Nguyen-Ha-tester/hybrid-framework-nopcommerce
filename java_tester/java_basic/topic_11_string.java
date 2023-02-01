@@ -3,8 +3,11 @@ package java_basic;
 import org.testng.annotations.Test;
 
 public class topic_11_string {
-
+	// System.setProperty ("webdriver.gecko.driver", "./browser_drivers/geckodriver")
+	// WebDriver driver = new FirefoxDriver();
+	//
 	public void introduce_string() {
+
 		String string1 = "cat";
 		String string2 = "dog";
 		String string3 = new String("cat");
@@ -18,6 +21,7 @@ public class topic_11_string {
 
 	@Test
 	public void string_method() {
+
 		String schoolName = "Automation Testing Advanced";
 		String schoolNameButInCase = "automation testing advaNceD";
 		String address = " in Ha Noi";
@@ -45,5 +49,45 @@ public class topic_11_string {
 
 		// Lấy ra 1 kí tự/ 1 chuỗi kí tự từ index thứ mấy đến thứ mấy -> trả về kiểu string -> hay dùng
 		System.out.println("Vị trí của 1 kí tự/ chuỗi kí tự là: " + schoolName.substring(0, 10));
+
+		// Tách string
+		String split[] = schoolName.split(" ");
+		System.out.println(split[2]); // lấy ra mảng được tách đứng ở index thứ 2
+
+		// Thay thế 1 kí tự này thành kí tự khách
+		schoolName = schoolName.replace("Automation", "Manual");
+		System.out.println(schoolName);
+
+		// Conver từ string qua float
+		float schoolNameF = Float.parseFloat("13130912");
+		System.out.println(schoolNameF);
+
+		// Conver từ float sang string
+		String schoolNameS = String.valueOf(schoolNameF);
+		System.out.println(schoolNameS);
+
+		// // toLowerCase/ toUpperCase
+		// String osName = System.getProperty("os.name");
+		// System.out.println(osName); // => In ra tên hệ điều hành
+		// if (osName.toLowerCase().contains("mac os")) { // toLowerCase sẽ chuyển string từ viết hoa -> thường và ngược lại với toUpperCase
+		// Keys key = Keys.COMMAND;
+		// } else {
+		// Keys key = Keys.CONTROL;
+		// }
+		// //
+		// String driverInstanceName = driver.toString();
+		// System.out.println(driverInstanceName); //= > In ra tên của driver
+
+		// Khoảng trắng, xuống dòng, tab
+		String helloWorld = "       \n    \t     hello   \n   world";
+		System.out.println("Chưa dùng trim(): " + helloWorld);
+		String trim = helloWorld.trim();
+		System.out.println("Đã dùng trim(): " + trim);
+
+		// Blank khác với Empty:
+		String abc = "     ";
+		System.out.println("Empty: " + abc.isEmpty());
+		System.out.println("Blank: " + abc.isBlank());
+
 	}
 }
