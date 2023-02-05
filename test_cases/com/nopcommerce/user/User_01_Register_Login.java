@@ -82,8 +82,6 @@ public class User_01_Register_Login {
 
 	}
 
-	}
-
 	@Test
 	public void TC_05_Register_Password_Less_Than_6_Chars() {
 
