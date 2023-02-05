@@ -56,16 +56,31 @@ public class User_01_Register_Login {
 		driver.findElement(By.xpath("//a[@class='ico-register']")).click();
 		driver.findElement(By.cssSelector("input#FirstName")).sendKeys("Automation");
 		driver.findElement(By.cssSelector("input#LastName")).sendKeys("Testing");
-		driver.findElement(By.cssSelector("input#Email")).sendKeys("automation@test");
+		driver.findElement(By.cssSelector("input#Email")).sendKeys(emailAddress);
+		driver.findElement(By.cssSelector("input#Password")).sendKeys("012345678");
+		driver.findElement(By.cssSelector("input#ConfirmPassword")).sendKeys("012345678");
+
+		Assert.assertEquals(driver.findElement(By.cssSelector("div.result")).getText(), "Your registration completed");
+		driver.findElement(By.cssSelector("a.ico-login")).click();
+		driver.findElement(By.cssSelector("input#Email")).sendKeys(emailAddress);
+		driver.findElement(By.cssSelector("input#Password")).sendKeys("012345678");
+		driver.findElement(By.cssSelector("button.login-button")).click();
+		driver.findElement(By.cssSelector("a.ico-logout")).click();
+
+	}
+
+	@Test
+	public void TC_04_Register_Existing_Email() {
+		driver.findElement(By.xpath("//a[@class='ico-register']")).click();
+		driver.findElement(By.cssSelector("input#FirstName")).sendKeys("Automation");
+		driver.findElement(By.cssSelector("input#LastName")).sendKeys("Testing");
+		driver.findElement(By.cssSelector("input#Email")).sendKeys(emailAddress);
 		driver.findElement(By.cssSelector("input#Password")).sendKeys("012345678");
 		driver.findElement(By.cssSelector("input#ConfirmPassword")).sendKeys("012345678");
 
 		Assert.assertEquals(driver.findElement(By.cssSelector("span#Email-error")).getText(), "Wrong email");
 
 	}
-
-	@Test
-	public void TC_04_Register_Existing_Email() {
 
 	}
 
