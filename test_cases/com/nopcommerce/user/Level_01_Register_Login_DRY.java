@@ -11,7 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class User_01_Register_Login {
+public class Level_01_Register_Login_DRY {
 	WebDriver driver;
 
 	String emailAddress;
@@ -41,11 +41,8 @@ public class User_01_Register_Login {
 	@Test
 	public void TC_02_Register_Invalid_Email() {
 		driver.findElement(By.xpath("//a[@class='ico-register']")).click();
-		driver.findElement(By.cssSelector("input#FirstName")).sendKeys("Automation");
-		driver.findElement(By.cssSelector("input#LastName")).sendKeys("Testing");
 		driver.findElement(By.cssSelector("input#Email")).sendKeys("ahdghadh");
-		driver.findElement(By.cssSelector("input#Password")).sendKeys("012345678");
-		driver.findElement(By.cssSelector("input#ConfirmPassword")).sendKeys("012345678");
+		driver.findElement(By.cssSelector("button#register-button")).click();
 
 		Assert.assertEquals(driver.findElement(By.cssSelector("span#Email-error")).getText(), "Wrong email");
 
@@ -59,6 +56,7 @@ public class User_01_Register_Login {
 		driver.findElement(By.cssSelector("input#Email")).sendKeys(emailAddress);
 		driver.findElement(By.cssSelector("input#Password")).sendKeys("012345678");
 		driver.findElement(By.cssSelector("input#ConfirmPassword")).sendKeys("012345678");
+		driver.findElement(By.cssSelector("button#register-button")).click();
 
 		Assert.assertEquals(driver.findElement(By.cssSelector("div.result")).getText(), "Your registration completed");
 		driver.findElement(By.cssSelector("a.ico-login")).click();
@@ -72,23 +70,32 @@ public class User_01_Register_Login {
 	@Test
 	public void TC_04_Register_Existing_Email() {
 		driver.findElement(By.xpath("//a[@class='ico-register']")).click();
-		driver.findElement(By.cssSelector("input#FirstName")).sendKeys("Automation");
-		driver.findElement(By.cssSelector("input#LastName")).sendKeys("Testing");
 		driver.findElement(By.cssSelector("input#Email")).sendKeys(emailAddress);
-		driver.findElement(By.cssSelector("input#Password")).sendKeys("012345678");
-		driver.findElement(By.cssSelector("input#ConfirmPassword")).sendKeys("012345678");
+		driver.findElement(By.cssSelector("button#register-button")).click();
 
-		Assert.assertEquals(driver.findElement(By.cssSelector("span#Email-error")).getText(), "Wrong email");
+		Assert.assertEquals(driver.findElement(By.cssSelector("div.message-error li")).getText(), "The specified email already exists");
 
 	}
 
 	@Test
 	public void TC_05_Register_Password_Less_Than_6_Chars() {
+		driver.findElement(By.xpath("//a[@class='ico-register']")).click();
+		driver.findElement(By.cssSelector("input#Password")).sendKeys("012");
+		driver.findElement(By.cssSelector("button#register-button")).click();
+
+		Assert.assertEquals(driver.findElement(By.cssSelector("span#Password-error")).getText(), "Password must meet the following rules:");
+		Assert.assertEquals(driver.findElement(By.cssSelector("span#Password-error ul li")).getText(), "must have at least 6 characters");
 
 	}
 
 	@Test
 	public void TC_06_Register_Invalid_Confirm_Password() {
+		driver.findElement(By.xpath("//a[@class='ico-register']")).click();
+		driver.findElement(By.cssSelector("input#Password")).sendKeys("012345678");
+		driver.findElement(By.cssSelector("input#ConfirmPassword")).sendKeys("999");
+		driver.findElement(By.cssSelector("button#register-button")).click();
+
+		Assert.assertEquals(driver.findElement(By.cssSelector("span#ConfirmPassword-error")).getText(), "The password and confirmation password do not match.");
 
 	}
 
