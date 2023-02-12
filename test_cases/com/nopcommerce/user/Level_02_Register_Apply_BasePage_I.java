@@ -37,10 +37,10 @@ public class Level_02_Register_Apply_BasePage_I {
 		basePage.clickToElement(driver, "//button[@id='register-button']");
 
 		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='FirstName-error']"), "First name is required.");
-		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='LastName-error']"), "First name is required.");
-		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='Email-error']"), "First name is required.");
-		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='Password-error']"), "First name is required.");
-		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='ConfirmPassword-error']"), "First name is required.");
+		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='LastName-error']"), "Last name is required.");
+		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='Email-error']"), "Email is required.");
+		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='Password-error']"), "Password is required.");
+		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='ConfirmPassword-error']"), "Password is required.");
 
 	}
 
@@ -75,7 +75,7 @@ public class Level_02_Register_Apply_BasePage_I {
 		basePage.sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
 		basePage.sendkeyToElement(driver, "//input[@id='Password']", "012345678");
 
-		basePage.clickToElement(driver, "//button[@class='login-button']");
+		basePage.clickToElement(driver, "//button[contains(@class,'login-button')]");
 		basePage.clickToElement(driver, "//a[@class='ico-logout']");
 
 	}

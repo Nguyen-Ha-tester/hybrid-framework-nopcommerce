@@ -45,7 +45,7 @@ public class Level_02_Login_Apply_BasePage extends BasePage {
 
 	@Test
 	public void TC_01_Login_Empty_Data() {
-		clickToElement(driver, "//button[@class='button-1 login-button']");
+		clickToElement(driver, "//button[contains(@class,'login-button')]");
 		Assert.assertEquals(getElementText(driver, "//span[@id='Email-error']"), "Please enter your email");
 
 	}
@@ -53,7 +53,7 @@ public class Level_02_Login_Apply_BasePage extends BasePage {
 	@Test
 	public void TC_02_Login_Invalid_Email() {
 		sendkeyToElement(driver, "//input[@id='Email']", "000");
-		clickToElement(driver, "//button[@class='button-1 login-button']");
+		clickToElement(driver, "//button[contains(@class,'login-button')]");
 		Assert.assertEquals(getElementText(driver, "//span[@id='Email-error']"), "Wrong email");
 
 	}
@@ -61,14 +61,14 @@ public class Level_02_Login_Apply_BasePage extends BasePage {
 	@Test
 	public void TC_03_Login_Success_With_Wrong_Email() {
 		sendkeyToElement(driver, "//input[@id='Email']", "abc@abc.com");
-		clickToElement(driver, "//button[@class='button-1 login-button']");
+		clickToElement(driver, "//button[contains(@class,'login-button')]");
 		Assert.assertEquals(getElementText(driver, "//div[@class='message-error validation-summary-errors']"), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
 	}
 
 	@Test
 	public void TC_04_Login_Existing_Email_Blank_Password() {
 		sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
-		clickToElement(driver, "//button[@class='button-1 login-button']");
+		clickToElement(driver, "//button[contains(@class,'login-button')]");
 		Assert.assertEquals(getElementText(driver, "//div[@class='message-error validation-summary-errors']"), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
 	}
 
@@ -76,7 +76,7 @@ public class Level_02_Login_Apply_BasePage extends BasePage {
 	public void TC_05_Login_Existing_Email_Wrong_Password() {
 		sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
 		sendkeyToElement(driver, "//input[@id='Password']", "33333333333333");
-		clickToElement(driver, "//button[@class='button-1 login-button']");
+		clickToElement(driver, "//button[contains(@class,'login-button')]");
 		Assert.assertEquals(getElementText(driver, "//div[@class='message-error validation-summary-errors']"), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
 	}
 
@@ -84,7 +84,7 @@ public class Level_02_Login_Apply_BasePage extends BasePage {
 	public void TC_06_Login_Existing_Email_Correct_Password() {
 		sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
 		sendkeyToElement(driver, "//input[@id='Password']", "012345678");
-		clickToElement(driver, "//button[@class='button-1 login-button']");
+		clickToElement(driver, "//button[contains(@class,'login-button')]");
 		Assert.assertEquals(getElementText(driver, "//div[@class='result']"), "Your registration completed");
 	}
 

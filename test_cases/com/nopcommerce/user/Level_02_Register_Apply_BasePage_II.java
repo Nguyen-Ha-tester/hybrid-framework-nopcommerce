@@ -18,7 +18,7 @@ public class Level_02_Register_Apply_BasePage_II extends BasePage {
 
 	@BeforeClass
 	public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", "./browser_drivers/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "./browser_drivers/geckodriver.exe");
 		driver = new FirefoxDriver();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -34,10 +34,10 @@ public class Level_02_Register_Apply_BasePage_II extends BasePage {
 		clickToElement(driver, "//button[@id='register-button']");
 
 		Assert.assertEquals(getElementText(driver, "//span[@id='FirstName-error']"), "First name is required.");
-		Assert.assertEquals(getElementText(driver, "//span[@id='LastName-error']"), "First name is required.");
-		Assert.assertEquals(getElementText(driver, "//span[@id='Email-error']"), "First name is required.");
-		Assert.assertEquals(getElementText(driver, "//span[@id='Password-error']"), "First name is required.");
-		Assert.assertEquals(getElementText(driver, "//span[@id='ConfirmPassword-error']"), "First name is required.");
+		Assert.assertEquals(getElementText(driver, "//span[@id='LastName-error']"), "Last name is required.");
+		Assert.assertEquals(getElementText(driver, "//span[@id='Email-error']"), "Email is required.");
+		Assert.assertEquals(getElementText(driver, "//span[@id='Password-error']"), "Password is required.");
+		Assert.assertEquals(getElementText(driver, "//span[@id='ConfirmPassword-error']"), "Password is required.");
 
 	}
 
@@ -72,7 +72,7 @@ public class Level_02_Register_Apply_BasePage_II extends BasePage {
 		sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
 		sendkeyToElement(driver, "//input[@id='Password']", "012345678");
 
-		clickToElement(driver, "//button[@class='login-button']");
+		clickToElement(driver, "//button[contains(@class,'login-button')]");
 		clickToElement(driver, "//a[@class='ico-logout']");
 
 	}

@@ -62,7 +62,7 @@ public class Level_01_Register_DRY {
 		driver.findElement(By.cssSelector("a.ico-login")).click();
 		driver.findElement(By.cssSelector("input#Email")).sendKeys(emailAddress);
 		driver.findElement(By.cssSelector("input#Password")).sendKeys("012345678");
-		driver.findElement(By.cssSelector("button.login-button")).click();
+		driver.findElement(By.xpath("//button[contains(@class,'login-button')]")).click();
 		driver.findElement(By.cssSelector("a.ico-logout")).click();
 
 	}
