@@ -23,9 +23,7 @@ public class HomePageObject extends BasePage {
 
 	}
 
-	public void clickLoginLink() {
-		// TODO Auto-generated method stub
-
+	public boolean isLogOutLinkClickable() {
+		return getWebElement(driver, HomePageUI.LOG_OUT_LINK).isDisplayed();
 	}
-
 }

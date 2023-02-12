@@ -104,7 +104,7 @@ public class BasePage {
 		return By.xpath(xpathLocator);
 	}
 
-	private WebElement getWebElement(WebDriver driver, String xpathLocator) {
+	protected WebElement getWebElement(WebDriver driver, String xpathLocator) {
 		return driver.findElement(getByXpath(xpathLocator));
 	}
 

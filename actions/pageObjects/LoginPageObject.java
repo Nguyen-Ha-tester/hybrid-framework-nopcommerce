@@ -29,8 +29,13 @@ public class LoginPageObject extends BasePage {
 	}
 
 	public String getErrorMessageAtEmailTextfield() {
-		// TODO Auto-generated method stub
-		return null;
+		waitForElementVisible(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
+		return getElementText(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
+	}
+
+	public String getErrorMessageAboveEmailField() {
+		waitForElementVisible(driver, LoginPageUI.ABOVE_EMAIL_ERROR_MESSAGE);
+		return getElementText(driver, LoginPageUI.ABOVE_EMAIL_ERROR_MESSAGE);
 	}
 
 }
