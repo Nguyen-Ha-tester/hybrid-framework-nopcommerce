@@ -14,7 +14,7 @@ import commons.BasePage;
 
 public class Level_03_Apply_Base_Page extends BasePage {
 	WebDriver driver;
-	String emailAddress;
+	public String emailAddress;
 
 	@BeforeClass
 	public void beforeClass() {
@@ -61,7 +61,7 @@ public class Level_03_Apply_Base_Page extends BasePage {
 
 		sendkeyToElement(driver, "//input[@id='FirstName']", "Automation");
 		sendkeyToElement(driver, "//input[@id='LastName']", "Testing");
-		sendkeyToElement(driver, "//input[@id='Email']", "emailAddress");
+		sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
 		sendkeyToElement(driver, "//input[@id='Password']", "012345678");
 		sendkeyToElement(driver, "//input[@id='ConfirmPassword']", "012345678");
 
@@ -82,7 +82,7 @@ public class Level_03_Apply_Base_Page extends BasePage {
 		waitForElementClickable(driver, "//a[@class='ico-register']");
 		clickToElement(driver, "//a[@class='ico-register']");
 
-		sendkeyToElement(driver, "//input[@id='Email']", "emailAddress");
+		sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
 
 		clickToElement(driver, "//button[@id='register-button']");
 
