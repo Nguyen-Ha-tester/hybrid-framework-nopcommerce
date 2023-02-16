@@ -1,5 +1,6 @@
 package com.nopcommerce.user;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -11,9 +12,9 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 
-public class User_02_Login extends BasePage {
+public class Level_02_Login_Apply_BasePage extends BasePage {
 	WebDriver driver;
-	Level_03_Apply_Base_Page level03 = new Level_03_Apply_Base_Page();
+	public String emailAddress;
 
 	@BeforeClass
 	public void beforeClass() {
@@ -22,6 +23,24 @@ public class User_02_Login extends BasePage {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("https://demo.nopcommerce.com/login?returnUrl=%2F");
+		emailAddress = "automationfc" + generateFakeNumber() + "@gmail.com";
+	}
+
+	@Test
+	public void TC_00_Register_Success() {
+		driver.get("https://demo.nopcommerce.com/");
+		waitForElementClickable(driver, "//a[@class='ico-register']");
+		clickToElement(driver, "//a[@class='ico-register']");
+
+		sendkeyToElement(driver, "//input[@id='FirstName']", "Automation");
+		sendkeyToElement(driver, "//input[@id='LastName']", "Testing");
+		sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
+		sendkeyToElement(driver, "//input[@id='Password']", "012345678");
+		sendkeyToElement(driver, "//input[@id='ConfirmPassword']", "012345678");
+
+		clickToElement(driver, "//button[@id='register-button']");
+
+		Assert.assertEquals(getElementText(driver, "//div[@class='result']"), "Your registration completed");
 	}
 
 	@Test
@@ -48,14 +67,14 @@ public class User_02_Login extends BasePage {
 
 	@Test
 	public void TC_04_Login_Existing_Email_Blank_Password() {
-		sendkeyToElement(driver, "//input[@id='Email']", level03.emailAddress);
+		sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
 		clickToElement(driver, "//button[@class='button-1 login-button']");
 		Assert.assertEquals(getElementText(driver, "//div[@class='message-error validation-summary-errors']"), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
 	}
 
 	@Test
 	public void TC_05_Login_Existing_Email_Wrong_Password() {
-		sendkeyToElement(driver, "//input[@id='Email']", level03.emailAddress);
+		sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
 		sendkeyToElement(driver, "//input[@id='Password']", "33333333333333");
 		clickToElement(driver, "//button[@class='button-1 login-button']");
 		Assert.assertEquals(getElementText(driver, "//div[@class='message-error validation-summary-errors']"), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
@@ -63,7 +82,7 @@ public class User_02_Login extends BasePage {
 
 	@Test
 	public void TC_06_Login_Existing_Email_Correct_Password() {
-		sendkeyToElement(driver, "//input[@id='Email']", level03.emailAddress);
+		sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
 		sendkeyToElement(driver, "//input[@id='Password']", "012345678");
 		clickToElement(driver, "//button[@class='button-1 login-button']");
 		Assert.assertEquals(getElementText(driver, "//div[@class='result']"), "Your registration completed");
@@ -72,5 +91,11 @@ public class User_02_Login extends BasePage {
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
+	}
+
+	public int generateFakeNumber() {
+		Random rand = new Random();
+		return rand.nextInt(99999);
+
 	}
 }

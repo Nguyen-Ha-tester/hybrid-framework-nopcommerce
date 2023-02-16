@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 
-public class Level_03_Apply_Base_Page extends BasePage {
+public class Level_02_Register_Apply_BasePage_II extends BasePage {
 	WebDriver driver;
 	public String emailAddress;
 
