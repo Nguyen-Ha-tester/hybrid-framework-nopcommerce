@@ -36,7 +36,7 @@
 		</layout>
 	</appender>
 
-	<category name="com.nopcommerce.user">
+	<category name="com.nopcommerce.user"> <!-- apply show log cho toàn bộ testcase trong package này-->
 		<priority value="all" />
 		<appender-ref ref="console" />
 		<appender-ref ref="logfile" />
