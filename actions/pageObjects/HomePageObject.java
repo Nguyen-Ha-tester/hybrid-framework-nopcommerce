@@ -23,4 +23,9 @@ public class HomePageObject extends BasePage {
 
 	}
 
+	public void clickLoginLink() {
+		// TODO Auto-generated method stub
+
+	}
+
 }

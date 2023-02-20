@@ -28,4 +28,9 @@ public class LoginPageObject extends BasePage {
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
 	}
 
+	public String getErrorMessageAtEmailTextfield() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
