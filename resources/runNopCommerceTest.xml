@@ -13,7 +13,7 @@
   <parameter name ="browser" value ="h_firefox"/>
     <classes>
       <class name="com.nopcommerce.common.Common_01_Register"/>
-      <class name="com.nopcommerce.user.Level_16_Allure_Report"/>
+      <class name="com.nopcommerce.user.Level_17_Share_Data"/>
     </classes>
   </test> 
    
