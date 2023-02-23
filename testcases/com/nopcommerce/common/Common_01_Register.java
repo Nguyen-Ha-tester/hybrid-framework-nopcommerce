@@ -23,6 +23,7 @@ public class Common_01_Register extends BaseTest {
 	@BeforeTest(description = "Create New Common User for all class test")
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
+		homePage = PageGeneratorManagerNopCommerce.getUserHomePage(driver);
 
 		firstName = "Automation";
 		lastName = "FC";
@@ -30,7 +31,6 @@ public class Common_01_Register extends BaseTest {
 		password = "123456x";
 
 		log.info("Register - Step 01: Navigate to Register page");
-		homePage = PageGeneratorManagerNopCommerce.getUserHomePage(driver);
 		registerPage = homePage.openRegisterPage();
 
 		log.info("Register - Step 02: Enter to firstname textbox with value is" + firstName + "'");
@@ -52,7 +52,7 @@ public class Common_01_Register extends BaseTest {
 		registerPage.clickRegisterButton();
 
 		log.info("Register - Step 08: Verify register success message display ");
-		verifyEquals(registerPage.getSuccessMessage(), "Your registration completed...");
+		verifyEquals(registerPage.getSuccessMessage(), "Your registration completed");
 
 	}
 
