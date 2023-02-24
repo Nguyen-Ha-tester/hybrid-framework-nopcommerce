@@ -10,9 +10,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
+import pageObjects.nopCommerce.CustomerInforPageObject;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.MyAccountPageObject;
 import pageObjects.nopCommerce.PageGeneratorManager;
 import pageObjects.nopCommerce.RegisterPageObject;
 
@@ -22,13 +22,13 @@ public class Level_07_Switch_Page extends BaseTest {
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;
 	private LoginPageObject loginPage;
-	private MyAccountPageObject myAccountPage;
+	private CustomerInforPageObject customerInforPage;
 
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-
+		driver.get("https://demo.nopcommerce.com/");
 		firstName = "Automation";
 		lastName = "FC";
 		emailAddress = "automationtesting" + generateFakeNumber() + "@gmail.comm";
@@ -59,13 +59,22 @@ public class Level_07_Switch_Page extends BaseTest {
 	}
 
 	@Test
-	public void User_03_My_Account() {
-		myAccountPage = homePage.clickMyAccountLink();
-		myAccountPage.clickNewsletterCheckbox();
+	public void User_03_Customer_Infor() {
+		customerInforPage = homePage.clickMyAccountLink();
+		customerInforPage.clickNewsletterCheckbox();
+		Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
 	}
 
 	@Test
 	public void User_04_Switch_Page() {
+
+	}
+
+	@Test
+	public void User_05_Switch_Role() {
+		// Role user -> admin
+
+		// Role admin -> user
 
 	}
 

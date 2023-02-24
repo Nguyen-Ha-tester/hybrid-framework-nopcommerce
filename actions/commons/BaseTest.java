@@ -78,7 +78,6 @@ public class BaseTest {
 			throw new RuntimeException("Please input with correct browser name."); // RuntimeException có nghĩa là chạy lỗi phát là throw ngay
 		}
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.get("https://demo.nopcommerce.com/");
 		return driver;
 	}
 }
