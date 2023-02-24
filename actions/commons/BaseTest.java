@@ -15,16 +15,15 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 	private WebDriver driver;
 	private String osName = System.getProperty("os.name");
-	private String projectPath = System.getProperty("user.dir");
 
 	protected WebDriver getBrowserDriver(String browserName) {
 		// Firefox
 		if (browserName.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			if (osName.contains("Mac OS")) {
-			} else {
-				WebDriverManager.firefoxdriver().setup();
-			}
+			// if (osName.contains("Mac OS")) {
+			// } else {
+			// WebDriverManager.firefoxdriver().setup();
+			// }
 			driver = new FirefoxDriver();
 		} else if (browserName.equals("h_firefox")) {
 			WebDriverManager.firefoxdriver().setup();
@@ -79,6 +78,7 @@ public class BaseTest {
 			throw new RuntimeException("Please input with correct browser name."); // RuntimeException có nghĩa là chạy lỗi phát là throw ngay
 		}
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.get("https://demo.nopcommerce.com/");
 		return driver;
 	}
 }
