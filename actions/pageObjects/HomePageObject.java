@@ -26,4 +26,9 @@ public class HomePageObject extends BasePage {
 	public boolean isLogOutLinkClickable() {
 		return getWebElement(driver, HomePageUI.LOG_OUT_LINK).isDisplayed();
 	}
+
+	public void loadLoginPage() {
+		openPageUrl(driver, HomePageUI.LOGIN_LINK);
+	}
+
 }
