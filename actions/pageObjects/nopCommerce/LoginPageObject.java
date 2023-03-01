@@ -1,9 +1,9 @@
-package pageObjects;
+package pageObjects.nopCommerce;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.LoginPageUI;
+import pageUIs.nopCommerce.LoginPageUI;
 
 public class LoginPageObject extends BasePage {
 
@@ -23,9 +23,10 @@ public class LoginPageObject extends BasePage {
 		sendkeyToElement(driver, LoginPageUI.PASSWORD_TEXT_FIELD, passWord);
 	}
 
-	public void clickLoginButton() {
+	public HomePageObject clickLoginButton() {
 		waitForElementClickable(driver, LoginPageUI.PASSWORD_TEXT_FIELD);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+		return PageGeneratorManager.getHomePage(driver);
 	}
 
 	public String getErrorMessageAtEmailTextfield() {

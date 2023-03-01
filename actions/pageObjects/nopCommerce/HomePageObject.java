@@ -1,9 +1,9 @@
-package pageObjects;
+package pageObjects.nopCommerce;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.HomePageUI;
+import pageUIs.nopCommerce.HomePageUI;
 
 public class HomePageObject extends BasePage {
 	private WebDriver driver;
@@ -12,9 +12,14 @@ public class HomePageObject extends BasePage {
 		this.driver = driver;
 	}
 
-	public void clickRegisterLink() {
+	public RegisterPageObject clickRegisterLink() {
 		waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
 		clickToElement(driver, HomePageUI.REGISTER_LINK);
+		// cach 2:
+		// return new RegisterPageObject(driver);
+		// cach 3:
+		return PageGeneratorManager.getRegisterPage(driver);
+
 	}
 
 	public void clickLogoutLink() {

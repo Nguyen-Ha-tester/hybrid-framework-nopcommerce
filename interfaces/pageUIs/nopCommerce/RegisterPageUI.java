@@ -1,4 +1,4 @@
-package pageUIs;
+package pageUIs.nopCommerce;
 
 public class RegisterPageUI {
 	public static final String REGISTER_BUTTON = "//button[@id='register-button']";
