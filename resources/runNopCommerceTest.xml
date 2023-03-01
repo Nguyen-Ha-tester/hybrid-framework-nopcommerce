@@ -4,24 +4,10 @@
   <test name="Run on FireFox">
   <parameter name ="browser" value ="firefox"/>
     <classes>
-      <class name="com.nopcommerce.user.Level_04_Multiple_Browsers"/>
+      <class name="com.nopcommerce.user.Level_05_Page_Factory"/>
     </classes>
   </test> 
 
- <test name="Run on Chrome">
-  <parameter name ="browser" value ="chrome"/>
-    <classes>
-      <class name="com.nopcommerce.user.Level_04_Multiple_Browsers"/>
-    </classes>
-  </test> 
-
-
- <test name="Run on Edge">
-  <parameter name ="browser" value ="edge"/>
-    <classes>
-      <class name="com.nopcommerce.user.Level_04_Multiple_Browsers"/>
-    </classes>
-  </test> 
-  
+ 
   
 </suite> 

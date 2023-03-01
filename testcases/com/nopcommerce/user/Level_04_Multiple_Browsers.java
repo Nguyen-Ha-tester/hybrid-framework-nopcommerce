@@ -27,7 +27,7 @@ public class Level_04_Multiple_Browsers extends BaseTest {
 	}
 
 	@Test
-	public void Register_01_Empty_Data() {
+	public void Register_Empty_Data() {
 		System.out.println("Register 01 - Step 01: Click to register Link");
 		homePage.clickRegisterLink();
 
