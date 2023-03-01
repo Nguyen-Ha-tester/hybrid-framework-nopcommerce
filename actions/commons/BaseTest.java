@@ -15,7 +15,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 	private WebDriver driver;
 	private String osName = System.getProperty("os.name");
-	private String projectPath = System.getProperty("user.dir");
 
 	protected WebDriver getBrowserDriver(String browserName) {
 		// Firefox
