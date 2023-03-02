@@ -34,7 +34,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 		unregistedEmailAddress = "automationtesting" + generateFakeNumber() + "@gmail.comm";
 		password = "123456x";
 		wrongPassword = "abc";
-		homePage = PageGeneratorManager.getHomePage(driver); //// che giau viec khoi tao doi tuong
+		homePage = PageGeneratorManager.getHomePage(driver);
 		registerPage = homePage.clickRegisterLink();
 		registerPage.inputFirstName(firstName);
 		registerPage.inputLastName(lastName);
