@@ -10,16 +10,16 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 public class Level_06_Page_Generator_Manager_II extends BaseTest {
 	private WebDriver driver;
 	private String existingEmailAddress, unregistedEmailAddress, invalidEmailAddress, firstName, lastName, password, wrongPassword;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
 
 	@Parameters("browser")
 	@BeforeClass
@@ -33,7 +33,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest {
 		unregistedEmailAddress = "automationtesting" + generateFakeNumber() + "@gmail.comm";
 		password = "123456x";
 		wrongPassword = "abc";
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 
 		registerPage = homePage.openRegisterPage();
 

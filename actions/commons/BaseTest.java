@@ -12,7 +12,7 @@ import org.openqa.selenium.opera.OperaDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseTest {
+public class BaseTest extends BasePage {
 	private WebDriver driver;
 	private String osName = System.getProperty("os.name");
 
@@ -78,6 +78,7 @@ public class BaseTest {
 			throw new RuntimeException("Please input with correct browser name."); // RuntimeException có nghĩa là chạy lỗi phát là throw ngay
 		}
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		openPageUrl(driver, GlobalConstants.USER_PAGE_URL);
 		return driver;
 	}
 }

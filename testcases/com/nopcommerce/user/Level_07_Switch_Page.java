@@ -10,25 +10,25 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.nopCommerce.AddressesPageObject;
-import pageObjects.nopCommerce.CustomerInforPageObject;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.OrdersPageObject;
-import pageObjects.nopCommerce.PageGeneratorManagerNopCommerce;
-import pageObjects.nopCommerce.RegisterPageObject;
-import pageObjects.nopCommerce.RewardPointsPageObject;
+import commons.PageGeneratorManagerNopCommerce;
+import pageObjects.nopCommerce.user.UserAddressesPageObject;
+import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserOrdersPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
+import pageObjects.nopCommerce.user.UserRewardPointsPageObject;
 
 public class Level_07_Switch_Page extends BaseTest {
 	private WebDriver driver;
 	private String emailAddress, firstName, lastName, password;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
-	private CustomerInforPageObject customerInforPage;
-	private AddressesPageObject addressesPage;
-	private OrdersPageObject ordersPage;
-	private RewardPointsPageObject rewardPointsPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
+	private UserCustomerInforPageObject customerInforPage;
+	private UserAddressesPageObject addressesPage;
+	private UserOrdersPageObject ordersPage;
+	private UserRewardPointsPageObject rewardPointsPage;
 
 	@Parameters("browser")
 	@BeforeClass
@@ -43,7 +43,7 @@ public class Level_07_Switch_Page extends BaseTest {
 
 	@Test
 	public void User_01_Register_Page() {
-		homePage = PageGeneratorManagerNopCommerce.getHomePage(driver);
+		homePage = PageGeneratorManagerNopCommerce.getUserHomePage(driver);
 		registerPage = homePage.openRegisterPage();
 		registerPage.inputFirstName(firstName);
 		registerPage.inputLastName(lastName);

@@ -1,6 +1,6 @@
-package pageUIs.nopCommerce;
+package pageUIs.nopCommerce.user;
 
-public class BasePageUI {
+public class UserBasePageUI {
 
 	public static final String ADDRESSES_LINK = "//div[@class='block block-account-navigation']//a[text()='Addresses']";
 	public static final String ORDERS_LINK = "//div[@class='block block-account-navigation']//a[text()='Orders']";

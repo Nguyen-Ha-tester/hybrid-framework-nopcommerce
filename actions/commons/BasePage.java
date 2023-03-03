@@ -15,11 +15,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageObjects.nopCommerce.AddressesPageObject;
-import pageObjects.nopCommerce.OrdersPageObject;
-import pageObjects.nopCommerce.PageGeneratorManagerNopCommerce;
-import pageObjects.nopCommerce.RewardPointsPageObject;
-import pageUIs.nopCommerce.BasePageUI;
+import pageObjects.nopCommerce.user.UserAddressesPageObject;
+import pageObjects.nopCommerce.user.UserOrdersPageObject;
+import pageObjects.nopCommerce.user.UserRewardPointsPageObject;
+import pageUIs.nopCommerce.user.UserBasePageUI;
 
 public class BasePage {
 
@@ -27,7 +26,7 @@ public class BasePage {
 		return new BasePage();
 	}
 
-	protected void openPageUrl(WebDriver driver, String pageUrl) {
+	public void openPageUrl(WebDriver driver, String pageUrl) {
 		driver.get(pageUrl);
 	}
 
@@ -322,22 +321,22 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(xpathLocator)));
 	}
 
-	public AddressesPageObject openAddressesPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.ADDRESSES_LINK);
-		clickToElement(driver, BasePageUI.ADDRESSES_LINK);
-		return PageGeneratorManagerNopCommerce.getAddressesPage(driver);
+	public UserAddressesPageObject openAddressesPage(WebDriver driver) {
+		waitForElementClickable(driver, UserBasePageUI.ADDRESSES_LINK);
+		clickToElement(driver, UserBasePageUI.ADDRESSES_LINK);
+		return PageGeneratorManagerNopCommerce.getUserAddressesPage(driver);
 	}
 
-	public OrdersPageObject openOrdersPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.ORDERS_LINK);
-		clickToElement(driver, BasePageUI.ORDERS_LINK);
-		return PageGeneratorManagerNopCommerce.getOrdersPagePage(driver);
+	public UserOrdersPageObject openOrdersPage(WebDriver driver) {
+		waitForElementClickable(driver, UserBasePageUI.ORDERS_LINK);
+		clickToElement(driver, UserBasePageUI.ORDERS_LINK);
+		return PageGeneratorManagerNopCommerce.getUserOrdersPagePage(driver);
 	}
 
-	public RewardPointsPageObject openRewardPointsPage(WebDriver driver) {
-		waitForElementClickable(driver, BasePageUI.REWARD_POINTS_LINK);
-		clickToElement(driver, BasePageUI.REWARD_POINTS_LINK);
-		return PageGeneratorManagerNopCommerce.getRewardPointsPage(driver);
+	public UserRewardPointsPageObject openRewardPointsPage(WebDriver driver) {
+		waitForElementClickable(driver, UserBasePageUI.REWARD_POINTS_LINK);
+		clickToElement(driver, UserBasePageUI.REWARD_POINTS_LINK);
+		return PageGeneratorManagerNopCommerce.getUserRewardPointsPage(driver);
 	}
 
 	private long longTimeout = 30;

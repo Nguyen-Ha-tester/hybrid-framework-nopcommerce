@@ -10,19 +10,19 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 public class Level_04_Multiple_Browsers extends BaseTest {
 	private WebDriver driver;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
 
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 		homePage.loadLoginPage();
 	}
 
@@ -31,7 +31,7 @@ public class Level_04_Multiple_Browsers extends BaseTest {
 		System.out.println("Register 01 - Step 01: Click to register Link");
 		homePage.openRegisterPage();
 
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 
 		System.out.println("Register 02 - Step 01: Click to register button");
 		registerPage.clickRegisterButton();

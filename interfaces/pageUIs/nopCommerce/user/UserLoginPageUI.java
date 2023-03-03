@@ -1,6 +1,6 @@
-package pageUIs.nopCommerce;
+package pageUIs.nopCommerce.user;
 
-public class LoginPageUI {
+public class UserLoginPageUI {
 	public static final String LOGIN_BUTTON = "//button[contains(@class,'login-button')]";
 	public static final String EMAIL_TEXT_FIELD = "//input[@id='Email']";
 	public static final String PASSWORD_TEXT_FIELD = "//input[@id='Password']";
