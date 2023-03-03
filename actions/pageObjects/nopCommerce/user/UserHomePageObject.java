@@ -37,6 +37,12 @@ public class UserHomePageObject extends BasePage {
 		openPageUrl(driver, UserHomePageUI.LOGIN_LINK);
 	}
 
+	public UserLoginPageObject clickLoginLink() {
+		waitForElementClickable(driver, UserHomePageUI.LOGIN_LINK);
+		clickToElement(driver, UserHomePageUI.LOGIN_LINK);
+		return PageGeneratorManagerNopCommerce.getUserLoginPage(driver);
+	}
+
 	public UserCustomerInforPageObject openCustomerInforPage() {
 		waitForElementClickable(driver, UserHomePageUI.MY_ACCOUNT_BUTTON);
 		clickToElement(driver, UserHomePageUI.MY_ACCOUNT_BUTTON);

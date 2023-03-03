@@ -52,19 +52,32 @@ public class Level_08_Switch_Role extends BaseTest {
 	}
 
 	@Test
-	public void Role_01_User_Login() {
+	public void Role_01_User_To_Admin() {
+		// Login as User role
+
 		userLoginPage = userRegisterPage.clickLoginLink();
 		userHomePage = userLoginPage.loginAsUser(userEmailAddress, userPassword);
 		Assert.assertTrue(userHomePage.isLogOutLinkClickable());
-	}
 
-	@Test
-	public void Role_02_Admin_Login() {
+		// Logout user
+		userHomePage = userHomePage.clickLogoutLinkAtUserPage(driver);
+		// Login as Admin role
 		userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_PAGE_URL);
 		adminLoginPage = PageGeneratorManagerNopCommerce.getAdminLoginPage(driver);
 		adminLoginPage.loginAsAdmin(adminEmailAddress, adminPassword);
 		adminDashboardPage = PageGeneratorManagerNopCommerce.getAdminDashboardPage(driver);
-		Assert.assertTrue(adminDashboardPage.isDashboardDisplayed());
+		Assert.assertTrue(adminDashboardPage.isDashboardHeaderDisplayed());
+		// Logout admin
+		adminLoginPage = adminDashboardPage.clickLogoutLinkAtAdminPage(driver);
+	}
+
+	@Test
+	public void Role_02_Admin_Login() {
+		// Login Page (admin) -> Login Page (User)
+		adminLoginPage.openPageUrl(driver, GlobalConstants.USER_PAGE_URL);
+		userHomePage = PageGeneratorManagerNopCommerce.getUserHomePage(driver);
+		userLoginPage = userHomePage.clickLoginLink();
+
 	}
 
 	@Test
