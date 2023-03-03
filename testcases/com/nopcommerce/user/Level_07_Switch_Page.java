@@ -10,11 +10,14 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
+import pageObjects.nopCommerce.AddressesPageObject;
 import pageObjects.nopCommerce.CustomerInforPageObject;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.PageGeneratorManager;
+import pageObjects.nopCommerce.OrdersPageObject;
+import pageObjects.nopCommerce.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.nopCommerce.RewardPointsPageObject;
 
 public class Level_07_Switch_Page extends BaseTest {
 	private WebDriver driver;
@@ -23,6 +26,9 @@ public class Level_07_Switch_Page extends BaseTest {
 	private RegisterPageObject registerPage;
 	private LoginPageObject loginPage;
 	private CustomerInforPageObject customerInforPage;
+	private AddressesPageObject addressesPage;
+	private OrdersPageObject ordersPage;
+	private RewardPointsPageObject rewardPointsPage;
 
 	@Parameters("browser")
 	@BeforeClass
@@ -37,8 +43,8 @@ public class Level_07_Switch_Page extends BaseTest {
 
 	@Test
 	public void User_01_Register_Page() {
-		homePage = PageGeneratorManager.getHomePage(driver);
-		registerPage = homePage.clickRegisterLink();
+		homePage = PageGeneratorManagerNopCommerce.getHomePage(driver);
+		registerPage = homePage.openRegisterPage();
 		registerPage.inputFirstName(firstName);
 		registerPage.inputLastName(lastName);
 		registerPage.inputEmail(emailAddress);
@@ -60,7 +66,7 @@ public class Level_07_Switch_Page extends BaseTest {
 
 	@Test
 	public void User_03_Customer_Infor() {
-		customerInforPage = homePage.clickMyAccountLink();
+		customerInforPage = homePage.openCustomerInforPage();
 		customerInforPage.clickNewsletterCheckbox();
 		Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
 	}
@@ -68,13 +74,16 @@ public class Level_07_Switch_Page extends BaseTest {
 	@Test
 	public void User_04_Switch_Page() {
 
+		// customer info -> addresses
+		addressesPage = customerInforPage.openAddressesPage(driver);
+		// addresses --> orders
+		ordersPage = addressesPage.openOrdersPage(driver);
+		// orders --> reward points
+		rewardPointsPage = ordersPage.openRewardPointsPage(driver);
 	}
 
 	@Test
 	public void User_05_Switch_Role() {
-		// Role user -> admin
-
-		// Role admin -> user
 
 	}
 

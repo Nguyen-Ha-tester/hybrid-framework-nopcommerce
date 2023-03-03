@@ -15,6 +15,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.nopCommerce.AddressesPageObject;
+import pageObjects.nopCommerce.OrdersPageObject;
+import pageObjects.nopCommerce.PageGeneratorManagerNopCommerce;
+import pageObjects.nopCommerce.RewardPointsPageObject;
+import pageUIs.nopCommerce.BasePageUI;
+
 public class BasePage {
 
 	public static BasePage getBasePageObject() {
@@ -314,6 +320,24 @@ public class BasePage {
 	protected void waitForElementClickable(WebDriver driver, String xpathLocator) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(xpathLocator)));
+	}
+
+	public AddressesPageObject openAddressesPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.ADDRESSES_LINK);
+		clickToElement(driver, BasePageUI.ADDRESSES_LINK);
+		return PageGeneratorManagerNopCommerce.getAddressesPage(driver);
+	}
+
+	public OrdersPageObject openOrdersPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.ORDERS_LINK);
+		clickToElement(driver, BasePageUI.ORDERS_LINK);
+		return PageGeneratorManagerNopCommerce.getOrdersPagePage(driver);
+	}
+
+	public RewardPointsPageObject openRewardPointsPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.REWARD_POINTS_LINK);
+		clickToElement(driver, BasePageUI.REWARD_POINTS_LINK);
+		return PageGeneratorManagerNopCommerce.getRewardPointsPage(driver);
 	}
 
 	private long longTimeout = 30;

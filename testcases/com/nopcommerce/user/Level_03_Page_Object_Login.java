@@ -38,7 +38,7 @@ public class Level_03_Page_Object_Login extends BasePage {
 		wrongPassword = "abc";
 		homePage = new HomePageObject(driver);
 		registerPage = new RegisterPageObject(driver);
-		homePage.clickRegisterLink();
+		homePage.openRegisterPage();
 		registerPage.inputFirstName(firstName);
 		registerPage.inputLastName(lastName);
 		registerPage.inputEmail(existingEmailAddress);

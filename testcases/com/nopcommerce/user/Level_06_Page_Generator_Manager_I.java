@@ -35,7 +35,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 		wrongPassword = "abc";
 		homePage = new HomePageObject(driver);
 		registerPage = new RegisterPageObject(driver);
-		homePage.clickRegisterLink();
+		homePage.openRegisterPage();
 		registerPage.inputFirstName(firstName);
 		registerPage.inputLastName(lastName);
 		registerPage.inputEmail(existingEmailAddress);

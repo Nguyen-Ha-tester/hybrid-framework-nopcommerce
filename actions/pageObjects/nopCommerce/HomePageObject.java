@@ -12,13 +12,13 @@ public class HomePageObject extends BasePage {
 		this.driver = driver;
 	}
 
-	public RegisterPageObject clickRegisterLink() {
+	public RegisterPageObject openRegisterPage() {
 		waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
 		clickToElement(driver, HomePageUI.REGISTER_LINK);
 		// cach 2:
 		// return new RegisterPageObject(driver);
 		// cach 3:
-		return PageGeneratorManager.getRegisterPage(driver);
+		return PageGeneratorManagerNopCommerce.getRegisterPage(driver);
 
 	}
 
@@ -36,10 +36,10 @@ public class HomePageObject extends BasePage {
 		openPageUrl(driver, HomePageUI.LOGIN_LINK);
 	}
 
-	public CustomerInforPageObject clickMyAccountLink() {
+	public CustomerInforPageObject openCustomerInforPage() {
 		waitForElementClickable(driver, HomePageUI.MY_ACCOUNT_BUTTON);
 		clickToElement(driver, HomePageUI.MY_ACCOUNT_BUTTON);
-		return PageGeneratorManager.getCustomerInforPage(driver);
+		return PageGeneratorManagerNopCommerce.getCustomerInforPage(driver);
 	}
 
 }

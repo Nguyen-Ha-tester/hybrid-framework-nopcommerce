@@ -26,7 +26,7 @@ public class LoginPageObject extends BasePage {
 	public HomePageObject clickLoginButton() {
 		waitForElementClickable(driver, LoginPageUI.PASSWORD_TEXT_FIELD);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
-		return PageGeneratorManager.getHomePage(driver);
+		return PageGeneratorManagerNopCommerce.getHomePage(driver);
 	}
 
 	public String getErrorMessageAtEmailTextfield() {

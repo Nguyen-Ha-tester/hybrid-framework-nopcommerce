@@ -2,7 +2,7 @@ package pageObjects.nopCommerce;
 
 import org.openqa.selenium.WebDriver;
 
-public class PageGeneratorManager {
+public class PageGeneratorManagerNopCommerce {
 
 	public static HomePageObject getHomePage(WebDriver driver) {
 		return new HomePageObject(driver);
@@ -19,4 +19,17 @@ public class PageGeneratorManager {
 	public static CustomerInforPageObject getCustomerInforPage(WebDriver driver) {
 		return new CustomerInforPageObject(driver);
 	}
+
+	public static AddressesPageObject getAddressesPage(WebDriver driver) {
+		return new AddressesPageObject(driver);
+	}
+
+	public static OrdersPageObject getOrdersPagePage(WebDriver driver) {
+		return new OrdersPageObject(driver);
+	}
+
+	public static RewardPointsPageObject getRewardPointsPage(WebDriver driver) {
+		return new RewardPointsPageObject(driver);
+	}
+
 }

@@ -76,7 +76,7 @@ public class RegisterPageObject extends BasePage {
 	public LoginPageObject clickLoginLink() {
 		waitForElementClickable(driver, RegisterPageUI.LOGIN_LINK);
 		clickToElement(driver, RegisterPageUI.LOGIN_LINK);
-		return PageGeneratorManager.getLoginPage(driver);
+		return PageGeneratorManagerNopCommerce.getLoginPage(driver);
 	}
 
 	public String getExistingEmailErrorMassege() {

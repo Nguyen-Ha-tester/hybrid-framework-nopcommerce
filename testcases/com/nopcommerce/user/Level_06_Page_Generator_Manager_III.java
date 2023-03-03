@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.PageGeneratorManager;
+import pageObjects.nopCommerce.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.RegisterPageObject;
 
 public class Level_06_Page_Generator_Manager_III extends BaseTest {
@@ -34,8 +34,8 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 		unregistedEmailAddress = "automationtesting" + generateFakeNumber() + "@gmail.comm";
 		password = "123456x";
 		wrongPassword = "abc";
-		homePage = PageGeneratorManager.getHomePage(driver);
-		registerPage = homePage.clickRegisterLink();
+		homePage = PageGeneratorManagerNopCommerce.getHomePage(driver);
+		registerPage = homePage.openRegisterPage();
 		registerPage.inputFirstName(firstName);
 		registerPage.inputLastName(lastName);
 		registerPage.inputEmail(existingEmailAddress);

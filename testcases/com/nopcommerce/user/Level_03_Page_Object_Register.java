@@ -39,7 +39,7 @@ public class Level_03_Page_Object_Register extends BasePage {
 	@Test
 	public void Register_01_Empty_Data() {
 		System.out.println("Register 01 - Step 01: Click to register Link");
-		homePage.clickRegisterLink();
+		homePage.openRegisterPage();
 
 		registerPage = new RegisterPageObject(driver);
 
@@ -58,7 +58,7 @@ public class Level_03_Page_Object_Register extends BasePage {
 	@Test
 	public void Register_02_Invalid_Email() {
 		System.out.println("Register 02 - Step 01: Click to register Link");
-		homePage.clickRegisterLink();
+		homePage.openRegisterPage();
 		registerPage = new RegisterPageObject(driver);
 		System.out.println("Register 02 - Step 02: Input invalid email");
 		registerPage.inputEmail("000");
@@ -74,7 +74,7 @@ public class Level_03_Page_Object_Register extends BasePage {
 	@Test
 	public void Register_03_Success() {
 		System.out.println("Register 03 - Step 01: Click to register Link");
-		homePage.clickRegisterLink();
+		homePage.openRegisterPage();
 		registerPage = new RegisterPageObject(driver);
 		System.out.println("Register 03 - Step 02: Input all valid required fields");
 		registerPage.inputFirstName(firstName);
@@ -110,7 +110,7 @@ public class Level_03_Page_Object_Register extends BasePage {
 	@Test
 	public void Register_04_Existing_Email() {
 		System.out.println("Register 04 - Step 01: Click to register Link");
-		homePage.clickRegisterLink();
+		homePage.openRegisterPage();
 		registerPage = new RegisterPageObject(driver);
 		System.out.println("Register 04 - Step 02: Input existing email field");
 		registerPage.inputFirstName(firstName);
@@ -129,7 +129,7 @@ public class Level_03_Page_Object_Register extends BasePage {
 	@Test
 	public void Register_05_Password_Less_Than_6_Chars() {
 		System.out.println("Register 05 - Step 01: Click to register Link");
-		homePage.clickRegisterLink();
+		homePage.openRegisterPage();
 		registerPage = new RegisterPageObject(driver);
 		System.out.println("Register 05 - Step 02: Input password field under 6 chars");
 		registerPage.inputPassword("010");
@@ -144,7 +144,7 @@ public class Level_03_Page_Object_Register extends BasePage {
 	@Test
 	public void Register_06_Invalid_Confirm_Password() {
 		System.out.println("Register 06 - Step 01: Click to register Link");
-		homePage.clickRegisterLink();
+		homePage.openRegisterPage();
 		registerPage = new RegisterPageObject(driver);
 		System.out.println("Register 06 - Step 02: Input invalid confirm password field");
 		registerPage.inputPassword("0123456");
