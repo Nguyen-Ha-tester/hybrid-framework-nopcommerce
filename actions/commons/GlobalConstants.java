@@ -20,6 +20,7 @@ public class GlobalConstants {
 	public static final String DRAG_DROP_HTMLS = PROJECT_PATH + File.separator + "dragDropHTMLS";
 	public static final String REPORTNG_SCREENSHOT_FOLDER_PATH = PROJECT_PATH + File.separator + "reportNGImages" + File.separator;
 	public static final String EXTENT_REPORT_FOLDER_PATH = PROJECT_PATH + File.separator + "extentReportV2" + File.separator;
+	public static final String ALLURE_REPORT_FOLDER_PATH = PROJECT_PATH + File.separator + "allure-results" + File.separator;
 
 	// Một số thông tin của Database
 	// Database Account/ User/ Port/ Pass của dev
