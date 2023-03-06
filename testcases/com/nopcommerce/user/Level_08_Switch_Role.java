@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGeneratorManagerNopCommerce;
+import pageObjects.nopCommerce.admin.AdminDashboardPageObject;
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
@@ -24,6 +25,7 @@ public class Level_08_Switch_Role extends BaseTest {
 	private UserRegisterPageObject userRegisterPage;
 	private UserLoginPageObject userLoginPage;
 	private AdminLoginPageObject adminLoginPage;
+	private AdminDashboardPageObject adminDashboardPage;
 
 	@Parameters("browser")
 	@BeforeClass
@@ -58,9 +60,11 @@ public class Level_08_Switch_Role extends BaseTest {
 
 	@Test
 	public void Role_02_Admin_Login() {
-		userHomePage.openPageUrl(driver, GlobalConstants.USER_PAGE_URL);
+		userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_PAGE_URL);
 		adminLoginPage = PageGeneratorManagerNopCommerce.getAdminLoginPage(driver);
 		adminLoginPage.loginAsAdmin(adminEmailAddress, adminPassword);
+		adminDashboardPage = PageGeneratorManagerNopCommerce.getAdminDashboardPage(driver);
+		Assert.assertTrue(adminDashboardPage.isDashboardDisplayed());
 	}
 
 	@Test
