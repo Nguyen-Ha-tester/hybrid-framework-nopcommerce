@@ -48,7 +48,7 @@ public class Level_08_Switch_Role extends BaseTest {
 		userRegisterPage.inputConfirmPassword(userPassword);
 		userRegisterPage.clickRegisterButton();
 		Assert.assertEquals(userRegisterPage.getSuccessMessage(), "Your registration completed");
-
+		openPageUrl(driver, GlobalConstants.USER_PAGE_URL);
 	}
 
 	@Test
