@@ -19,7 +19,7 @@ import pageObjects.nopCommerce.user.UserOrdersPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 import pageObjects.nopCommerce.user.UserRewardPointsPageObject;
 
-public class Level_07_Switch_Page extends BaseTest {
+public class Level_09_Dynamic_Locator extends BaseTest {
 	private WebDriver driver;
 	private String emailAddress, firstName, lastName, password;
 	private UserHomePageObject homePage;
@@ -42,7 +42,7 @@ public class Level_07_Switch_Page extends BaseTest {
 	}
 
 	@Test
-	public void User_01_Register_Page() {
+	public void User_01_Register_Login() {
 		homePage = PageGeneratorManagerNopCommerce.getUserHomePage(driver);
 		registerPage = homePage.openRegisterPage();
 		registerPage.inputFirstName(firstName);
@@ -53,10 +53,6 @@ public class Level_07_Switch_Page extends BaseTest {
 		registerPage.clickRegisterButton();
 		Assert.assertEquals(registerPage.getSuccessMessage(), "Your registration completed");
 
-	}
-
-	@Test
-	public void User_02_Login_Page() {
 		loginPage = registerPage.clickLoginLink();
 		loginPage.inputEmail(emailAddress);
 		loginPage.inputPassword(password);
@@ -65,25 +61,21 @@ public class Level_07_Switch_Page extends BaseTest {
 	}
 
 	@Test
-	public void User_03_Customer_Infor() {
+	public void User_02_Switch_Page() {
 		customerInforPage = homePage.openCustomerInforPage();
 		customerInforPage.clickNewsletterCheckbox();
 		Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
+
+		// customer info -> addresses
+		addressesPage = (UserAddressesPageObject) customerInforPage.openPagesInMyAccountPageByName(driver, "Addresses");
+		// addresses --> orders
+		ordersPage = (UserOrdersPageObject) addressesPage.openPagesInMyAccountPageByName(driver, "Orders");
+		// orders --> reward points
+		rewardPointsPage = (UserRewardPointsPageObject) ordersPage.openPagesInMyAccountPageByName(driver, "Reward points");
 	}
 
 	@Test
-	public void User_04_Switch_Page() {
-
-		// // customer info -> addresses
-		// addressesPage = customerInforPage.openAddressesPage(driver);
-		// // addresses --> orders
-		// ordersPage = addressesPage.openOrdersPage(driver);
-		// // orders --> reward points
-		// rewardPointsPage = ordersPage.openRewardPointsPage(driver);
-	}
-
-	@Test
-	public void User_05_Switch_Role() {
+	public void User_03_Dynamic_Locator() {
 
 	}
 

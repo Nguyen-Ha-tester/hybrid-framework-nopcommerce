@@ -60,7 +60,7 @@ public class Level_08_Switch_Role extends BaseTest {
 		Assert.assertTrue(userHomePage.isLogOutLinkClickable());
 
 		// Logout user
-		userHomePage = userHomePage.clickLogoutLinkAtUserPage(driver);
+		// userHomePage = userHomePage.clickLogoutLinkAtUserPage(driver);
 		// Login as Admin role
 		userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_PAGE_URL);
 		adminLoginPage = PageGeneratorManagerNopCommerce.getAdminLoginPage(driver);

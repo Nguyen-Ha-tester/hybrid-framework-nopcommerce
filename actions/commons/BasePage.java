@@ -16,10 +16,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
-import pageObjects.nopCommerce.user.UserAddressesPageObject;
-import pageObjects.nopCommerce.user.UserHomePageObject;
-import pageObjects.nopCommerce.user.UserOrdersPageObject;
-import pageObjects.nopCommerce.user.UserRewardPointsPageObject;
 import pageUIs.nopCommerce.admin.AdminBasePageUI;
 import pageUIs.nopCommerce.user.UserBasePageUI;
 
@@ -108,7 +104,6 @@ public class BasePage {
 		}
 	}
 
-	// Locator type co nhieu loai: id=... css=... name=...
 	private By getByLocator(String locatorType) {
 		By by = null;
 		if (locatorType.startsWith("id=") || locatorType.startsWith("ID=") || locatorType.startsWith("Id=")) {
@@ -339,29 +334,89 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(locatorType)));
 	}
 
-	public UserAddressesPageObject openAddressesPage(WebDriver driver) {
-		waitForElementClickable(driver, UserBasePageUI.ADDRESSES_LINK);
-		clickToElement(driver, UserBasePageUI.ADDRESSES_LINK);
-		return PageGeneratorManagerNopCommerce.getUserAddressesPage(driver);
+	// Dynamic Method Area
+	private String getDynamicXpathLocator(String locatorType, String... dynamicValues) {
+		if (locatorType.startsWith("xpath=") || locatorType.startsWith("XPATH=") || locatorType.startsWith("Xpath=") || locatorType.startsWith("XPath=")) {
+			locatorType = String.format(locatorType, (Object[]) dynamicValues);
+		}
+		return locatorType;
 	}
 
-	public UserOrdersPageObject openOrdersPage(WebDriver driver) {
-		waitForElementClickable(driver, UserBasePageUI.ORDERS_LINK);
-		clickToElement(driver, UserBasePageUI.ORDERS_LINK);
-		return PageGeneratorManagerNopCommerce.getUserOrdersPagePage(driver);
+	protected void waitForElementVisible(WebDriver driver, String locatorType, String... dynamicValues) {
+		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByLocator(getDynamicXpathLocator(locatorType, dynamicValues))));
 	}
 
-	public UserRewardPointsPageObject openRewardPointsPage(WebDriver driver) {
-		waitForElementClickable(driver, UserBasePageUI.REWARD_POINTS_LINK);
-		clickToElement(driver, UserBasePageUI.REWARD_POINTS_LINK);
-		return PageGeneratorManagerNopCommerce.getUserRewardPointsPage(driver);
+	protected void clickToElement(WebDriver driver, String locatorType, String... dynamicValues) {
+		getWebElement(driver, getDynamicXpathLocator(locatorType, dynamicValues)).click();
 	}
 
-	public UserHomePageObject clickLogoutLinkAtUserPage(WebDriver driver) {
-		waitForElementClickable(driver, UserBasePageUI.LOG_OUT_LINK);
-		clickToElement(driver, UserBasePageUI.LOG_OUT_LINK);
-		return PageGeneratorManagerNopCommerce.getUserHomePage(driver);
+	protected void sendkeyToElement(WebDriver driver, String locatorType, String textValue, String... dynamicValues) {
+		WebElement element = getWebElement(driver, getDynamicXpathLocator(locatorType, dynamicValues));
+		element.clear();
+		element.sendKeys(textValue);
 	}
+
+	protected void waitForElementClickable(WebDriver driver, String locatorType, String... dynamicValues) {
+		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpathLocator(locatorType, dynamicValues))));
+	}
+
+	protected boolean isElementDisplayed(WebDriver driver, String locatorType, String... dynamicValues) {
+		return getWebElement(driver, getDynamicXpathLocator(locatorType, dynamicValues)).isDisplayed();
+	}
+
+	protected boolean isElementEnable(WebDriver driver, String locatorType, String... dynamicValues) {
+		return getWebElement(driver, getDynamicXpathLocator(locatorType, dynamicValues)).isEnabled();
+	}
+
+	protected boolean isElementSelected(WebDriver driver, String locatorType, String... dynamicValues) {
+		return getWebElement(driver, getDynamicXpathLocator(locatorType, dynamicValues)).isSelected();
+	}
+
+	protected int getElementSize(WebDriver driver, String locatorType, String... dynamicValues) {
+		return getListWebElements(driver, getDynamicXpathLocator(locatorType, dynamicValues)).size();
+	}
+
+	// Dynamic Page Area
+	public BasePage openPagesInMyAccountPageByName(WebDriver driver, String pageName) {
+		waitForElementVisible(driver, UserBasePageUI.DYNAMIC_PAGES_IN_MY_ACCOUNT_PAGE, pageName);
+		clickToElement(driver, UserBasePageUI.DYNAMIC_PAGES_IN_MY_ACCOUNT_PAGE, pageName);
+		switch (pageName) {
+		case "Orders":
+			return PageGeneratorManagerNopCommerce.getUserOrdersPagePage(driver);
+		case "Addresses":
+			return PageGeneratorManagerNopCommerce.getUserAddressesPage(driver);
+		case "Reward points":
+			return PageGeneratorManagerNopCommerce.getUserRewardPointsPage(driver);
+		default:
+			throw new RuntimeException("Invalid Page Name in My Acount page");
+		}
+	}
+
+	// public UserAddressesPageObject openAddressesPage(WebDriver driver) {
+	// waitForElementClickable(driver, UserBasePageUI.ADDRESSES_LINK);
+	// clickToElement(driver, UserBasePageUI.ADDRESSES_LINK);
+	// return PageGeneratorManagerNopCommerce.getUserAddressesPage(driver);
+	// }
+	//
+	// public UserOrdersPageObject openOrdersPage(WebDriver driver) {
+	// waitForElementClickable(driver, UserBasePageUI.ORDERS_LINK);
+	// clickToElement(driver, UserBasePageUI.ORDERS_LINK);
+	// return PageGeneratorManagerNopCommerce.getUserOrdersPagePage(driver);
+	// }
+	//
+	// public UserRewardPointsPageObject openRewardPointsPage(WebDriver driver) {
+	// waitForElementClickable(driver, UserBasePageUI.REWARD_POINTS_LINK);
+	// clickToElement(driver, UserBasePageUI.REWARD_POINTS_LINK);
+	// return PageGeneratorManagerNopCommerce.getUserRewardPointsPage(driver);
+	// }
+	//
+	// public UserHomePageObject clickLogoutLinkAtUserPage(WebDriver driver) {
+	// waitForElementClickable(driver, UserBasePageUI.LOG_OUT_LINK);
+	// clickToElement(driver, UserBasePageUI.LOG_OUT_LINK);
+	// return PageGeneratorManagerNopCommerce.getUserHomePage(driver);
+	// }
 
 	public AdminLoginPageObject clickLogoutLinkAtAdminPage(WebDriver driver) {
 		waitForElementClickable(driver, AdminBasePageUI.LOG_OUT_LINK);
@@ -369,6 +424,6 @@ public class BasePage {
 		return PageGeneratorManagerNopCommerce.getAdminLoginPage(driver);
 	}
 
-	private long longTimeout = 30;
+	private long longTimeout = GlobalConstants.LONG_TIME_OUT;
 
 }
