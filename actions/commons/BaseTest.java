@@ -153,14 +153,12 @@ public class BaseTest extends BasePage {
 
 	@BeforeSuite
 	public void deleteAllFilesInReportNGScreenshot() {
-		System.out.println("---------- START delete file in folder ----------");
 		deleteAllFileInFolder();
-		System.out.println("---------- END delete file in folder ----------");
 	}
 
 	public void deleteAllFileInFolder() {
 		try {
-			File file = new File(GlobalConstants.REPORTNG_SCREENSHOT_FOLDER_PATH);
+			File file = new File(GlobalConstants.ALLURE_REPORT_FOLDER_PATH);
 			File[] listOfFiles = file.listFiles();
 			for (int i = 0; i < listOfFiles.length; i++) {
 				if (listOfFiles[i].isFile()) {
