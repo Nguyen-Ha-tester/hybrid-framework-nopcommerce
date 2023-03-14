@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite  name="NopCommerce">
  <listeners>
- <listener class-name="commons.MethodListener"></listener>
-<listener class-name="reportConfig.ReportNGListener"></listener>
-<!--  <listener class-name="reportConfig.ExtentReportListenerV2"></listener> -->
- <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
- <listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+ <listeneene class-name="commons.MethodListener"/>
+<!--<listener class-name="reportConfig.ReportNGListener"/> -->
+ <listener class-name="reportConfig.ExtentReportListenerV2"/> 
+ <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+ <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
  
  </listeners> 
  
   <test name="Run on Chrome">
   <parameter name ="browser" value ="chrome"/>
     <classes>
-      <class name="com.nopcommerce.user.Level_14_Log_ReportNG"/>
+      <class name="com.nopcommerce.user.Level_15_ExtentReport_Version2_Screenshot"/>
     </classes>
   </test> 
 

@@ -14,7 +14,7 @@ public class ExtentManager {
 
 	public synchronized static ExtentReports getReporter() {
 		if (extent == null) {
-			extent = new ExtentReports(GlobalConstants.PROJECT_PATH + "/ExtentReportV2.html", true);
+			extent = new ExtentReports(GlobalConstants.PROJECT_PATH + "/extentReportV2/ExtentReportScreenshot.html", true);
 		}
 		return extent;
 	}
