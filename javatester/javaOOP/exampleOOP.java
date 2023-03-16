@@ -1,14 +1,6 @@
 package javaOOP;
 
 public class exampleOOP {
-	public exampleOOP(String manName, String manAge, String girlName, String girlAge) {
-		super();
-		this.manName = manName;
-		this.manAge = manAge;
-		this.girlName = girlName;
-		this.girlAge = girlAge;
-	}
-
 	private String manName;
 	private String manAge;
 	private String girlName;
@@ -51,6 +43,14 @@ public class exampleOOP {
 		System.out.println("Man age is " + getManAge());
 		System.out.println("Girl name is " + getGirlName());
 		System.out.println("Girl name is " + getGirlAge());
+	}
+
+	public exampleOOP(String manName, String manAge, String girlName, String girlAge) {
+		super();
+		this.manName = manName;
+		this.manAge = manAge;
+		this.girlName = girlName;
+		this.girlAge = girlAge;
 	}
 
 	public static void main(String[] args) {
