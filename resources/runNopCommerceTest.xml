@@ -4,10 +4,10 @@
   <test name="Run on FireFox">
   <parameter name ="browser" value ="firefox"/>
     <classes>
-      <class name="com.nopcommerce.user.Level_07_Switch_Page"/>
+      <class name="com.nopcommerce.user.Level_09_Dynamic_Locator"/>
     </classes>
   </test> 
 
  
-  
+   
 </suite> 

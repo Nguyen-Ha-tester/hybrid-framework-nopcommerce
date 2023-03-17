@@ -6,8 +6,7 @@ public class topic_03_operator { // Phép toán học
 
 	public static void main(String[] args) {
 
-		int number = 16; //Phép gán
-		 
+		int number = 16; // Phép gán
 
 		number += 5; // nghĩa là number = number + 5
 		number -= 5; // nghĩa là number = number -5
@@ -19,7 +18,7 @@ public class topic_03_operator { // Phép toán học
 		++number; // nghĩa là
 
 		System.out.println(number);
-		if (number == 5) { // Phép toán tử
+		if (number == 5) { // Phép toán tử. Phép toán tử trong String có == và +
 			System.out.println("true");
 		} else {
 			System.out.println("false");
@@ -32,7 +31,7 @@ public class topic_03_operator { // Phép toán học
 
 		}
 		boolean status = (number == 2 ? true : false); // Biểu thức condition (tam nguyên) có 3 dấu = ? : => tương tự
-														// biểu thức ifElse
+														 // biểu thức ifElse
 		System.out.println(status);
 
 		// Gọi chạy các hàm public khác
@@ -41,7 +40,7 @@ public class topic_03_operator { // Phép toán học
 		run.Exercise_02();
 		run.Exercise_03();
 	}
-	
+
 	@Test
 	public void Exercise_01() {
 		Object P1 = "Tuan";
@@ -52,13 +51,13 @@ public class topic_03_operator { // Phép toán học
 	public void Exercise_02() {
 		int a = 1;
 		int b = 6;
-		//Cách 1:
+		// Cách 1:
 		if (a != b) {
 			int a1 = b;
 			int b1 = a;
 			System.out.println("After swapping then a = " + a1 + "," + " b = " + b1);
 		}
-		//Cách 2:
+		// Cách 2:
 		a = a + b;
 		b = a - b;
 		a = a - b;

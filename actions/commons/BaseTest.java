@@ -17,15 +17,17 @@ public class BaseTest extends BasePage {
 	private String osName = System.getProperty("os.name");
 
 	protected WebDriver getBrowserDriver(String browserName) {
+		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+
 		// Firefox
-		if (browserName.equals("firefox")) {
+		if (browserList == BrowserList.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
-			if (osName.contains("Mac OS")) {
+			if (osName.contains("Mac")) {
 			} else {
 				WebDriverManager.firefoxdriver().setup();
 			}
 			driver = new FirefoxDriver();
-		} else if (browserName.equals("h_firefox")) {
+		} else if (browserList == BrowserList.H_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--headless");
@@ -33,14 +35,14 @@ public class BaseTest extends BasePage {
 			driver = new FirefoxDriver();
 
 			// Chrome
-		} else if (browserName.equals("chrome")) {
-			if (osName.contains("Mac OS")) {
+		} else if (browserList == BrowserList.CHROME) {
+			if (osName.contains("Mac")) {
 				WebDriverManager.chromedriver().setup();
 			} else {
 				WebDriverManager.chromedriver().setup();
 			}
 			driver = new ChromeDriver();
-		} else if (browserName.equals("h_chrome")) {
+		} else if (browserList == BrowserList.H_CHROME) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
@@ -48,8 +50,8 @@ public class BaseTest extends BasePage {
 			driver = new ChromeDriver();
 
 			// Edge
-		} else if (browserName.equals("edge")) {
-			if (osName.contains("Mac OS")) {
+		} else if (browserList == BrowserList.EDGE) {
+			if (osName.contains("Mac")) {
 				WebDriverManager.edgedriver().setup();
 			} else {
 				WebDriverManager.edgedriver().setup();
@@ -57,19 +59,19 @@ public class BaseTest extends BasePage {
 			driver = new EdgeDriver();
 
 			// Opera
-		} else if (browserName.equals("opera")) {
+		} else if (browserList == BrowserList.OPERA) {
 			WebDriverManager.operadriver().setup();
 			driver = new OperaDriver();
 
 			// Coc Coc: use chromedriver version older 5 or 6 than cococ version
-		} else if (browserName.equals("coc coc")) {
+		} else if (browserList == BrowserList.COCCOC) {
 			WebDriverManager.chromedriver().driverVersion("107.0.5304.62").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setBinary("");
 			driver = new ChromeDriver(options);
 
 			// Brave: use chromedriver version same with brave browser version
-		} else if (browserName.equals("brave")) {
+		} else if (browserList == BrowserList.BRAVE) {
 			WebDriverManager.chromedriver().driverVersion(".....").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setBinary("");
@@ -80,4 +82,14 @@ public class BaseTest extends BasePage {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		return driver;
 	}
+
+	// protected String getEnvironmentValue(String serverName) {
+	// String envURL = null;
+	// EnvironmentList environment = EnvironmentList.valueOf(serverName.toUpperCase());
+	// if (environment == EnvironmentList.DEV) {
+	//
+	// }
+	// return envURL;
+	//
+	// }
 }
