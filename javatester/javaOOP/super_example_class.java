@@ -14,4 +14,11 @@ public class super_example_class {
 		driver.manage().timeouts().implicitlyWait(longTimeout, TimeUnit.MILLISECONDS); // hàm super sẽ gọi đến biến longTimeout của class cha
 	}
 
+	// public super_example_class(String number) {
+	// System.out.println("This is farther constructor" + number);
+	// }
+	//
+	// public super_example_class(String number2, String number) {
+	// System.out.println("This is farther constructor" + number + number2);
+	// }
 }

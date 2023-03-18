@@ -38,4 +38,9 @@ public class topic_05_this_super extends super_example_class {
 		setImplicitWait(); // Gọi đến hàm của class hiện tại
 		super.setImplicitWait(); // Gọi đến hàm của class cha
 	}
+
+	// public topic_05_this_super() {
+	// super("number", "number2"); // super chỉ định rõ constructor nào ở class cha sẽ được chọn.
+	// System.out.println("This is child constructor");
+	// }
 }
