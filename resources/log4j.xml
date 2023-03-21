@@ -28,7 +28,7 @@
 			<param name="ConversionPattern" value="[%d] %m%n" />
 		</layout>
 	</appender>
-
+<!-- -->
 	<appender name="testng" class="commons.TestNGAppender"> <!-- Khi log chạy xong thì sẽ lưu vào report cho m  -->
 		<param name="Threshold" value="INFO" />
 		<layout class="org.apache.log4j.PatternLayout">
