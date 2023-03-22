@@ -40,5 +40,9 @@
 	<classpathentry kind="lib" path="libraryWebDriverManager/jna-5.8.0.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/slf4j-api-2.0.3.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/webdrivermanager-5.3.1.jar"/>
+	<classpathentry kind="lib" path="libraryReportNG/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="libraryReportNG/guice-3.0.jar"/>
+	<classpathentry kind="lib" path="libraryReportNG/reportng-1.1.4.jar"/>
+	<classpathentry kind="lib" path="libraryReportNG/velocity-1.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
