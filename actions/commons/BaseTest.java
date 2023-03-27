@@ -14,7 +14,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest extends BasePage {
 	private WebDriver driver;
-	private String osName = System.getProperty("os.name");
 
 	protected WebDriver getBrowserDriver(String browserName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
@@ -22,7 +21,7 @@ public class BaseTest extends BasePage {
 		// Firefox
 		if (browserList == BrowserList.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
-			if (osName.contains("Mac")) {
+			if (GlobalConstants.OS_NAME.contains("Mac")) {
 			} else {
 				WebDriverManager.firefoxdriver().setup();
 			}
@@ -36,7 +35,7 @@ public class BaseTest extends BasePage {
 
 			// Chrome
 		} else if (browserList == BrowserList.CHROME) {
-			if (osName.contains("Mac")) {
+			if (GlobalConstants.OS_NAME.contains("Mac")) {
 				WebDriverManager.chromedriver().setup();
 			} else {
 				WebDriverManager.chromedriver().setup();
@@ -51,7 +50,7 @@ public class BaseTest extends BasePage {
 
 			// Edge
 		} else if (browserList == BrowserList.EDGE) {
-			if (osName.contains("Mac")) {
+			if (GlobalConstants.OS_NAME.contains("Mac")) {
 				WebDriverManager.edgedriver().setup();
 			} else {
 				WebDriverManager.edgedriver().setup();
@@ -67,19 +66,19 @@ public class BaseTest extends BasePage {
 		} else if (browserList == BrowserList.COCCOC) {
 			WebDriverManager.chromedriver().driverVersion("107.0.5304.62").setup();
 			ChromeOptions options = new ChromeOptions();
-			options.setBinary("");
+			options.setBinary("C://.....");
 			driver = new ChromeDriver(options);
 
 			// Brave: use chromedriver version same with brave browser version
 		} else if (browserList == BrowserList.BRAVE) {
 			WebDriverManager.chromedriver().driverVersion(".....").setup();
 			ChromeOptions options = new ChromeOptions();
-			options.setBinary("");
+			options.setBinary("C://.....");
 			driver = new ChromeDriver(options);
 		} else {
 			throw new RuntimeException("Please input with correct browser name."); // RuntimeException có nghĩa là chạy lỗi phát là throw ngay
 		}
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIME_OUT, TimeUnit.SECONDS);
 		return driver;
 	}
 
