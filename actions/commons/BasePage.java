@@ -128,7 +128,7 @@ public class BasePage {
 		return driver.findElement(getByLocator(locatorType));
 	}
 
-	private List<WebElement> getListWebElements(WebDriver driver, String locatorType) {
+	protected List<WebElement> getListWebElements(WebDriver driver, String locatorType) {
 		return driver.findElements(getByLocator(locatorType));
 	}
 
@@ -173,7 +173,7 @@ public class BasePage {
 		}
 	}
 
-	protected void sleepInSecond(long timeInSecond) {
+	public void sleepInSecond(long timeInSecond) {
 		try {
 			Thread.sleep(timeInSecond * 1000);
 		} catch (InterruptedException e) {
