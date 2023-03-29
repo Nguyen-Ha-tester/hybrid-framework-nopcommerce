@@ -29,4 +29,8 @@ public class HomePageObject extends BasePage {
 		pressKeyToElement(driver, HomePageUI.DYNAMIC_COLUMN_NAME, Keys.ENTER, columnName);
 	}
 
+	public void enterToTextboxOfColumnNameAtRowNumber(String string, String string2, String string3) {
+
+	}
+
 }

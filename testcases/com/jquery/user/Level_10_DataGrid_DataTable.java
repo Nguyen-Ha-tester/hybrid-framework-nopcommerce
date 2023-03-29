@@ -45,6 +45,13 @@ public class Level_10_DataGrid_DataTable extends BaseTest {
 
 	}
 
+	@Test
+	public void Table_03_Enter_Textbox_At_Any_Row() {
+
+		homePage.enterToTextboxOfColumnNameAtRowNumber("Album", "1", "Michael 97");
+
+	}
+
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
