@@ -7,7 +7,7 @@
 	<appender name="console" class="org.apache.log4j.ConsoleAppender"> <!-- name = console => log ra file console trên màn hình-->
 		<param name="Target" value="System.out" />
 		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%m%n" />
+			<param name="ConversionPattern" value="[%d] %m%n" />
 		</layout>
 	</appender>
 
@@ -15,7 +15,7 @@
 		<param name="File" value="./scriptLogs/NopCommerce.txt" />
 		<param name="Append" value="false" /> <!-- Dùng FileAppender chỉ lưu lần chạy gần nhất-->
 		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%m%n" />
+			<param name="ConversionPattern" value="[%d] %m%n" />
 		</layout>
 	</appender>
 
@@ -25,14 +25,14 @@
 		<param name="maxFileSize" value="10MB" /> <!-- Dung lượng lưu trữ log là 10MB khá nhiều-->
 		<param name="maxBackupIndex" value="10" /> <!--show 10 lần chạy gần nhất -->
 		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%m%n" />
+			<param name="ConversionPattern" value="[%d] %m%n" />
 		</layout>
 	</appender>
 
 	<appender name="testng" class="commons.TestNGAppender"> <!-- Khi log chạy xong thì sẽ lưu vào report cho m  -->
 		<param name="Threshold" value="INFO" />
 		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%m%n" />
+			<param name="ConversionPattern" value="[%d] %m%n" />
 		</layout>
 	</appender>
 
