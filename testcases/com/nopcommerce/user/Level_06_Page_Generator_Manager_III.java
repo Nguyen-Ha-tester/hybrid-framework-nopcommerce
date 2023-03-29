@@ -10,7 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import commons.PageGeneratorManagerNopCommerce;
+import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;

@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import commons.BaseTest;
 import commons.GlobalConstants;
-import commons.PageGeneratorManagerNopCommerce;
+import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.user.UserAddressesPageObject;
 import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
@@ -40,7 +40,7 @@ public class Level_07_Switch_Page extends BaseTest {
 		lastName = "FC";
 		emailAddress = "automationtesting" + generateFakeNumber() + "@gmail.comm";
 		password = "123456x";
-		openPageUrl(driver, GlobalConstants.USER_PAGE_URL);
+		openPageUrl(driver, GlobalConstants.USER_PAGE_NOP_COMMERCE_URL);
 	}
 
 	@Test

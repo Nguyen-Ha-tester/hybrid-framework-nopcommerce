@@ -6,6 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -16,6 +17,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
+import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
 import pageUIs.nopCommerce.admin.AdminBasePageUI;
 import pageUIs.nopCommerce.user.UserBasePageUI;
 
@@ -240,6 +242,11 @@ public class BasePage {
 		action.moveToElement(getWebElement(driver, locatorType)).perform();
 	}
 
+	protected void pressKeyToElement(WebDriver driver, String locatorType, Keys key) {
+		Actions action = new Actions(driver);
+		action.sendKeys(getWebElement(driver, locatorType), key).perform();
+	}
+
 	protected void scrollToBottomPage(WebDriver driver) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("window.scrollBy(0,document.body.scrollHeight)");
@@ -376,6 +383,11 @@ public class BasePage {
 
 	protected int getElementSize(WebDriver driver, String locatorType, String... dynamicValues) {
 		return getListWebElements(driver, getDynamicXpathLocator(locatorType, dynamicValues)).size();
+	}
+
+	protected void pressKeyToElement(WebDriver driver, String locatorType, Keys key, String... dynamicValues) {
+		Actions action = new Actions(driver);
+		action.sendKeys(getWebElement(driver, getDynamicXpathLocator(locatorType, dynamicValues)), key).perform();
 	}
 
 	// Dynamic Page Area

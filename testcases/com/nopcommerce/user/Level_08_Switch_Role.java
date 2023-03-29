@@ -11,9 +11,9 @@ import org.testng.annotations.Test;
 
 import commons.BaseTest;
 import commons.GlobalConstants;
-import commons.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.admin.AdminDashboardPageObject;
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
+import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
@@ -48,7 +48,7 @@ public class Level_08_Switch_Role extends BaseTest {
 		userRegisterPage.inputConfirmPassword(userPassword);
 		userRegisterPage.clickRegisterButton();
 		Assert.assertEquals(userRegisterPage.getSuccessMessage(), "Your registration completed");
-		openPageUrl(driver, GlobalConstants.USER_PAGE_URL);
+		openPageUrl(driver, GlobalConstants.USER_PAGE_NOP_COMMERCE_URL);
 	}
 
 	@Test
@@ -74,7 +74,7 @@ public class Level_08_Switch_Role extends BaseTest {
 	@Test
 	public void Role_02_Admin_Login() {
 		// Login Page (admin) -> Login Page (User)
-		adminLoginPage.openPageUrl(driver, GlobalConstants.USER_PAGE_URL);
+		adminLoginPage.openPageUrl(driver, GlobalConstants.USER_PAGE_NOP_COMMERCE_URL);
 		userHomePage = PageGeneratorManagerNopCommerce.getUserHomePage(driver);
 		userLoginPage = userHomePage.clickLoginLink();
 

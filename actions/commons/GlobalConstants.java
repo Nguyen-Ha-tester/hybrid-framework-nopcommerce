@@ -4,7 +4,8 @@ import java.io.File;
 
 public class GlobalConstants {
 	public static final String ADMIN_PAGE_URL = "https://admin-demo.nopcommerce.com";
-	public static final String USER_PAGE_URL = "https://demo.nopcommerce.com/";
+	public static final String USER_PAGE_NOP_COMMERCE_URL = "https://demo.nopcommerce.com/";
+	public static final String USER_PAGE_JQUERY_URL = "https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/";
 	public static final long LONG_TIME_OUT = 30;
 	public static final long SHORT_TIME_OUT = 5;
 	public static final String PROJECT_PATH = System.getProperty("user.dir");

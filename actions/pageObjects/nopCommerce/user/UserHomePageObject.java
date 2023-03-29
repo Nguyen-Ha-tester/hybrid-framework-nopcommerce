@@ -3,7 +3,6 @@ package pageObjects.nopCommerce.user;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import commons.PageGeneratorManagerNopCommerce;
 import pageUIs.nopCommerce.user.UserHomePageUI;
 
 public class UserHomePageObject extends BasePage {
