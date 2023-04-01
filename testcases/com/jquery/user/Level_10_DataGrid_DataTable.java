@@ -46,18 +46,25 @@ public class Level_10_DataGrid_DataTable extends BaseTest {
 
 	}
 
-	public void Table_03_Enter_Textbox_At_Any_Row() {
+	public void Table_03_Get_Value_Each_Row_At_All_Page() {
+		// Hàm đọc dữ liệu của file dataGridDemo
+		// rồi lưu vào 1 list<String> = expectedValueAllRowsAllPages để so sánh với kết quả run test thực tế actual
+		actualValueAllRowsAllPages = homePage.getValueEachRowAtAllPage();
+		Assert.assertEquals(actualValueAllRowsAllPages, expectedValueAllRowsAllPages);
+	}
 
+	@Test
+	public void Table_04_Enter_Textbox() {
+		openPageUrl(driver, GlobalConstants.USER_PAGE_JQUERY_URL);
+		homePage = new PageGeneratorManager().getHomePage(driver);
 		homePage.enterToTextboxOfColumnNameAtRowNumber("Album", "1", "Michael 97");
 		homePage.sleepInSecond(3);
 	}
 
 	@Test
-	public void Table_04_Get_Value_Each_Row_At_All_Page() {
-		// Hàm đọc dữ liệu của file dataGridDemo
-		// rồi lưu vào 1 list<String> = expectedValueAllRowsAllPages để so sánh với kết quả run test thực tế actual
-		actualValueAllRowsAllPages = homePage.getValueEachRowAtAllPage();
-		Assert.assertEquals(actualValueAllRowsAllPages, expectedValueAllRowsAllPages);
+	public void Table_05_Select_Dropdown() {
+		homePage.selectDropdownOfColumnNameAtRowNumber("Country", "2", "Germany");
+
 	}
 
 	@AfterClass

@@ -390,6 +390,11 @@ public class BasePage {
 		action.sendKeys(getWebElement(driver, getDynamicXpathLocator(locatorType, dynamicValues)), key).perform();
 	}
 
+	protected void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textValue, String... dynamicValues) {
+		Select select = new Select(getWebElement(driver, locatorType));
+		select.selectByVisibleText(textValue);
+	}
+
 	// Dynamic Page Area
 	public BasePage openPagesInMyAccountPageByName(WebDriver driver, String pageName) {
 		waitForElementVisible(driver, UserBasePageUI.DYNAMIC_PAGES_IN_MY_ACCOUNT_PAGE, pageName);

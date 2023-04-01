@@ -33,9 +33,6 @@ public class HomePageObject extends BasePage {
 		pressKeyToElement(driver, HomePageUI.DYNAMIC_COLUMN_NAME, Keys.ENTER, columnName);
 	}
 
-	public void enterToTextboxOfColumnNameAtRowNumber(String string, String string2, String string3) {
-	}
-
 	public List<String> getValueEachRowAtAllPage() {
 		int numberOfAllPages = getElementSize(driver, HomePageUI.ALL_PAGE_LOCATOR);
 
@@ -62,6 +59,19 @@ public class HomePageObject extends BasePage {
 			System.out.println(valueEachRowEachPage);
 		}
 		return valueInAllRowsAllPages;
+	}
+
+	public void enterToTextboxOfColumnNameAtRowNumber(String columnName, String rowNumber, String valueInTextField) {
+		int columnIndex = getElementSize(driver, HomePageUI.DYNAMIC_COLUMN_INDEX_BY_NAME, columnName) + 1;
+		waitForElementVisible(driver, HomePageUI.DYNAMIC_TEXT_FIELD, rowNumber, String.valueOf(columnIndex));
+		sendkeyToElement(driver, HomePageUI.DYNAMIC_TEXT_FIELD, valueInTextField, rowNumber, String.valueOf(columnIndex));
+	}
+
+	public void selectDropdownOfColumnNameAtRowNumber(String columnName, String rowNumber, String valueInDropDown) {
+		int columnIndex = getElementSize(driver, HomePageUI.DYNAMIC_COLUMN_INDEX_BY_NAME, columnName) + 1;
+		waitForElementClickable(driver, HomePageUI.DYNAMIC_TEXT_FIELD, rowNumber, String.valueOf(columnIndex));
+		selectItemInDefaultDropdown(driver, HomePageUI.DYNAMIC_TEXT_FIELD, valueInDropDown, rowNumber, String.valueOf(columnIndex));
+
 	}
 
 }
