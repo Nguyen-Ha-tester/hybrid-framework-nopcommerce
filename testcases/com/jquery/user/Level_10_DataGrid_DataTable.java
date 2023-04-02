@@ -11,21 +11,21 @@ import org.testng.annotations.Test;
 
 import commons.BaseTest;
 import commons.GlobalConstants;
-import pageObjects.jQuery.HomePageObject;
+import pageObjects.jQuery.HomePageObjectDataTable;
 import pageObjects.jQuery.PageGeneratorManager;
 
 public class Level_10_DataGrid_DataTable extends BaseTest {
 	private WebDriver driver;
 	List<String> actualValueAllRowsAllPages;
 	List<String> expectedValueAllRowsAllPages;
-	private HomePageObject homePage;
+	private HomePageObjectDataTable homePage;
 
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 		openPageUrl(driver, GlobalConstants.USER_PAGE_JQUERY_URL);
-		homePage = new PageGeneratorManager().getHomePage(driver);
+		homePage = new PageGeneratorManager().getHomePageDataTable(driver);
 
 	}
 
@@ -55,9 +55,9 @@ public class Level_10_DataGrid_DataTable extends BaseTest {
 
 	@Test
 	public void Table_04_Enter_Textbox() {
-		openPageUrl(driver, GlobalConstants.USER_PAGE_JQUERY_URL);
-		homePage = new PageGeneratorManager().getHomePage(driver);
-		homePage.enterToTextboxOfColumnNameAtRowNumber("Album", "1", "Michael 97");
+		openPageUrl(driver, GlobalConstants.USER_PAGE_JQUERY_UR_2);
+		homePage = new PageGeneratorManager().getHomePageDataTable(driver);
+		homePage.enterToTextboxOfColumnNameAtRowNumber("Company", "1", "Michael 97");
 		homePage.sleepInSecond(3);
 	}
 

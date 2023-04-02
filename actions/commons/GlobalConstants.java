@@ -6,13 +6,14 @@ public class GlobalConstants {
 	public static final String ADMIN_PAGE_URL = "https://admin-demo.nopcommerce.com";
 	public static final String USER_PAGE_NOP_COMMERCE_URL = "https://demo.nopcommerce.com/";
 	public static final String USER_PAGE_JQUERY_URL = "https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/";
+	public static final String USER_PAGE_JQUERY_UPLOAD_FILE_URL = "https://blueimp.github.io/jQuery-File-Upload/";
 	public static final long LONG_TIME_OUT = 30;
 	public static final long SHORT_TIME_OUT = 5;
 	public static final String PROJECT_PATH = System.getProperty("user.dir");
 	public static final String OS_NAME = System.getProperty("os.name");
 
 	// Trỏ về location mặc định của folder uploadFiles
-	public static final String UPLOAD_FILE = PROJECT_PATH + File.separator + "uploadFiles";
+	public static final String UPLOAD_FILE = PROJECT_PATH + File.separator + "uploadFiles" + File.separator;
 	// Trỏ về location mặc định của folder downloadFiles
 	public static final String DOWNLOAD_FILE = PROJECT_PATH + File.separator + "downloadFiles";
 	public static final String BROWSER_LOG = PROJECT_PATH + File.separator + "browserLogs";
@@ -28,4 +29,5 @@ public class GlobalConstants {
 	public static final String DB_TEST_PASS = "TeSTP@sS13";
 
 	public static final long RETRY_TEST_FAIL = 3;
+	public static final String USER_PAGE_JQUERY_UR_2 = "https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/";
 }

@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
 import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
+import pageUIs.jQuery.BasePageUIJQuery;
 import pageUIs.nopCommerce.admin.AdminBasePageUI;
 import pageUIs.nopCommerce.user.UserBasePageUI;
 
@@ -341,6 +342,16 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(locatorType)));
 	}
 
+	public void uploadMultipleFiles(WebDriver driver, String... fileNames) {
+		String filePath = GlobalConstants.UPLOAD_FILE;
+		String fullFileName = "";
+		for (String file : fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+		fullFileName = fullFileName.trim();
+		getWebElement(driver, BasePageUIJQuery.UPLOAD_FILE_BUTTON).sendKeys(fullFileName);
+	}
+
 	// Dynamic Method Area
 	private String getDynamicXpathLocator(String locatorType, String... dynamicValues) {
 		if (locatorType.startsWith("xpath=") || locatorType.startsWith("XPATH=") || locatorType.startsWith("Xpath=") || locatorType.startsWith("XPath=")) {
@@ -391,7 +402,7 @@ public class BasePage {
 	}
 
 	protected void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textValue, String... dynamicValues) {
-		Select select = new Select(getWebElement(driver, locatorType));
+		Select select = new Select(getWebElement(driver, getDynamicXpathLocator(locatorType, dynamicValues)));
 		select.selectByVisibleText(textValue);
 	}
 
