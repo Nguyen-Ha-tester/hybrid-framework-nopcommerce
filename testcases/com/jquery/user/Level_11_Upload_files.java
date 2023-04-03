@@ -33,12 +33,15 @@ public class Level_11_Upload_files extends BaseTest {
 		homePageUploadFile.uploadMultipleFiles(driver, oneFile);
 		Assert.assertTrue(homePageUploadFile.isFileLoaded(oneFile));
 		homePageUploadFile.clickStartUploadFile(oneFile);
+		Assert.assertTrue(homePageUploadFile.isFileUploaded(oneFile));
 
 	}
 
 	@Test
 	public void UploadFile_02_Multiple_File_Per_Time() {
 		homePageUploadFile.uploadMultipleFiles(driver, multiplefile);
+		homePageUploadFile.clickStartUploadFile(multiplefile);
+		Assert.assertTrue(homePageUploadFile.isFileUploaded(oneFile));
 
 	}
 
