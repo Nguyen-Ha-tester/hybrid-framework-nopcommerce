@@ -29,6 +29,7 @@ public class Level_13_Element_Undisplayed extends BaseTest {
 		verifyTrue(loginPage.isEmailAddressTextboxDisplayed());
 	}
 
+	@Test
 	public void TC_02_Verify_Element_Undisplayed_Presence() {
 		// Có thể dùng 2 cách:
 		// Cách 1: Dùng verifyTrue element undisplayed
@@ -37,10 +38,12 @@ public class Level_13_Element_Undisplayed extends BaseTest {
 		verifyFalse(loginPage.isConfirmEmailAddressTextboxDisplayed());
 	}
 
+	@Test
 	public void TC_03_Verify_Element_Undisplayed_Staleness() {
 		loginPage.clickCloseIcon();
 		loginPage.sleepInSecond(2);
-		verifyFalse(loginPage.isConfirmEmailAddressTextboxDisplayed());
+		verifyTrue(loginPage.isConfirmEmailAddressTextboxUndisplayedInDom());
+
 	}
 
 	@AfterClass

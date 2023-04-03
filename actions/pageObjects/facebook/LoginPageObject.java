@@ -32,4 +32,8 @@ public class LoginPageObject extends BasePage {
 		clickToElement(driver, LoginPageUI.CLOSE_ICON);
 	}
 
+	public boolean isConfirmEmailAddressTextboxUndisplayedInDom() {
+		return isElementUndisplayed(driver, LoginPageUI.CONFIRM_EMAIL_ADDRESS_TEXT_BOX);
+	}
+
 }
