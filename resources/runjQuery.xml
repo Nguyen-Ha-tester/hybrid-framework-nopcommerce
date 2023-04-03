@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite  name="JQuery">
  
+ <listeners>
+ <listener class-name="commons.MethodListener"></listener>
+ </listeners> 
+ 
   <test name="Run on FireFox">
   <parameter name ="browser" value ="firefox"/>
     <classes>
-      <class name="com.jquery.user.Level_11_Upload_files"/>
+      <class name="com.jquery.user.Level_12_Assert_Verify"/>
     </classes>
-  </test> 
+  </test>
 
- 
-  <test name="Run on Chrome">
-  <parameter name ="browser" value ="Chrome"/>
-    <classes>
-      <class name="com.jquery.user.Level_11_Upload_files"/>
-    </classes>
-  </test> 
-
- 
   
 </suite> 

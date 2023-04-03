@@ -93,16 +93,13 @@ public class BaseTest extends BasePage {
 	// return envURL;
 	//
 	// }
-	private boolean verifyTrue(boolean condition) {
+	protected boolean verifyTrue(boolean condition) {
 		boolean pass = true;
 		try {
-			if (condition == true) {
-				System.out.println(" -------------------------- PASSED -------------------------- ");
-			} else {
-				System.out.println(" -------------------------- FAILED -------------------------- ");
-			}
 			Assert.assertTrue(condition);
+			System.out.println(" -------------------------- PASSED -------------------------- ");
 		} catch (Throwable e) {
+			System.out.println(" -------------------------- FAILED -------------------------- ");
 			pass = false;
 
 			// Add lỗi vào ReportNG
@@ -112,16 +109,13 @@ public class BaseTest extends BasePage {
 		return pass;
 	}
 
-	private boolean verifyFalse(boolean condition) {
+	protected boolean verifyFalse(boolean condition) {
 		boolean pass = true;
 		try {
-			if (condition == false) {
-				System.out.println(" -------------------------- PASSED -------------------------- ");
-			} else {
-				System.out.println(" -------------------------- FAILED -------------------------- ");
-			}
 			Assert.assertFalse(condition);
+			System.out.println(" -------------------------- PASSED -------------------------- ");
 		} catch (Throwable e) {
+			System.out.println(" -------------------------- FAILED -------------------------- ");
 			pass = false;
 			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
 			Reporter.getCurrentTestResult().setThrowable(e);
@@ -129,14 +123,14 @@ public class BaseTest extends BasePage {
 		return pass;
 	}
 
-	private boolean verifyEquals(Object actual, Object expected) {
+	protected boolean verifyEquals(Object actual, Object expected) {
 		boolean pass = true;
 		try {
 			Assert.assertEquals(actual, expected);
 			System.out.println(" -------------------------- PASSED -------------------------- ");
 		} catch (Throwable e) {
-			pass = false;
 			System.out.println(" -------------------------- FAILED -------------------------- ");
+			pass = false;
 			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
 			Reporter.getCurrentTestResult().setThrowable(e);
 		}
