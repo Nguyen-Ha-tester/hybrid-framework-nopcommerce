@@ -15,9 +15,9 @@ import pageObjects.jQuery.PageGeneratorManager;
 public class Level_11_Upload_files extends BaseTest {
 	private WebDriver driver;
 	private HomePageObjectUploadFile homePageUploadFile;
-	String oneFile = "2.png";
+	String oneFile = "3.png";
 	String secondFile = "1.jpg";
-	String[] multiplefile = { oneFile, secondFile };
+	String[] multipleFile = { oneFile, secondFile };
 
 	@Parameters("browser")
 	@BeforeClass
@@ -33,15 +33,21 @@ public class Level_11_Upload_files extends BaseTest {
 		homePageUploadFile.uploadMultipleFiles(driver, oneFile);
 		Assert.assertTrue(homePageUploadFile.isFileLoaded(oneFile));
 		homePageUploadFile.clickStartUploadFile(oneFile);
-		Assert.assertTrue(homePageUploadFile.isFileUploaded(oneFile));
+		Assert.assertTrue(homePageUploadFile.isFileLinkUploaded(oneFile));
+		Assert.assertTrue(homePageUploadFile.isFileImageUploaded(oneFile));
 
 	}
 
 	@Test
 	public void UploadFile_02_Multiple_File_Per_Time() {
-		homePageUploadFile.uploadMultipleFiles(driver, multiplefile);
-		homePageUploadFile.clickStartUploadFile(multiplefile);
-		Assert.assertTrue(homePageUploadFile.isFileUploaded(oneFile));
+		homePageUploadFile.refreshPage(driver);
+		homePageUploadFile.uploadMultipleFiles(driver, multipleFile);
+		homePageUploadFile.clickStartUploadFile(oneFile);
+		homePageUploadFile.clickStartUploadFile(secondFile);
+		Assert.assertTrue(homePageUploadFile.isFileLinkUploaded(oneFile));
+		Assert.assertTrue(homePageUploadFile.isFileImageUploaded(oneFile));
+		Assert.assertTrue(homePageUploadFile.isFileLinkUploaded(secondFile));
+		Assert.assertTrue(homePageUploadFile.isFileImageUploaded(secondFile));
 
 	}
 

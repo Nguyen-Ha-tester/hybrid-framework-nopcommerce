@@ -4,7 +4,15 @@
   <test name="Run on FireFox">
   <parameter name ="browser" value ="firefox"/>
     <classes>
-      <class name="com.jquery.user.Level_10_DataGrid_DataTable"/>
+      <class name="com.jquery.user.Level_11_Upload_files"/>
+    </classes>
+  </test> 
+
+ 
+  <test name="Run on Chrome">
+  <parameter name ="browser" value ="Chrome"/>
+    <classes>
+      <class name="com.jquery.user.Level_11_Upload_files"/>
     </classes>
   </test> 
 
