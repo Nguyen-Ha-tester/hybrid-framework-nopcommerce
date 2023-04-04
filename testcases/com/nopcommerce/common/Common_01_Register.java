@@ -12,9 +12,10 @@ import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
-public class Common_01_Register_New_Account extends BaseTest {
+public class Common_01_Register extends BaseTest {
 	private WebDriver driver;
-	private String emailAddress, firstName, lastName, password;
+	public static String emailAddress, password;
+	private String firstName, lastName;
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
 

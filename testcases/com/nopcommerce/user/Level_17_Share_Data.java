@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.nopcommerce.common.Common_01_Register;
+
 import commons.BaseTest;
 import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.user.UserHomePageObject;
@@ -27,8 +29,8 @@ public class Level_17_Share_Data extends BaseTest {
 		driver = getBrowserDriver(browserName);
 		registerPage = PageGeneratorManagerNopCommerce.getUserRegisterPage(driver);
 
-		emailAddress = "";
-		password = "";
+		emailAddress = Common_01_Register.emailAddress;
+		password = Common_01_Register.password;
 
 		log.info("Login - Step 01: Navigate to login page ");
 		loginPage = registerPage.clickLoginLink();
