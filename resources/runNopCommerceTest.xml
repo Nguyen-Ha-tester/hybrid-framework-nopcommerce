@@ -2,7 +2,7 @@
 <suite  name="NopCommerce">
  
   <test name="Run on FireFox">
-  <parameter name ="browser" value ="firefox"/>
+  <parameter name ="browser" value ="chrome"/>
     <classes>
       <class name="com.nopcommerce.user.Level_14_Log_ReportNG"/>
     </classes>
