@@ -219,7 +219,11 @@ public class BasePage {
 	}
 
 	protected boolean isElementDisplayed(WebDriver driver, String locatorType) {
-		return getWebElement(driver, locatorType).isDisplayed();
+		try {
+			return getWebElement(driver, locatorType).isDisplayed();
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	protected boolean isElementEnable(WebDriver driver, String locatorType) {
@@ -463,6 +467,6 @@ public class BasePage {
 		return PageGeneratorManagerNopCommerce.getAdminLoginPage(driver);
 	}
 
-	private long longTimeout = GlobalConstants.LONG_TIME_OUT;
+	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 
 }
