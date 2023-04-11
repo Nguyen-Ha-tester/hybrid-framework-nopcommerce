@@ -50,7 +50,7 @@ public class Level_14_Log_ReportNG extends BaseTest {
 		log.info("Register - Step 07: Click to register button");
 		registerPage.clickRegisterButton();
 		log.info("Register - Step 08: Verify register success message display ");
-		verifyEquals(registerPage.getSuccessMessage(), "Your registration completed");
+		verifyEquals(registerPage.getSuccessMessage(), "Your registration completed...");
 
 	}
 
@@ -64,7 +64,7 @@ public class Level_14_Log_ReportNG extends BaseTest {
 		loginPage.inputPassword(password);
 		log.info("Login - Step 04: Click to login button");
 		homePage = loginPage.clickLoginButton();
-		log.info("Login - Step 05: Verify logout button is displayed");
+		log.info("Login - Step 05: Verify logout button is displayed.");
 		verifyTrue(homePage.isLogOutLinkClickable());
 
 	}

@@ -44,5 +44,19 @@
 	<classpathentry kind="lib" path="libraryReportNG/guice-3.0.jar"/>
 	<classpathentry kind="lib" path="libraryReportNG/reportng-1.1.4.jar"/>
 	<classpathentry kind="lib" path="libraryReportNG/velocity-1.4.jar"/>
+	<classpathentry kind="lib" path="libraryExtendReportV2/bson-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libraryExtendReportV2/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="libraryExtendReportV2/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="libraryExtendReportV2/jsoup-1.8.3.jar"/>
+	<classpathentry kind="lib" path="libraryExtendReportV2/mongodb-driver-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libraryExtendReportV2/mongodb-driver-core-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libraryExtendReportV2/sqlite-jdbc-3.8.11.1.jar"/>
+	<classpathentry kind="lib" path="libraryExtentReportV2/bson-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libraryExtentReportV2/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="libraryExtentReportV2/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="libraryExtentReportV2/jsoup-1.8.3.jar"/>
+	<classpathentry kind="lib" path="libraryExtentReportV2/mongodb-driver-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libraryExtentReportV2/mongodb-driver-core-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libraryExtentReportV2/sqlite-jdbc-3.8.11.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

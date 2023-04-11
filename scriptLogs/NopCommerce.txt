@@ -1,13 +1,13 @@
-[2023-03-21 23:28:23,509] Register - Step 01: Navigate to Register page
-[2023-03-21 23:28:24,892] Register - Step 02: Enter to firstname textbox with value isAutomation'
-[2023-03-21 23:28:25,093] Register - Step 03: Enter to lastname textbox with value isFC'
-[2023-03-21 23:28:25,290] Register - Step 04: Enter to emailAddress textbox with value isautomationtesting93618@gmail.comm'
-[2023-03-21 23:28:25,524] Register - Step 05: Enter to password textbox with value is123456x'
-[2023-03-21 23:28:25,705] Register - Step 06: Enter to confirm password textbox with value is123456x'
-[2023-03-21 23:28:25,912] Register - Step 07: Click to register button
-[2023-03-21 23:28:26,861] Register - Step 08: Verify register success message display 
-[2023-03-21 23:28:26,937] Login - Step 01: Navigate to login page 
-[2023-03-21 23:28:27,597] Login - Step 02: enter to email textbox with value isautomationtesting93618@gmail.comm'
-[2023-03-21 23:28:27,807] Login - Step 03: enter to password textbox with value is123456x'
-[2023-03-21 23:28:27,987] Login - Step 04: Click to login button
-[2023-03-21 23:28:28,981] Login - Step 05: Verify logout button is displayed
+[2023-04-11 18:42:56,889] Register - Step 01: Navigate to Register page
+[2023-04-11 18:42:57,913] Register - Step 02: Enter to firstname textbox with value isAutomation'
+[2023-04-11 18:42:58,116] Register - Step 03: Enter to lastname textbox with value isFC'
+[2023-04-11 18:42:58,275] Register - Step 04: Enter to emailAddress textbox with value isautomationtesting96345@gmail.comm'
+[2023-04-11 18:42:58,522] Register - Step 05: Enter to password textbox with value is123456x'
+[2023-04-11 18:42:58,718] Register - Step 06: Enter to confirm password textbox with value is123456x'
+[2023-04-11 18:42:58,829] Register - Step 07: Click to register button
+[2023-04-11 18:42:59,588] Register - Step 08: Verify register success message display 
+[2023-04-11 18:42:59,646] Login - Step 01: Navigate to login page 
+[2023-04-11 18:43:00,060] Login - Step 02: enter to email textbox with value isautomationtesting96345@gmail.comm'
+[2023-04-11 18:43:00,185] Login - Step 03: enter to password textbox with value is123456x'
+[2023-04-11 18:43:00,333] Login - Step 04: Click to login button
+[2023-04-11 18:43:01,073] Login - Step 05: Verify logout button is displayed.
