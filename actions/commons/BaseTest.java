@@ -1,5 +1,6 @@
 package commons;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
@@ -13,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeSuite;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -45,7 +47,7 @@ public class BaseTest extends BasePage {
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size: 1920x1080");
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver(options);
 
 			// Chrome
 		} else if (browserList == BrowserList.CHROME) {
@@ -60,7 +62,7 @@ public class BaseTest extends BasePage {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size: 1920x1080");
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 
 			// Edge
 		} else if (browserList == BrowserList.EDGE) {
@@ -148,4 +150,26 @@ public class BaseTest extends BasePage {
 		}
 		return pass;
 	}
+
+	@BeforeSuite
+	public void deleteAllFilesInReportNGScreenshot() {
+		System.out.println("---------- START delete file in folder ----------");
+		deleteAllFileInFolder();
+		System.out.println("---------- END delete file in folder ----------");
+	}
+
+	public void deleteAllFileInFolder() {
+		try {
+			File file = new File(GlobalConstants.REPORTNG_SCREENSHOT_FOLDER_PATH);
+			File[] listOfFiles = file.listFiles();
+			for (int i = 0; i < listOfFiles.length; i++) {
+				if (listOfFiles[i].isFile()) {
+					new File(listOfFiles[i].toString()).delete();
+				}
+			}
+		} catch (Exception e) {
+			log.info(e.getMessage());
+		}
+	}
+
 }

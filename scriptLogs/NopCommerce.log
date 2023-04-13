@@ -202,3 +202,109 @@ Login - Step 05: Verify logout button is displayed
 [2023-04-11 18:43:00,185] Login - Step 03: enter to password textbox with value is123456x'
 [2023-04-11 18:43:00,333] Login - Step 04: Click to login button
 [2023-04-11 18:43:01,073] Login - Step 05: Verify logout button is displayed.
+[2023-04-13 11:48:56,994] Register - Step 01: Navigate to Register page
+[2023-04-13 11:48:58,001] Register - Step 02: Enter to firstname textbox with value isAutomation'
+[2023-04-13 11:48:58,068] Register - Step 03: Enter to lastname textbox with value isFC'
+[2023-04-13 11:48:58,126] Register - Step 04: Enter to emailAddress textbox with value isautomationtesting86839@gmail.comm'
+[2023-04-13 11:48:58,190] Register - Step 05: Enter to password textbox with value is123456x'
+[2023-04-13 11:48:58,243] Register - Step 06: Enter to confirm password textbox with value is123456x'
+[2023-04-13 11:48:58,301] Register - Step 07: Click to register button
+[2023-04-13 11:48:58,973] Register - Step 08: Verify register success message display 
+[2023-04-13 11:48:59,189] Login - Step 01: Navigate to login page 
+[2023-04-13 11:48:59,541] Login - Step 02: enter to email textbox with value isautomationtesting86839@gmail.comm'
+[2023-04-13 11:48:59,617] Login - Step 03: enter to password textbox with value is123456x'
+[2023-04-13 11:48:59,671] Login - Step 04: Click to login button
+[2023-04-13 11:49:00,337] Login - Step 05: Verify logout button is displayed.
+[2023-04-13 14:16:20,934] Cannot read the array length because "listOfFiles" is null
+[2023-04-13 14:16:29,127] Register - Step 01: Navigate to Register page
+[2023-04-13 14:16:30,309] Register - Step 02: Enter to firstname textbox with value isAutomation'
+[2023-04-13 14:16:30,436] Register - Step 03: Enter to lastname textbox with value isFC'
+[2023-04-13 14:16:30,486] Register - Step 04: Enter to emailAddress textbox with value isautomationtesting53689@gmail.comm'
+[2023-04-13 14:16:30,532] Register - Step 05: Enter to password textbox with value is123456x'
+[2023-04-13 14:16:30,580] Register - Step 06: Enter to confirm password textbox with value is123456x'
+[2023-04-13 14:16:30,622] Register - Step 07: Click to register button
+[2023-04-13 14:16:31,586] Register - Step 08: Verify register success message display 
+[2023-04-13 14:16:31,846] Login - Step 01: Navigate to login page 
+[2023-04-13 14:16:32,462] Login - Step 02: enter to email textbox with value isautomationtesting53689@gmail.comm'
+[2023-04-13 14:16:32,514] Login - Step 03: enter to password textbox with value is123456x'
+[2023-04-13 14:16:32,557] Login - Step 04: Click to login button
+[2023-04-13 14:16:33,440] Login - Step 05: Verify logout button is displayed.
+[2023-04-13 14:21:40,910] Cannot read the array length because "listOfFiles" is null
+[2023-04-13 14:21:54,199] Register - Step 01: Navigate to Register page
+[2023-04-13 14:21:55,335] Register - Step 02: Enter to firstname textbox with value isAutomation'
+[2023-04-13 14:21:55,433] Register - Step 03: Enter to lastname textbox with value isFC'
+[2023-04-13 14:21:55,487] Register - Step 04: Enter to emailAddress textbox with value isautomationtesting66775@gmail.comm'
+[2023-04-13 14:21:55,544] Register - Step 05: Enter to password textbox with value is123456x'
+[2023-04-13 14:21:55,591] Register - Step 06: Enter to confirm password textbox with value is123456x'
+[2023-04-13 14:21:55,638] Register - Step 07: Click to register button
+[2023-04-13 14:21:56,327] Register - Step 08: Verify register success message display 
+[2023-04-13 14:21:56,634] Login - Step 01: Navigate to login page 
+[2023-04-13 14:21:57,343] Login - Step 02: enter to email textbox with value isautomationtesting66775@gmail.comm'
+[2023-04-13 14:21:57,734] Login - Step 03: enter to password textbox with value is123456x'
+[2023-04-13 14:21:57,782] Login - Step 04: Click to login button
+[2023-04-13 14:21:58,385] Login - Step 05: Verify logout button is displayed.
+[2023-04-13 14:22:23,612] Register - Step 01: Navigate to Register page
+[2023-04-13 14:22:24,652] Register - Step 02: Enter to firstname textbox with value isAutomation'
+[2023-04-13 14:22:24,742] Register - Step 03: Enter to lastname textbox with value isFC'
+[2023-04-13 14:22:24,789] Register - Step 04: Enter to emailAddress textbox with value isautomationtesting78647@gmail.comm'
+[2023-04-13 14:22:24,853] Register - Step 05: Enter to password textbox with value is123456x'
+[2023-04-13 14:22:24,899] Register - Step 06: Enter to confirm password textbox with value is123456x'
+[2023-04-13 14:22:24,944] Register - Step 07: Click to register button
+[2023-04-13 14:22:25,628] Register - Step 08: Verify register success message display 
+[2023-04-13 14:22:25,949] Login - Step 01: Navigate to login page 
+[2023-04-13 14:22:26,363] Login - Step 02: enter to email textbox with value isautomationtesting78647@gmail.comm'
+[2023-04-13 14:22:26,428] Login - Step 03: enter to password textbox with value is123456x'
+[2023-04-13 14:22:26,476] Login - Step 04: Click to login button
+[2023-04-13 14:22:27,843] Login - Step 05: Verify logout button is displayed.
+[2023-04-13 14:23:13,469] Register - Step 01: Navigate to Register page
+[2023-04-13 14:23:14,423] Register - Step 02: Enter to firstname textbox with value isAutomation'
+[2023-04-13 14:23:14,507] Register - Step 03: Enter to lastname textbox with value isFC'
+[2023-04-13 14:23:14,559] Register - Step 04: Enter to emailAddress textbox with value isautomationtesting81545@gmail.comm'
+[2023-04-13 14:23:14,621] Register - Step 05: Enter to password textbox with value is123456x'
+[2023-04-13 14:23:14,672] Register - Step 06: Enter to confirm password textbox with value is123456x'
+[2023-04-13 14:23:14,722] Register - Step 07: Click to register button
+[2023-04-13 14:23:15,376] Register - Step 08: Verify register success message display 
+[2023-04-13 14:23:15,611] Login - Step 01: Navigate to login page 
+[2023-04-13 14:23:15,988] Login - Step 02: enter to email textbox with value isautomationtesting81545@gmail.comm'
+[2023-04-13 14:23:16,057] Login - Step 03: enter to password textbox with value is123456x'
+[2023-04-13 14:23:16,107] Login - Step 04: Click to login button
+[2023-04-13 14:23:16,725] Login - Step 05: Verify logout button is displayed.
+[2023-04-13 14:24:10,375] Register - Step 01: Navigate to Register page
+[2023-04-13 14:24:11,316] Register - Step 02: Enter to firstname textbox with value isAutomation'
+[2023-04-13 14:24:11,392] Register - Step 03: Enter to lastname textbox with value isFC'
+[2023-04-13 14:24:11,450] Register - Step 04: Enter to emailAddress textbox with value isautomationtesting49758@gmail.comm'
+[2023-04-13 14:24:11,515] Register - Step 05: Enter to password textbox with value is123456x'
+[2023-04-13 14:24:11,569] Register - Step 06: Enter to confirm password textbox with value is123456x'
+[2023-04-13 14:24:11,617] Register - Step 07: Click to register button
+[2023-04-13 14:24:12,292] Register - Step 08: Verify register success message display 
+[2023-04-13 14:24:12,519] Login - Step 01: Navigate to login page 
+[2023-04-13 14:24:12,880] Login - Step 02: enter to email textbox with value isautomationtesting49758@gmail.comm'
+[2023-04-13 14:24:12,966] Login - Step 03: enter to password textbox with value is123456x'
+[2023-04-13 14:24:13,020] Login - Step 04: Click to login button
+[2023-04-13 14:24:13,615] Login - Step 05: Verify logout button is displayed.
+[2023-04-13 14:24:48,038] Register - Step 01: Navigate to Register page
+[2023-04-13 14:24:49,025] Register - Step 02: Enter to firstname textbox with value isAutomation'
+[2023-04-13 14:24:49,099] Register - Step 03: Enter to lastname textbox with value isFC'
+[2023-04-13 14:24:49,152] Register - Step 04: Enter to emailAddress textbox with value isautomationtesting85024@gmail.comm'
+[2023-04-13 14:24:49,206] Register - Step 05: Enter to password textbox with value is123456x'
+[2023-04-13 14:24:49,253] Register - Step 06: Enter to confirm password textbox with value is123456x'
+[2023-04-13 14:24:49,300] Register - Step 07: Click to register button
+[2023-04-13 14:24:50,017] Register - Step 08: Verify register success message display 
+[2023-04-13 14:24:50,257] Login - Step 01: Navigate to login page 
+[2023-04-13 14:24:50,644] Login - Step 02: enter to email textbox with value isautomationtesting85024@gmail.comm'
+[2023-04-13 14:24:50,712] Login - Step 03: enter to password textbox with value is123456x'
+[2023-04-13 14:24:50,766] Login - Step 04: Click to login button
+[2023-04-13 14:24:51,424] Login - Step 05: Verify logout button is displayed.
+[2023-04-13 14:26:40,674] Register - Step 01: Navigate to Register page
+[2023-04-13 14:26:41,689] Register - Step 02: Enter to firstname textbox with value isAutomation'
+[2023-04-13 14:26:41,761] Register - Step 03: Enter to lastname textbox with value isFC'
+[2023-04-13 14:26:41,813] Register - Step 04: Enter to emailAddress textbox with value isautomationtesting33984@gmail.comm'
+[2023-04-13 14:26:41,870] Register - Step 05: Enter to password textbox with value is123456x'
+[2023-04-13 14:26:41,914] Register - Step 06: Enter to confirm password textbox with value is123456x'
+[2023-04-13 14:26:41,960] Register - Step 07: Click to register button
+[2023-04-13 14:26:42,612] Register - Step 08: Verify register success message display 
+[2023-04-13 14:26:42,717] Login - Step 01: Navigate to login page 
+[2023-04-13 14:26:43,071] Login - Step 02: enter to email textbox with value isautomationtesting33984@gmail.comm'
+[2023-04-13 14:26:43,154] Login - Step 03: enter to password textbox with value is123456x'
+[2023-04-13 14:26:43,201] Login - Step 04: Click to login button
+[2023-04-13 14:26:43,790] Login - Step 05: Verify logout button is displayed.

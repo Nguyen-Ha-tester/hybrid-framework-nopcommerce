@@ -99,7 +99,7 @@ public class ExtentReportListenerV2 implements ITestListener {
 		Object testClass = result.getInstance();
 		WebDriver webDriver = ((BaseTest) testClass).getDriverInstance();
 		String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BASE64);
-		ExtentManager.getTest().log(LogStatus.FAIL, "Test Failed", ExtentManager.getTest().addBase64ScreenShot(base64Screenshot));
+		ExtentManagerV2.getTest().log(LogStatus.FAIL, "Test Failed", ExtentManagerV2.getTest().addBase64ScreenShot(base64Screenshot));
 	}
 
 	@Override

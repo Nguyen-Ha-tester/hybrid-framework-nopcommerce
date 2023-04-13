@@ -8,9 +8,9 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import commons.GlobalConstants;
 
-public class ExtentManager {
+public class ExtentManagerV2 {
 	private static Map<Integer, ExtentTest> extentTestMap = new HashMap<Integer, ExtentTest>();
-	private static ExtentReports extent = ExtentManager.getReporter();
+	private static ExtentReports extent = ExtentManagerV2.getReporter();
 
 	public synchronized static ExtentReports getReporter() {
 		if (extent == null) {

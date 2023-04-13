@@ -14,9 +14,9 @@ import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
-import reportConfig.ExtentManager;
+import reportConfig.ExtentManagerV2;
 
-public class Level_15_ExtentReport_Version3 extends BaseTest {
+public class Level_16_ExtentReport_Version3 extends BaseTest {
 	private WebDriver driver;
 	private String emailAddress, firstName, lastName, password;
 	private UserHomePageObject homePage;
@@ -47,7 +47,7 @@ public class Level_15_ExtentReport_Version3 extends BaseTest {
 		registerPage.clickRegisterButton();
 		verifyEquals(registerPage.getSuccessMessage(), "Your registration completed...");
 
-		ExtentManager.endTest();
+		ExtentManagerV2.endTest();
 	}
 
 	@Test

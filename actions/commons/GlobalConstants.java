@@ -19,7 +19,7 @@ public class GlobalConstants {
 	public static final String DOWNLOAD_FILE = PROJECT_PATH + File.separator + "downloadFiles";
 	public static final String BROWSER_LOG = PROJECT_PATH + File.separator + "browserLogs";
 	public static final String DRAG_DROP_HTMLS = PROJECT_PATH + File.separator + "dragDropHTMLS";
-	public static final String REPORTNG_SCREENSHOT = PROJECT_PATH + File.separator + "reportNGImages" + File.separator;
+	public static final String REPORTNG_SCREENSHOT_FOLDER_PATH = PROJECT_PATH + File.separator + "reportNGImages" + File.separator;
 	// Một số thông tin của Database
 	// Database Account/ User/ Port/ Pass của dev
 	public static final String DB_DEV_URL = "19.12.32.331:339";

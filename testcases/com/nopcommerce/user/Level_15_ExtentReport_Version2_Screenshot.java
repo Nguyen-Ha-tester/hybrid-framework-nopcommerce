@@ -16,7 +16,7 @@ import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
-import reportConfig.ExtentManager;
+import reportConfig.ExtentManagerV2;
 
 public class Level_15_ExtentReport_Version2_Screenshot extends BaseTest {
 	private WebDriver driver;
@@ -39,45 +39,45 @@ public class Level_15_ExtentReport_Version2_Screenshot extends BaseTest {
 	@Test
 	public void User_01_Register(Method method) {
 
-		ExtentManager.startTest(method.getName(), "User_01_Register");
+		ExtentManagerV2.startTest(method.getName(), "User_01_Register");
 
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 01: Navigate to Register page");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 01: Navigate to Register page");
 		homePage = PageGeneratorManagerNopCommerce.getUserHomePage(driver);
 		registerPage = homePage.openRegisterPage();
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 02: Enter to firstname textbox with value is" + firstName + "'");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 02: Enter to firstname textbox with value is" + firstName + "'");
 		registerPage.inputFirstName(firstName);
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 03: Enter to lastname textbox with value is" + lastName + "'");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 03: Enter to lastname textbox with value is" + lastName + "'");
 		registerPage.inputLastName(lastName);
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 04: Enter to emailAddress textbox with value is" + emailAddress + "'");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 04: Enter to emailAddress textbox with value is" + emailAddress + "'");
 		registerPage.inputEmail(emailAddress);
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 05: Enter to password textbox with value is" + password + "'");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 05: Enter to password textbox with value is" + password + "'");
 		registerPage.inputPassword(password);
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 06: Enter to confirm password textbox with value is" + password + "'");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 06: Enter to confirm password textbox with value is" + password + "'");
 		registerPage.inputConfirmPassword(password);
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 07: Click to register button");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 07: Click to register button");
 		registerPage.clickRegisterButton();
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 08: Verify register success message display ");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 08: Verify register success message display ");
 		verifyEquals(registerPage.getSuccessMessage(), "Your registration completed...");
 
-		ExtentManager.endTest();
+		ExtentManagerV2.endTest();
 	}
 
 	@Test
 	public void User_02_Login(Method method) {
-		ExtentManager.startTest(method.getName(), "User_02_Login");
+		ExtentManagerV2.startTest(method.getName(), "User_02_Login");
 
-		ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 01: Navigate to login page ");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 01: Navigate to login page ");
 		loginPage = registerPage.clickLoginLink();
-		ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 02: enter to email textbox with value is" + emailAddress + "'");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 02: enter to email textbox with value is" + emailAddress + "'");
 		loginPage.inputEmail(emailAddress);
-		ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 03: enter to password textbox with value is" + password + "'");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 03: enter to password textbox with value is" + password + "'");
 		loginPage.inputPassword(password);
-		ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 04: Click to login button");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 04: Click to login button");
 		homePage = loginPage.clickLoginButton();
-		ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 05: Verify logout button is displayed.");
+		ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 05: Verify logout button is displayed.");
 		verifyTrue(homePage.isLogOutLinkClickable());
 
-		ExtentManager.endTest();
+		ExtentManagerV2.endTest();
 
 	}
 
