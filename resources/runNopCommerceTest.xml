@@ -10,7 +10,7 @@
  </listeners> 
  
   <test name="Run on Firefox">
-  <parameter name ="browser" value ="H_FIREFOX"/>
+  <parameter name ="browser" value ="h_firefox"/>
     <classes>
       <class name="com.nopcommerce.user.Level_14_Log_ReportNG"/>
     </classes>
