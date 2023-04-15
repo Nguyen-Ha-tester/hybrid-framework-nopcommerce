@@ -3,6 +3,7 @@ package pageObjects.nopCommerce.user;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
+import io.qameta.allure.Step;
 import pageUIs.nopCommerce.user.UserHomePageUI;
 
 public class UserHomePageObject extends BasePage {
@@ -12,6 +13,7 @@ public class UserHomePageObject extends BasePage {
 		this.driver = driver;
 	}
 
+	@Step("Open Register Page")
 	public UserRegisterPageObject openRegisterPage() {
 		waitForElementClickable(driver, UserHomePageUI.REGISTER_LINK);
 		clickToElement(driver, UserHomePageUI.REGISTER_LINK);
@@ -28,6 +30,7 @@ public class UserHomePageObject extends BasePage {
 
 	}
 
+	@Step("Verify is the log out link clickable")
 	public boolean isLogOutLinkClickable() {
 		return getWebElement(driver, UserHomePageUI.LOG_OUT_LINK).isDisplayed();
 	}
