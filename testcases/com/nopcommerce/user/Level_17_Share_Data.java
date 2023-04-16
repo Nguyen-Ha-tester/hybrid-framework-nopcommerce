@@ -9,6 +9,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
+import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
@@ -18,13 +19,17 @@ public class Level_17_Share_Data extends BaseTest {
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
 	private UserLoginPageObject loginPage;
+	private String emailAddress, password;
 
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-		String emailAddress = "";
-		String password = "";
+		registerPage = PageGeneratorManagerNopCommerce.getUserRegisterPage(driver);
+
+		emailAddress = "";
+		password = "";
+
 		log.info("Login - Step 01: Navigate to login page ");
 		loginPage = registerPage.clickLoginLink();
 		log.info("Login - Step 02: enter to email textbox with value is" + emailAddress + "'");
