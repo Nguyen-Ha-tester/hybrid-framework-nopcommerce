@@ -3,6 +3,7 @@ package com.nopcommerce.user;
 import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -48,7 +49,7 @@ public class Level_16_Allure_Report extends BaseTest {
 		registerPage.inputPassword(password);
 		registerPage.inputConfirmPassword(password);
 		registerPage.clickRegisterButton();
-		verifyEquals(registerPage.getSuccessMessage(), "Your registration completed...");
+		Assert.assertEquals(registerPage.getSuccessMessage(), "Your registration completed...");
 	}
 
 	@Description("Login to system")
@@ -59,7 +60,7 @@ public class Level_16_Allure_Report extends BaseTest {
 		loginPage.inputEmail(emailAddress);
 		loginPage.inputPassword(password);
 		homePage = loginPage.clickLoginButton();
-		verifyTrue(homePage.isLogOutLinkClickable());
+		Assert.assertTrue(homePage.isLogOutLinkClickable());
 
 	}
 
