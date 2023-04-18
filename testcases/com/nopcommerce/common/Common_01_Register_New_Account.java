@@ -1,69 +1,61 @@
-package com.nopcommerce.user;
+package com.nopcommerce.common;
 
 import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
 import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.user.UserHomePageObject;
-import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
-public class Level_16_Allure_Report extends BaseTest {
+public class Common_01_Register_New_Account extends BaseTest {
 	private WebDriver driver;
 	private String emailAddress, firstName, lastName, password;
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
-	private UserLoginPageObject loginPage;
 
 	@Parameters("browser")
-	@BeforeClass
+	@BeforeTest(description = "Create New Common User for all class test")
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
+
 		firstName = "Automation";
 		lastName = "FC";
 		emailAddress = "automationtesting" + generateFakeNumber() + "@gmail.comm";
 		password = "123456x";
-	}
 
-	@Description("Register to system")
-	@Severity(SeverityLevel.NORMAL)
-	@Test
-	public void User_01_Register() {
-
+		log.info("Register - Step 01: Navigate to Register page");
 		homePage = PageGeneratorManagerNopCommerce.getUserHomePage(driver);
 		registerPage = homePage.openRegisterPage();
+
+		log.info("Register - Step 02: Enter to firstname textbox with value is" + firstName + "'");
 		registerPage.inputFirstName(firstName);
+
+		log.info("Register - Step 03: Enter to lastname textbox with value is" + lastName + "'");
 		registerPage.inputLastName(lastName);
+
+		log.info("Register - Step 04: Enter to emailAddress textbox with value is" + emailAddress + "'");
 		registerPage.inputEmail(emailAddress);
+
+		log.info("Register - Step 05: Enter to password textbox with value is" + password + "'");
 		registerPage.inputPassword(password);
+
+		log.info("Register - Step 06: Enter to confirm password textbox with value is" + password + "'");
 		registerPage.inputConfirmPassword(password);
+
+		log.info("Register - Step 07: Click to register button");
 		registerPage.clickRegisterButton();
-		Assert.assertEquals(registerPage.getSuccessMessage(), "Your registration completed...");
-	}
 
-	@Description("Login to system")
-	@Severity(SeverityLevel.NORMAL)
-	@Test
-	public void User_02_Login() {
-		loginPage = registerPage.clickLoginLink();
-		loginPage.inputEmail(emailAddress);
-		loginPage.inputPassword(password);
-		homePage = loginPage.clickLoginButton();
-		Assert.assertTrue(homePage.isLogOutLinkClickable());
+		log.info("Register - Step 08: Verify register success message display ");
+		verifyEquals(registerPage.getSuccessMessage(), "Your registration completed...");
 
 	}
 
-	@AfterClass
+	@AfterTest
 	public void afterClass() {
 		driver.quit();
 	}

@@ -94,6 +94,7 @@ public class BaseTest extends BasePage {
 		} else {
 			throw new RuntimeException("Please input with correct browser name."); // RuntimeException có nghĩa là chạy lỗi phát là throw ngay
 		}
+		openPageUrl(driver, GlobalConstants.USER_PAGE_NOP_COMMERCE_URL);
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		return driver;
 	}

@@ -29,7 +29,6 @@ public class Level_15_ExtentReport_Version2_Screenshot extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-		driver.get("https://demo.nopcommerce.com/");
 		firstName = "Automation";
 		lastName = "FC";
 		emailAddress = "automationtesting" + generateFakeNumber() + "@gmail.comm";
