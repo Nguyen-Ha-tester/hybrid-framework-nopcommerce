@@ -9,14 +9,12 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 public class Level_17_Share_Data extends BaseTest {
 	private WebDriver driver;
-	private String emailAddress, firstName, lastName, password;
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
 	private UserLoginPageObject loginPage;
@@ -25,32 +23,8 @@ public class Level_17_Share_Data extends BaseTest {
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-	}
-
-	@Test
-	public void User_01_Register() {
-		log.info("Register - Step 01: Navigate to Register page");
-		homePage = PageGeneratorManagerNopCommerce.getUserHomePage(driver);
-		registerPage = homePage.openRegisterPage();
-		log.info("Register - Step 02: Enter to firstname textbox with value is" + firstName + "'");
-		registerPage.inputFirstName(firstName);
-		log.info("Register - Step 03: Enter to lastname textbox with value is" + lastName + "'");
-		registerPage.inputLastName(lastName);
-		log.info("Register - Step 04: Enter to emailAddress textbox with value is" + emailAddress + "'");
-		registerPage.inputEmail(emailAddress);
-		log.info("Register - Step 05: Enter to password textbox with value is" + password + "'");
-		registerPage.inputPassword(password);
-		log.info("Register - Step 06: Enter to confirm password textbox with value is" + password + "'");
-		registerPage.inputConfirmPassword(password);
-		log.info("Register - Step 07: Click to register button");
-		registerPage.clickRegisterButton();
-		log.info("Register - Step 08: Verify register success message display ");
-		verifyEquals(registerPage.getSuccessMessage(), "Your registration completed...");
-
-	}
-
-	@Test
-	public void User_02_Login() {
+		String emailAddress = "";
+		String password = "";
 		log.info("Login - Step 01: Navigate to login page ");
 		loginPage = registerPage.clickLoginLink();
 		log.info("Login - Step 02: enter to email textbox with value is" + emailAddress + "'");
@@ -61,6 +35,10 @@ public class Level_17_Share_Data extends BaseTest {
 		homePage = loginPage.clickLoginButton();
 		log.info("Login - Step 05: Verify logout button is displayed.");
 		verifyTrue(homePage.isLogOutLinkClickable());
+	}
+
+	@Test
+	public void Login_01() {
 
 	}
 
