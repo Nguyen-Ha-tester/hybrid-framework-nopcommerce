@@ -375,3 +375,9 @@ Login - Step 05: Verify logout button is displayed
 [2023-04-19 14:36:11,293] Login - Step 05: Verify logout button is displayed.
 [2023-04-19 15:49:46,804] Login - Step 01: Navigate to login page 
 [2023-04-19 15:49:47,814] Login - Step 02: Set cookie và reload page
+[2023-04-19 18:07:08,793] Login - Step 01: Navigate to login page 
+[2023-04-19 18:07:10,030] Login - Step 02: Set cookie và reload page
+[2023-04-19 18:09:36,436] Login - Step 01: Navigate to login page 
+[2023-04-19 18:09:37,389] Login - Step 02: enter to email textbox with value isnull'
+[2023-04-19 18:12:06,542] Login - Step 01: Navigate to login page 
+[2023-04-19 18:12:07,847] Login - Step 02: enter to email textbox with value isnull'
