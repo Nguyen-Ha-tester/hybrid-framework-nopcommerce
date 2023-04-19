@@ -291,6 +291,12 @@ public class BasePage {
 		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", getWebElement(driver, locatorType));
 	}
 
+	protected String getElementValueByJS(WebDriver driver, String locatorType) {
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		String xpathLocator = locatorType.substring(6);
+		return (String) jsExecutor.executeScript("return $(document.evaluate(" + xpathLocator + ",document,null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue).val()", getWebElement(driver, xpathLocator));
+	}
+
 	protected void removeAttributeInDOM(WebDriver driver, String locatorType, String attributeRemove) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("arguments[0].removeAttribute('" + attributeRemove + "');", getWebElement(driver, locatorType));
