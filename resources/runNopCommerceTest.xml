@@ -9,11 +9,11 @@
  <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
  </listeners> 
  
-  <test name="Run on Firefox">
-  <parameter name ="browser" value ="h_firefox"/>
+  <test name="Run on Chrome">
+  <parameter name ="browser" value ="h_chrome"/>
     <classes>
       <class name="com.nopcommerce.common.Common_01_Register_Cookie"/>
-      <class name="com.nopcommerce.user.Level_17_Share_Data_2"/>
+      <class name="com.nopcommerce.user.Level_18_Custom_Close_Driver"/>
     </classes>
   </test> 
    

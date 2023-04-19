@@ -76,7 +76,6 @@ public class Common_01_Register_Cookie extends BaseTest {
 
 		loggedCookies = homePage.getAllCookies(driver);
 		for (Cookie cookie : loggedCookies) {
-			System.out.println("HomePage get cookie: " + cookie);
 		}
 	}
 
