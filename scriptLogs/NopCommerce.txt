@@ -1,5 +1,2 @@
-[2023-04-18 22:33:39,675] Login - Step 01: Navigate to login page 
-[2023-04-18 22:33:40,841] Login - Step 02: enter to email textbox with value isautomationtesting49895@gmail.comm'
-[2023-04-18 22:33:40,967] Login - Step 03: enter to password textbox with value is123456x'
-[2023-04-18 22:33:41,060] Login - Step 04: Click to login button
-[2023-04-18 22:33:41,884] Login - Step 05: Verify logout button is displayed.
+[2023-04-19 15:49:46,804] Login - Step 01: Navigate to login page 
+[2023-04-19 15:49:47,814] Login - Step 02: Set cookie và reload page

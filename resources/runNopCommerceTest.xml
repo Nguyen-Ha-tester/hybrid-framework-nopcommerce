@@ -12,8 +12,8 @@
   <test name="Run on Firefox">
   <parameter name ="browser" value ="h_firefox"/>
     <classes>
-      <class name="com.nopcommerce.common.Common_01_Register"/>
-      <class name="com.nopcommerce.user.Level_17_Share_Data"/>
+      <class name="com.nopcommerce.common.Common_01_Register_Cookie"/>
+      <class name="com.nopcommerce.user.Level_17_Share_Data_2"/>
     </classes>
   </test> 
    

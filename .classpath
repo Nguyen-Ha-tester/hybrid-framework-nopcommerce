@@ -15,7 +15,7 @@
 	<classpathentry kind="lib" path="libraryLog4J/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="libraryLog4J/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="librarySelenium/client-combined-3.141.59-sources.jar"/>
-	<classpathentry kind="lib" path="librarySelenium/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="librarySelenium/selenium-server-standalone-3.141.59.jar" sourcepath="librarySelenium/client-combined-3.141.59-sources.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/bcpkix-jdk15on-1.64.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/bcprov-jdk15on-1.64.jar"/>
 	<classpathentry kind="lib" path="libraryWebDriverManager/commons-codec-1.15.jar"/>

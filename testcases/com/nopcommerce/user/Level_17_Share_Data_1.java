@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.nopcommerce.common.Common_01_Register;
+import com.nopcommerce.common.Common_01_Register_End_User;
 
 import commons.BaseTest;
 import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
@@ -16,7 +16,10 @@ import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
-public class Level_17_Share_Data extends BaseTest {
+public class Level_17_Share_Data_1 extends BaseTest {
+
+	// login sử dụng register common class để tự login tiếp bằng cách điền email, password
+
 	private WebDriver driver;
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
@@ -29,8 +32,8 @@ public class Level_17_Share_Data extends BaseTest {
 		driver = getBrowserDriver(browserName);
 		registerPage = PageGeneratorManagerNopCommerce.getUserRegisterPage(driver);
 
-		emailAddress = Common_01_Register.emailAddress;
-		password = Common_01_Register.password;
+		emailAddress = Common_01_Register_End_User.emailAddress;
+		password = Common_01_Register_End_User.password;
 
 		log.info("Login - Step 01: Navigate to login page ");
 		loginPage = registerPage.clickLoginLink();
