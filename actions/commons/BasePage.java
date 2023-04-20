@@ -442,7 +442,7 @@ public class BasePage {
 		action.sendKeys(getWebElement(driver, getDynamicXpathLocator(locatorType, dynamicValues)), key).perform();
 	}
 
-	protected void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textValue, String... dynamicValues) {
+	public void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textValue, String... dynamicValues) {
 		Select select = new Select(getWebElement(driver, getDynamicXpathLocator(locatorType, dynamicValues)));
 		select.selectByVisibleText(textValue);
 	}
@@ -522,9 +522,21 @@ public class BasePage {
 	 * @param driver
 	 * @param textboxID
 	 */
-	public void clickToButtonByText(WebDriver driver, String textboxID) {
-		waitForElementClickable(driver, UserBasePageUI.DYNAMIC_LOGIN_BUTTON_BY_TEXT, textboxID);
-		clickToElement(driver, UserBasePageUI.DYNAMIC_LOGIN_BUTTON_BY_TEXT, textboxID);
+	public void clickToButtonByText(WebDriver driver, String buttonText) {
+		waitForElementClickable(driver, UserBasePageUI.DYNAMIC_LOGIN_BUTTON_BY_TEXT, buttonText);
+		clickToElement(driver, UserBasePageUI.DYNAMIC_LOGIN_BUTTON_BY_TEXT, buttonText);
+	}
+
+	/**
+	 * Select dynamic dropdown by name
+	 * 
+	 * @param driver
+	 * @param dropdownName
+	 * @param itemValue
+	 */
+	public void selectToDropDownByName(WebDriver driver, String dropdownName, String itemValue) {
+		waitForElementClickable(driver, UserBasePageUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownName);
+		selectItemInDefaultDropdown(driver, UserBasePageUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownName);
 	}
 
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
