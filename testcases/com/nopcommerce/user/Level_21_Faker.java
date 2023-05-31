@@ -13,7 +13,7 @@ import pageObjects.nopCommerce.user.PageGeneratorManagerNopCommerce;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
-import utilities.DataHelper;
+import utilities.DataHelper_Fakerlibrary;
 
 public class Level_21_Faker extends BaseTest {
 	private WebDriver driver;
@@ -21,13 +21,13 @@ public class Level_21_Faker extends BaseTest {
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
 	private UserLoginPageObject loginPage;
-	private DataHelper dataHelper;
+	private DataHelper_Fakerlibrary dataHelper;
 
 	@Parameters({ "browser", "urlPage" })
 	@BeforeClass
 	public void beforeClass(String browserName, String urlPage) {
 		driver = getBrowserDriver(browserName, urlPage);
-		dataHelper = DataHelper.getDataHelper();
+		dataHelper = DataHelper_Fakerlibrary.getDataHelper();
 		firstName = dataHelper.getFirstName();
 		lastName = dataHelper.getLastName();
 		emailAddress = dataHelper.getEmailAddress();
