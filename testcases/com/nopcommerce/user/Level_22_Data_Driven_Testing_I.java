@@ -16,7 +16,7 @@ import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
-public class Level_22_Data_Driven_Testing extends BaseTest {
+public class Level_22_Data_Driven_Testing_I extends BaseTest {
 	private WebDriver driver;
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
@@ -34,7 +34,7 @@ public class Level_22_Data_Driven_Testing extends BaseTest {
 		homePage = PageGeneratorManagerNopCommerce.getUserHomePage(driver);
 		registerPage = homePage.openRegisterPage();
 		registerPage.inputToTextboxByID(driver, "FirstName", UserData.Register.FIRSTNAME);
-		registerPage.inputToTextboxByID(driver, "LastName", UserData.Register.FIRSTNAME);
+		registerPage.inputToTextboxByID(driver, "LastName", UserData.Register.LASTNAME);
 		registerPage.inputToTextboxByID(driver, "Email", UserData.Register.EMAIL);
 		registerPage.inputToTextboxByID(driver, "Password", UserData.Register.PASSWORD);
 		registerPage.inputToTextboxByID(driver, "ConfirmPassword", UserData.Register.PASSWORD);
