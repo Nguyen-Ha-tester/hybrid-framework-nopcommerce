@@ -1,10 +1,10 @@
 package com.nopcommerce.data;
 
-import utilities.DataHelper;
+import utilities.DataHelper_Fakerlibrary;
 
 public class UserData {
 
-	public static DataHelper dataHelper = DataHelper.getDataHelper();
+	public static DataHelper_Fakerlibrary dataHelper = DataHelper_Fakerlibrary.getDataHelper();
 
 	public static class Register {
 		public static final String FIRSTNAME = dataHelper.getFirstName();
