@@ -475,26 +475,26 @@ public class BasePage {
 	}
 
 	// public UserAddressesPageObject openAddressesPage(WebDriver driver) {
-	// waitForElementClickable(driver, UserBasePageUI.ADDRESSES_LINK);
-	// clickToElement(driver, UserBasePageUI.ADDRESSES_LINK);
+	// waitForElementClickable(driver, BasePageUI.ADDRESSES_LINK);
+	// clickToElement(driver, BasePageUI.ADDRESSES_LINK);
 	// return PageGeneratorManagerNopCommerce.getUserAddressesPage(driver);
 	// }
 	//
 	// public UserOrdersPageObject openOrdersPage(WebDriver driver) {
-	// waitForElementClickable(driver, UserBasePageUI.ORDERS_LINK);
-	// clickToElement(driver, UserBasePageUI.ORDERS_LINK);
+	// waitForElementClickable(driver, BasePageUI.ORDERS_LINK);
+	// clickToElement(driver, BasePageUI.ORDERS_LINK);
 	// return PageGeneratorManagerNopCommerce.getUserOrdersPagePage(driver);
 	// }
 	//
 	// public UserRewardPointsPageObject openRewardPointsPage(WebDriver driver) {
-	// waitForElementClickable(driver, UserBasePageUI.REWARD_POINTS_LINK);
-	// clickToElement(driver, UserBasePageUI.REWARD_POINTS_LINK);
+	// waitForElementClickable(driver, BasePageUI.REWARD_POINTS_LINK);
+	// clickToElement(driver, BasePageUI.REWARD_POINTS_LINK);
 	// return PageGeneratorManagerNopCommerce.getUserRewardPointsPage(driver);
 	// }
 	//
 	// public UserHomePageObject clickLogoutLinkAtUserPage(WebDriver driver) {
-	// waitForElementClickable(driver, UserBasePageUI.LOG_OUT_LINK);
-	// clickToElement(driver, UserBasePageUI.LOG_OUT_LINK);
+	// waitForElementClickable(driver, BasePageUI.LOG_OUT_LINK);
+	// clickToElement(driver, BasePageUI.LOG_OUT_LINK);
 	// return PageGeneratorManagerNopCommerce.getUserHomePage(driver);
 	// }
 
