@@ -145,9 +145,9 @@ public class BasePage {
 		element.sendKeys(textValue);
 	}
 
-	protected void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textValue) {
+	protected void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String itemValueInTheDropDown) {
 		Select select = new Select(getWebElement(driver, locatorType));
-		select.selectByVisibleText(textValue);
+		select.selectByVisibleText(itemValueInTheDropDown);
 	}
 
 	protected String getSelectedItemInDefaultDropdown(WebDriver driver, String locatorType) {

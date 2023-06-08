@@ -12,18 +12,20 @@ public class LoginPageObject extends BasePage {
 		this.driver = driver;
 	}
 
-	public void inputEmail(String string) {
-		waitForElementClickable(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, null);
+	public void inputUserName(String textboxId, String userName) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, textboxId);
+		sendkeyToElement(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, userName, textboxId);
 	}
 
-	public void inputPassword(String string) {
-		// TODO Auto-generated method stub
-
+	public void inputPassword(String textboxId, String password) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, textboxId);
+		sendkeyToElement(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, password, textboxId);
 	}
 
-	public ProducPageObject clickLoginButton() {
-		// TODO Auto-generated method stub
-		return null;
+	public ProducPageObject clickLoginButton(String buttonText) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, buttonText);
+		clickToElement(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, buttonText);
+		return PageGeneratorManager.getProductPage(driver);
 	}
 
 }
