@@ -1,0 +1,4 @@
+[2023-06-14 17:55:54,161] Register - Step 01: Navigate to Register page
+[2023-06-14 17:55:55,332] Login - Step 01: Navigate to login page 
+[2023-06-14 17:55:55,495] OS name = Mac OS X
+[2023-06-14 17:55:55,496] Driver instance name = chromedriver: chrome on mac (f95aebc13edba8045964c47bb36f2319)
