@@ -71,6 +71,5 @@ public class Login_To_System extends BaseTest {
 	public int generateFakeNumber() {
 		Random rand = new Random();
 		return rand.nextInt(99999);
-
 	}
 }
