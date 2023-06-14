@@ -66,7 +66,7 @@
 	<classpathentry kind="lib" path="libraryAllureReport/okio-1.14.1.jar"/>
 	<classpathentry kind="lib" path="libraryAllureReport/tika-core-1.20.jar"/>
 	<classpathentry kind="lib" path="libFaker/generex-1.0.2.jar"/>
-	<classpathentry kind="lib" path="libFaker/javafaker-1.0.1.jar" sourcepath="libFaker/javafaker-1.0.1.jar"/>
+	<classpathentry kind="lib" path="libFaker/javafaker-1.0.1.jar" sourcepath="libFaker/javafaker-1.0.2-sources.jar"/>
 	<classpathentry kind="lib" path="libFaker/snakeyaml-1.23.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
