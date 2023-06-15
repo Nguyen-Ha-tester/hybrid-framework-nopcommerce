@@ -401,3 +401,56 @@ Login - Step 05: Verify logout button is displayed
 [2023-06-14 17:55:55,332] Login - Step 01: Navigate to login page 
 [2023-06-14 17:55:55,495] OS name = Mac OS X
 [2023-06-14 17:55:55,496] Driver instance name = chromedriver: chrome on mac (f95aebc13edba8045964c47bb36f2319)
+[2023-06-15 16:38:08,758] Register - Step 01: Navigate to Register page
+[2023-06-15 16:38:39,947] Login - Step 01: Navigate to login page 
+[2023-06-15 16:38:40,221] OS name = Mac OS X
+[2023-06-15 16:38:40,222] Driver instance name = chromedriver: chrome on mac (3888d91565fed357e25049bc6efa5635)
+[2023-06-15 16:39:40,762] Register - Step 01: Navigate to Register page
+[2023-06-15 16:40:11,329] Login - Step 01: Navigate to login page 
+[2023-06-15 16:40:11,528] OS name = Mac OS X
+[2023-06-15 16:40:11,529] Driver instance name = chromedriver: chrome on mac (4515d6e787e23adb9a7510fbb089998d)
+[2023-06-15 16:53:51,151] Register - Step 01: Navigate to Register page
+[2023-06-15 16:53:52,111] Register - Step 02: Enter to firstname textbox with value isJeneva'
+[2023-06-15 16:53:52,262] Register - Step 03: Enter to lastname textbox with value isSchmidt'
+[2023-06-15 16:53:52,372] Register - Step 04: Enter to emailAddress textbox with value iseugenio.maggio@yahoo.com'
+[2023-06-15 16:53:52,487] Register - Step 05: Enter to password textbox with value isy4otkbolg70'
+[2023-06-15 16:53:52,601] Register - Step 06: Enter to confirm password textbox with value isy4otkbolg70'
+[2023-06-15 16:53:52,706] Register - Step 07: Click to register button
+[2023-06-15 16:53:53,411] Register - Step 08: Verify register success message display 
+[2023-06-15 16:53:53,514] Login - Step 01: Navigate to login page 
+[2023-06-15 16:53:53,893] Login - Step 02: enter to email textbox with value iseugenio.maggio@yahoo.com'
+[2023-06-15 16:53:53,996] Login - Step 03: enter to password textbox with value isy4otkbolg70'
+[2023-06-15 16:53:54,100] Login - Step 04: Click to login button
+[2023-06-15 16:53:54,168] Login - Step 05: Verify logout button is displayed.
+[2023-06-15 16:54:24,560] OS name = Mac OS X
+[2023-06-15 16:54:24,560] Driver instance name = chromedriver: chrome on mac (a616defd7773ceba69d43abe1965ffd1)
+[2023-06-15 17:03:51,044] Register - Step 01: Navigate to Register page
+[2023-06-15 17:03:52,030] Register - Step 02: Enter to firstname textbox with value isRonnie'
+[2023-06-15 17:03:52,187] Register - Step 03: Enter to lastname textbox with value isWhite'
+[2023-06-15 17:03:52,294] Register - Step 04: Enter to emailAddress textbox with value isjenelle.christiansen@hotmail.com'
+[2023-06-15 17:03:52,415] Register - Step 05: Enter to password textbox with value is1vd496ixxb4nqz'
+[2023-06-15 17:03:52,526] Register - Step 06: Enter to confirm password textbox with value is1vd496ixxb4nqz'
+[2023-06-15 17:03:52,637] Register - Step 07: Click to register button
+[2023-06-15 17:03:53,420] Register - Step 08: Verify register success message display 
+[2023-06-15 17:03:53,522] Login - Step 01: Navigate to login page 
+[2023-06-15 17:03:53,925] Login - Step 02: enter to email textbox with value isjenelle.christiansen@hotmail.com'
+[2023-06-15 17:03:54,019] Login - Step 03: enter to password textbox with value is1vd496ixxb4nqz'
+[2023-06-15 17:03:54,120] Login - Step 04: Click to login button
+[2023-06-15 17:03:54,193] Login - Step 05: Verify logout button is displayed.
+[2023-06-15 17:04:24,587] OS name = Mac OS X
+[2023-06-15 17:04:24,588] Driver instance name = chromedriver: chrome on mac (eb588e068b5e8e43e4936e137fc2297a)
+[2023-06-15 17:04:34,798] Register - Step 01: Navigate to Register page
+[2023-06-15 17:04:35,874] Register - Step 02: Enter to firstname textbox with value isQuincy'
+[2023-06-15 17:04:36,025] Register - Step 03: Enter to lastname textbox with value isPadberg'
+[2023-06-15 17:04:36,140] Register - Step 04: Enter to emailAddress textbox with value isdivina.mosciski@hotmail.com'
+[2023-06-15 17:04:36,256] Register - Step 05: Enter to password textbox with value iscgg6pfpr'
+[2023-06-15 17:04:36,368] Register - Step 06: Enter to confirm password textbox with value iscgg6pfpr'
+[2023-06-15 17:04:36,470] Register - Step 07: Click to register button
+[2023-06-15 17:04:37,629] Register - Step 08: Verify register success message display 
+[2023-06-15 17:04:37,742] Login - Step 01: Navigate to login page 
+[2023-06-15 17:04:38,384] Login - Step 02: enter to email textbox with value isdivina.mosciski@hotmail.com'
+[2023-06-15 17:04:38,557] Login - Step 03: enter to password textbox with value iscgg6pfpr'
+[2023-06-15 17:04:38,656] Login - Step 04: Click to login button
+[2023-06-15 17:04:39,388] Login - Step 05: Verify logout button is displayed.
+[2023-06-15 17:04:39,420] OS name = Mac OS X
+[2023-06-15 17:04:39,420] Driver instance name = chromedriver: chrome on mac (dd2be844f22e259b5b3532395105c38a)
