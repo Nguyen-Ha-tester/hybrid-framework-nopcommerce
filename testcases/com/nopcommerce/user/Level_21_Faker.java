@@ -23,10 +23,10 @@ public class Level_21_Faker extends BaseTest {
 	private UserLoginPageObject loginPage;
 	private DataHelper dataHelper;
 
-	@Parameters("browser")
+	@Parameters({ "browser", "urlPage" })
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
+	public void beforeClass(String browserName, String urlPage) {
+		driver = getBrowserDriver(browserName, urlPage);
 		dataHelper = DataHelper.getDataHelper();
 		firstName = dataHelper.getFirstName();
 		lastName = dataHelper.getLastName();
@@ -40,15 +40,15 @@ public class Level_21_Faker extends BaseTest {
 		homePage = PageGeneratorManagerNopCommerce.getUserHomePage(driver);
 		registerPage = homePage.openRegisterPage();
 		log.info("Register - Step 02: Enter to firstname textbox with value is" + firstName + "'");
-		registerPage.inputToTextboxByID(driver, "FirstName", "firstName");
+		registerPage.inputToTextboxByID(driver, "FirstName", firstName);
 		log.info("Register - Step 03: Enter to lastname textbox with value is" + lastName + "'");
-		registerPage.inputToTextboxByID(driver, "LastName", "lastName");
+		registerPage.inputToTextboxByID(driver, "LastName", lastName);
 		log.info("Register - Step 04: Enter to emailAddress textbox with value is" + emailAddress + "'");
-		registerPage.inputToTextboxByID(driver, "Email", "emailAddress");
+		registerPage.inputToTextboxByID(driver, "Email", emailAddress);
 		log.info("Register - Step 05: Enter to password textbox with value is" + password + "'");
-		registerPage.inputToTextboxByID(driver, "Password", "password");
+		registerPage.inputToTextboxByID(driver, "Password", password);
 		log.info("Register - Step 06: Enter to confirm password textbox with value is" + password + "'");
-		registerPage.inputToTextboxByID(driver, "ConfirmPassword", "password");
+		registerPage.inputToTextboxByID(driver, "ConfirmPassword", password);
 		log.info("Register - Step 07: Click to register button");
 		registerPage.clickRegisterButton();
 		log.info("Register - Step 08: Verify register success message display ");
@@ -61,13 +61,13 @@ public class Level_21_Faker extends BaseTest {
 		log.info("Login - Step 01: Navigate to login page ");
 		loginPage = registerPage.clickLoginLink();
 		log.info("Login - Step 02: enter to email textbox with value is" + emailAddress + "'");
-		loginPage.inputToTextboxByID(driver, "Email", "emailAddress");
+		loginPage.inputToTextboxByID(driver, "Email", emailAddress);
 		log.info("Login - Step 03: enter to password textbox with value is" + password + "'");
-		loginPage.inputToTextboxByID(driver, "Password", "password");
+		loginPage.inputToTextboxByID(driver, "Password", password);
 		log.info("Login - Step 04: Click to login button");
 		homePage = loginPage.clickLoginButton();
 		log.info("Login - Step 05: Verify logout button is displayed.");
-		verifyTrue(homePage.isLogOutLinkClickable());
+		verifyTrue(homePage.isLogOutLinkVisible());
 
 	}
 

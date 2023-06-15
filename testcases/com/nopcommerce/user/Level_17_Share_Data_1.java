@@ -44,7 +44,7 @@ public class Level_17_Share_Data_1 extends BaseTest {
 		log.info("Login - Step 04: Click to login button");
 		homePage = loginPage.clickLoginButton();
 		log.info("Login - Step 05: Verify logout button is displayed.");
-		verifyTrue(homePage.isLogOutLinkClickable());
+		verifyTrue(homePage.isLogOutLinkVisible());
 	}
 
 	@Test

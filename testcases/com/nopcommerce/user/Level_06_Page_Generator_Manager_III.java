@@ -86,7 +86,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest {
 		loginPage.inputEmail(existingEmailAddress);
 		loginPage.inputPassword(password);
 		homePage = loginPage.clickLoginButton();
-		Assert.assertTrue(homePage.isLogOutLinkClickable());
+		Assert.assertTrue(homePage.isLogOutLinkVisible());
 	}
 
 	@AfterClass

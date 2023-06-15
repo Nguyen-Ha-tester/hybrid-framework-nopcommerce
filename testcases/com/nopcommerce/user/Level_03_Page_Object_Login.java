@@ -96,7 +96,7 @@ public class Level_03_Page_Object_Login extends BasePage {
 		loginPage.inputPassword(password);
 		loginPage.clickLoginButton();
 		homePage = new UserHomePageObject(driver);
-		Assert.assertTrue(homePage.isLogOutLinkClickable());
+		Assert.assertTrue(homePage.isLogOutLinkVisible());
 	}
 
 	@AfterClass

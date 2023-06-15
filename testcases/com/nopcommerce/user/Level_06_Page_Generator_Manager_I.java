@@ -93,7 +93,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 		loginPage.inputPassword(password);
 		loginPage.clickLoginButton();
 		homePage = new UserHomePageObject(driver);
-		Assert.assertTrue(homePage.isLogOutLinkClickable());
+		Assert.assertTrue(homePage.isLogOutLinkVisible());
 	}
 
 	@AfterClass

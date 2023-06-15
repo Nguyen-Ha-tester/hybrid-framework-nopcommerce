@@ -46,7 +46,7 @@ public class Level_18_Custom_Close_Driver extends BaseTest {
 		homePage = loginPage.clickLoginButton();
 		log.info("Login - Step 05: Verify logout button is displayed.");
 		// giả dụ dùng assertFalse để cho fail tại step này. Dùng hàm assert để dừng run test ngay tại step bị fail
-		Assert.assertFalse(homePage.isLogOutLinkClickable());
+		Assert.assertFalse(homePage.isLogOutLinkVisible());
 	}
 
 	@Test

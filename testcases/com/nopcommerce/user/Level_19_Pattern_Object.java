@@ -64,7 +64,7 @@ public class Level_19_Pattern_Object extends BaseTest {
 		log.info("Login - Step 04: Click to login button");
 		homePage = loginPage.clickLoginButton();
 		log.info("Login - Step 05: Verify logout button is displayed.");
-		verifyTrue(homePage.isLogOutLinkClickable());
+		verifyTrue(homePage.isLogOutLinkVisible());
 
 	}
 

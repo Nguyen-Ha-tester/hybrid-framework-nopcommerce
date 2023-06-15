@@ -59,7 +59,7 @@ public class Level_16_Allure_Report extends BaseTest {
 		loginPage.inputEmail(emailAddress);
 		loginPage.inputPassword(password);
 		homePage = loginPage.clickLoginButton();
-		Assert.assertTrue(homePage.isLogOutLinkClickable());
+		Assert.assertTrue(homePage.isLogOutLinkVisible());
 
 	}
 

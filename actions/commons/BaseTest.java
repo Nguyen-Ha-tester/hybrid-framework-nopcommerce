@@ -38,10 +38,6 @@ public class BaseTest extends BasePage {
 		// Firefox
 		if (browserList == BrowserList.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
-			if (GlobalConstants.OS_NAME.contains("Mac")) {
-			} else {
-				WebDriverManager.firefoxdriver().setup();
-			}
 			driver = new FirefoxDriver();
 		} else if (browserList == BrowserList.H_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
@@ -52,11 +48,7 @@ public class BaseTest extends BasePage {
 
 			// Chrome
 		} else if (browserList == BrowserList.CHROME) {
-			if (GlobalConstants.OS_NAME.contains("Mac")) {
-				WebDriverManager.chromedriver().setup();
-			} else {
-				WebDriverManager.chromedriver().setup();
-			}
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browserList == BrowserList.H_CHROME) {
 			WebDriverManager.chromedriver().setup();
@@ -67,11 +59,7 @@ public class BaseTest extends BasePage {
 
 			// Edge
 		} else if (browserList == BrowserList.EDGE) {
-			if (GlobalConstants.OS_NAME.contains("Mac")) {
-				WebDriverManager.edgedriver().setup();
-			} else {
-				WebDriverManager.edgedriver().setup();
-			}
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 
 			// Opera
@@ -96,7 +84,7 @@ public class BaseTest extends BasePage {
 			throw new RuntimeException("Please input with correct browser name."); // RuntimeException có nghĩa là chạy lỗi phát là throw ngay
 		}
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-		driver.get("https://www.saucedemo.com/");
+		driver.get("https://demo.nopcommerce.com/");
 		return driver;
 	}
 

@@ -31,7 +31,7 @@ public class UserHomePageObject extends BasePage {
 	}
 
 	@Step("Verify is the log out link clickable")
-	public boolean isLogOutLinkClickable() {
+	public boolean isLogOutLinkVisible() {
 		return getWebElement(driver, UserHomePageUI.LOG_OUT_LINK).isDisplayed();
 	}
 

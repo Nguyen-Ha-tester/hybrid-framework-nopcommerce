@@ -57,7 +57,7 @@ public class Level_09_Dynamic_Locator extends BaseTest {
 		loginPage.inputEmail(emailAddress);
 		loginPage.inputPassword(password);
 		homePage = loginPage.clickLoginButton();
-		Assert.assertTrue(homePage.isLogOutLinkClickable());
+		Assert.assertTrue(homePage.isLogOutLinkVisible());
 	}
 
 	@Test

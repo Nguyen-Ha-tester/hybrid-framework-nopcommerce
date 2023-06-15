@@ -57,7 +57,7 @@ public class Level_08_Switch_Role extends BaseTest {
 
 		userLoginPage = userRegisterPage.clickLoginLink();
 		userHomePage = userLoginPage.loginAsUser(userEmailAddress, userPassword);
-		Assert.assertTrue(userHomePage.isLogOutLinkClickable());
+		Assert.assertTrue(userHomePage.isLogOutLinkVisible());
 
 		// Logout user
 		// userHomePage = userHomePage.clickLogoutLinkAtUserPage(driver);

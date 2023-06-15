@@ -63,7 +63,7 @@ public class Level_07_Switch_Page extends BaseTest {
 		loginPage.inputEmail(emailAddress);
 		loginPage.inputPassword(password);
 		homePage = loginPage.clickLoginButton();
-		Assert.assertTrue(homePage.isLogOutLinkClickable());
+		Assert.assertTrue(homePage.isLogOutLinkVisible());
 	}
 
 	@Test

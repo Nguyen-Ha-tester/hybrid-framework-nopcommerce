@@ -8,8 +8,8 @@
  <listener class-name="reportConfig.ExtentReportListenerV2"/> 
  <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
  </listeners> 
- 
   <test name="Run on Chrome">
+ <parameter name = "urlPage" value ="https://demo.nopcommerce.com/"/>
   <parameter name ="browser" value ="chrome"/>
     <classes>
  <!-- <class name="com.nopcommerce.common.Common_01_Register_Cookie"/>-->

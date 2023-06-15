@@ -72,7 +72,7 @@ public class Common_01_Register_Cookie extends BaseTest {
 		homePage = loginPage.clickLoginButton();
 
 		log.info("Login - Step 05: Verify logout button is displayed.");
-		verifyTrue(homePage.isLogOutLinkClickable());
+		verifyTrue(homePage.isLogOutLinkVisible());
 
 		loggedCookies = homePage.getAllCookies(driver);
 		for (Cookie cookie : loggedCookies) {

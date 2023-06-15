@@ -3,6 +3,7 @@ package javaBasic;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
+import com.github.javafaker.Address;
 import com.github.javafaker.CreditCardType;
 import com.github.javafaker.Faker;
 
@@ -24,6 +25,11 @@ public class Topic_17_Faker {
 		System.out.println(fakerVI.address().cityName());
 		System.out.println(fakerVI.finance().creditCard(CreditCardType.AMERICAN_EXPRESS));
 
+		// Khai báo object phụ để tối giản code khi code bị lặp lại
+		Address fakeAddress = faker.address();
+		fakeAddress.buildingNumber();
+		fakeAddress.city();
+		fakeAddress.country();
 	}
 
 }
