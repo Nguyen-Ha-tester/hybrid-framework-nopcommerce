@@ -232,10 +232,8 @@ public class BaseTest extends BasePage {
 		String cmd = null;
 		try {
 			String osName = GlobalConstants.OS_NAME;
-			log.info("OS name = " + osName);
 
 			String driverInstanceName = driver.toString().toLowerCase();
-			log.info("Driver instance name = " + driverInstanceName);
 
 			String browserDriverName = null;
 
