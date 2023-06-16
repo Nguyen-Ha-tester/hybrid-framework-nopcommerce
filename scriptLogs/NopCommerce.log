@@ -454,3 +454,75 @@ Login - Step 05: Verify logout button is displayed
 [2023-06-15 17:04:39,388] Login - Step 05: Verify logout button is displayed.
 [2023-06-15 17:04:39,420] OS name = Mac OS X
 [2023-06-15 17:04:39,420] Driver instance name = chromedriver: chrome on mac (dd2be844f22e259b5b3532395105c38a)
+[2023-06-16 14:18:04,915] Register - Step 01: Navigate to Register page
+[2023-06-16 14:18:06,147] Register - Step 02: Enter to firstname textbox with value isKenyetta'
+[2023-06-16 14:18:06,324] Register - Step 03: Enter to lastname textbox with value isAbshire'
+[2023-06-16 14:18:06,436] Register - Step 04: Enter to emailAddress textbox with value isdarrel.moore@hotmail.com'
+[2023-06-16 14:18:06,556] Register - Step 05: Enter to password textbox with value isni7mg156xo0yvi'
+[2023-06-16 14:18:06,677] Register - Step 06: Enter to confirm password textbox with value isni7mg156xo0yvi'
+[2023-06-16 14:18:06,780] Register - Step 07: Click to register button
+[2023-06-16 14:18:07,726] Register - Step 08: Verify register success message display 
+[2023-06-16 14:18:07,879] Login - Step 01: Navigate to login page 
+[2023-06-16 14:18:08,361] Login - Step 02: enter to email textbox with value isdarrel.moore@hotmail.com'
+[2023-06-16 14:18:08,460] Login - Step 03: enter to password textbox with value isni7mg156xo0yvi'
+[2023-06-16 14:18:08,567] Login - Step 04: Click to login button
+[2023-06-16 14:18:09,382] Login - Step 05: Verify logout button is displayed.
+[2023-06-16 14:18:09,412] OS name = Mac OS X
+[2023-06-16 14:18:09,413] Driver instance name = chromedriver: chrome on mac (1f8a899d1c0fb6a0db8bee557f527e4a)
+[2023-06-16 14:22:28,142] OS name = Mac OS X
+[2023-06-16 14:22:28,155] Driver instance name = chromedriver: chrome on mac (e68ace0b5e1df00a4238af1c09da4f51)
+[2023-06-16 14:22:39,323] OS name = Mac OS X
+[2023-06-16 14:22:39,323] Driver instance name = chromedriver: chrome on mac (e6304fa2b29dfd17927bf1cd09792960)
+[2023-06-16 14:38:21,359] OS name = Mac OS X
+[2023-06-16 14:38:21,360] Driver instance name = chromedriver: chrome on mac (4dfcd0deac01cfe8a7ea048a90c298e6)
+[2023-06-16 14:41:25,783] OS name = Mac OS X
+[2023-06-16 14:41:25,783] Driver instance name = chromedriver: chrome on mac (a7cd4156edc81ad23ef4e015f31ccb7f)
+[2023-06-16 14:44:51,849] Register - Step 01: Navigate to Register page
+[2023-06-16 14:44:52,849] Register - Step 02: Enter to firstname textbox with value isas'
+[2023-06-16 14:44:53,000] Register - Step 03: Enter to lastname textbox with value isasa'
+[2023-06-16 14:44:53,110] Register - Step 04: Enter to emailAddress textbox with value isas@asd.ca'
+[2023-06-16 14:44:53,211] Register - Step 05: Enter to password textbox with value is123456'
+[2023-06-16 14:44:53,317] Register - Step 06: Enter to confirm password textbox with value is123456'
+[2023-06-16 14:44:53,419] Register - Step 07: Click to register button
+[2023-06-16 14:44:54,170] Register - Step 08: Verify register success message display 
+[2023-06-16 14:44:54,280] Login - Step 01: Navigate to login page 
+[2023-06-16 14:44:54,743] Login - Step 02: enter to email textbox with value isas@asd.ca'
+[2023-06-16 14:44:54,838] Login - Step 03: enter to password textbox with value is123456'
+[2023-06-16 14:44:54,938] Login - Step 04: Click to login button
+[2023-06-16 14:44:55,588] Login - Step 05: Verify logout button is displayed.
+[2023-06-16 14:47:46,583] Cannot invoke "Object.toString()" because "this.driver" is null
+[2023-06-16 15:03:12,095] Register - Step 01: Navigate to Register page
+[2023-06-16 15:03:13,281] Register - Step 02: Enter to firstname textbox with value isHipolito'
+[2023-06-16 15:03:13,470] Register - Step 03: Enter to lastname textbox with value isJones'
+[2023-06-16 15:03:13,583] Register - Step 04: Enter to emailAddress textbox with value isyan.kirlin@gmail.com'
+[2023-06-16 15:03:13,700] Register - Step 05: Enter to password textbox with value istbr6sdqkfjc'
+[2023-06-16 15:03:13,821] Register - Step 06: Enter to confirm password textbox with value istbr6sdqkfjc'
+[2023-06-16 15:03:13,934] Register - Step 07: Click to register button
+[2023-06-16 15:03:14,692] Register - Step 08: Verify register success message display 
+[2023-06-16 15:03:14,868] Login - Step 01: Navigate to login page 
+[2023-06-16 15:03:15,353] Login - Step 02: enter to email textbox with value isyan.kirlin@gmail.com'
+[2023-06-16 15:03:15,454] Login - Step 03: enter to password textbox with value istbr6sdqkfjc'
+[2023-06-16 15:03:15,565] Login - Step 04: Click to login button
+[2023-06-16 15:03:16,251] Login - Step 05: Verify logout button is displayed.
+[2023-06-16 15:30:41,495] Register - Step 01: Navigate to Register page
+[2023-06-16 15:30:42,671] Register - Step 02: Enter to firstname textbox with value isJaclyn'
+[2023-06-16 15:30:42,944] Register - Step 03: Enter to lastname textbox with value isHaag'
+[2023-06-16 15:30:43,078] Register - Step 04: Enter to emailAddress textbox with value isalex.douglas@yahoo.com'
+[2023-06-16 15:30:43,215] Register - Step 05: Enter to password textbox with value isc97kpvhi'
+[2023-06-16 15:30:43,374] Register - Step 06: Enter to confirm password textbox with value isc97kpvhi'
+[2023-06-16 15:30:43,534] Register - Step 07: Click to register button
+[2023-06-16 15:30:44,493] Register - Step 08: Verify register success message display 
+[2023-06-16 15:30:44,712] Login - Step 01: Navigate to login page 
+[2023-06-16 15:32:28,245] Register - Step 01: Navigate to Register page
+[2023-06-16 15:32:28,769] Register - Step 02: Enter to firstname textbox with value isKirby'
+[2023-06-16 15:32:28,931] Register - Step 03: Enter to lastname textbox with value isQuigley'
+[2023-06-16 15:32:29,041] Register - Step 04: Enter to emailAddress textbox with value istreena.stiedemann@gmail.com'
+[2023-06-16 15:32:29,164] Register - Step 05: Enter to password textbox with value isboyzng6mxmuceet'
+[2023-06-16 15:32:29,279] Register - Step 06: Enter to confirm password textbox with value isboyzng6mxmuceet'
+[2023-06-16 15:32:29,394] Register - Step 07: Click to register button
+[2023-06-16 15:32:30,142] Register - Step 08: Verify register success message display 
+[2023-06-16 15:32:30,326] Login - Step 01: Navigate to login page 
+[2023-06-16 15:32:30,712] Login - Step 02: enter to email textbox with value istreena.stiedemann@gmail.com'
+[2023-06-16 15:32:30,817] Login - Step 03: enter to password textbox with value isboyzng6mxmuceet'
+[2023-06-16 15:32:30,926] Login - Step 04: Click to login button
+[2023-06-16 15:32:31,586] Login - Step 05: Verify logout button is displayed.
