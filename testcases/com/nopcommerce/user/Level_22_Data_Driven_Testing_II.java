@@ -22,7 +22,7 @@ public class Level_22_Data_Driven_Testing_II extends BaseTest {
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
 	private UserLoginPageObject loginPage;
-	String email;
+	String email, emailLogin;
 
 	@Parameters({ "browser", "urlPage" })
 	@BeforeClass
@@ -30,6 +30,11 @@ public class Level_22_Data_Driven_Testing_II extends BaseTest {
 		driver = getBrowserDriver(browserName, urlPage);
 		userData = UserDataMapper.getUserData();
 		email = userData.getEmail() + generateFakeNumber() + "@gmail.com";
+		emailLogin = userData.getEmailLogin() + generateFakeNumber() + "@gmail.com";
+
+		// Trường hợp file json có key trong mảng
+		System.out.println(userData.getSubjects().get(0).getName()); // lấy value của key "name" trong mảng thứ 0 trong object subject
+		System.out.println(userData.getSubjects().get(1).getName()); // lấy value của key "name" trong mảng thứ 1 trong object subject
 	}
 
 	@Test
@@ -49,8 +54,8 @@ public class Level_22_Data_Driven_Testing_II extends BaseTest {
 	@Test
 	public void User_02_Login() {
 		loginPage = registerPage.clickLoginLink();
-		loginPage.inputToTextboxByID(driver, "Email", email);
-		loginPage.inputToTextboxByID(driver, "Password", userData.getPassword());
+		loginPage.inputToTextboxByID(driver, "Email", emailLogin);
+		loginPage.inputToTextboxByID(driver, "Password", userData.getPasswordLogin());
 		homePage = loginPage.clickLoginButton();
 		verifyTrue(homePage.isLogOutLinkVisible());
 
