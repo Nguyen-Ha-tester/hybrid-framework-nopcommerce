@@ -7,7 +7,7 @@
 <!-- <listener class-name="reportConfig.AllureTestListener"/> 
  <listener class-name="reportConfig.ExtentReportListenerV2"/> 
  <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
- </listeners> 
+ </listeners>
   <test name="Run on Chrome">
  <parameter name = "urlPage" value ="https://demo.nopcommerce.com/"/>
   <parameter name ="browser" value ="chrome"/>

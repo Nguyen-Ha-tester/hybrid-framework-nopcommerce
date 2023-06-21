@@ -33,8 +33,8 @@ public class Level_22_Data_Driven_Testing_II extends BaseTest {
 		emailLogin = userData.getEmailLogin() + generateFakeNumber() + "@gmail.com";
 
 		// Trường hợp file json có key trong mảng
-		System.out.println(userData.getSubjects().get(0).getName()); // lấy value của key "name" trong mảng thứ 0 trong object subject
-		System.out.println(userData.getSubjects().get(1).getName()); // lấy value của key "name" trong mảng thứ 1 trong object subject
+		// System.out.println(userData.getSubjects().get(0).getName()); // lấy value của key "name" trong mảng thứ 0 trong object subject
+		// System.out.println(userData.getSubjects().get(1).getName()); // lấy value của key "name" trong mảng thứ 1 trong object subject
 	}
 
 	@Test
