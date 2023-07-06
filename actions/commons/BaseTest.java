@@ -32,7 +32,7 @@ public class BaseTest extends BasePage {
 
 	}
 
-	protected WebDriver getBrowserDriver(String browserName, String urlPage) {
+	protected WebDriver getBrowserDriver(String browserName, String envName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 
 		// Firefox
@@ -85,7 +85,34 @@ public class BaseTest extends BasePage {
 		}
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driver.get("https://demo.nopcommerce.com/");
+		driver.get(getEnvironmentURL(envName));
 		return driver;
+	}
+
+	public String getEnvironmentURL(String envName) {
+		String envURL = null;
+		EnvironmentList env = EnvironmentList.valueOf(envName.toUpperCase());
+
+		switch (env) {
+		case DEV:
+			envURL = "https://demo.nopcommerce.com/";
+			break;
+		case LOCAL:
+			envURL = "https://local.nopcommerce.com/";
+			break;
+		case PRE_PROD:
+			envURL = "https://pre-prod.nopcommerce.com/";
+			break;
+		case PROD:
+			envURL = "https://prod.nopcommerce.com/";
+			break;
+		default:
+			envURL = null;
+			break;
+		}
+
+		return envURL;
+
 	}
 
 	protected WebDriver getBrowserDriver(String browserName) {

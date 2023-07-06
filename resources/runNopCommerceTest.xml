@@ -9,11 +9,12 @@
  <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
  </listeners>
   <test name="Run on Chrome">
- <parameter name = "urlPage" value ="https://demo.nopcommerce.com/"/>
+  
+ <parameter name = "envName" value ="dev"/>
   <parameter name ="browser" value ="chrome"/>
     <classes>
  <!-- <class name="com.nopcommerce.common.Common_01_Register_Cookie"/>-->
-      <class name="com.nopcommerce.user.Level_22_Data_Driven_Testing_II"/>
+      <class name="com.nopcommerce.user.Level_23_Multiple_Environment"/>
     </classes>
   </test> 
    
