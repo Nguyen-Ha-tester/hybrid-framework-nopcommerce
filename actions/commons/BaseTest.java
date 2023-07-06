@@ -32,7 +32,7 @@ public class BaseTest extends BasePage {
 
 	}
 
-	protected WebDriver getBrowserDriver(String browserName, String envName) {
+	protected WebDriver getBrowserDriver(String browserName, String appURL) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 
 		// Firefox
@@ -49,7 +49,9 @@ public class BaseTest extends BasePage {
 			// Chrome
 		} else if (browserList == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			driver = new ChromeDriver(options);
 		} else if (browserList == BrowserList.H_CHROME) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
@@ -84,8 +86,7 @@ public class BaseTest extends BasePage {
 			throw new RuntimeException("Please input with correct browser name."); // RuntimeException có nghĩa là chạy lỗi phát là throw ngay
 		}
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-		driver.get("https://demo.nopcommerce.com/");
-		driver.get(getEnvironmentURL(envName));
+		driver.get(getEnvironmentURL(appURL));
 		return driver;
 	}
 
@@ -98,7 +99,7 @@ public class BaseTest extends BasePage {
 			envURL = "https://demo.nopcommerce.com/";
 			break;
 		case LOCAL:
-			envURL = "https://local.nopcommerce.com/";
+			envURL = "https://docs.google.com/document/d/1aCoazFM_bzTC15pRwbjvyH6zSWEy6r-48g9BgHMn7Yc/edit#";
 			break;
 		case PRE_PROD:
 			envURL = "https://pre-prod.nopcommerce.com/";

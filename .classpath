@@ -68,5 +68,10 @@
 	<classpathentry kind="lib" path="libFaker/generex-1.0.2.jar"/>
 	<classpathentry kind="lib" path="libFaker/javafaker-1.0.1.jar" sourcepath="libFaker/javafaker-1.0.2-sources.jar"/>
 	<classpathentry kind="lib" path="libFaker/snakeyaml-1.23.jar"/>
+	<classpathentry kind="lib" path="libOwner/hamcrest-all-1.3.jar"/>
+	<classpathentry kind="lib" path="libOwner/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="libOwner/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="libOwner/mockito-core-2.15.0.jar"/>
+	<classpathentry kind="lib" path="libOwner/owner-1.0.10.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

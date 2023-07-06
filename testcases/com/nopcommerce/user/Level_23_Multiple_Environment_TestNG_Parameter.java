@@ -16,7 +16,7 @@ import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
-public class Level_23_Multiple_Environment extends BaseTest {
+public class Level_23_Multiple_Environment_TestNG_Parameter extends BaseTest {
 	private UserDataMapper userData;
 	private WebDriver driver;
 	private UserHomePageObject homePage;

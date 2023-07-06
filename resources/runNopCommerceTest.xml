@@ -10,11 +10,10 @@
  </listeners>
   <test name="Run on Chrome">
   
- <parameter name = "envName" value ="dev"/>
+  <parameter name = "environment" value ="dev"/>
   <parameter name ="browser" value ="chrome"/>
     <classes>
- <!-- <class name="com.nopcommerce.common.Common_01_Register_Cookie"/>-->
-      <class name="com.nopcommerce.user.Level_23_Multiple_Environment"/>
+      <class name="com.nopcommerce.user.Level_24_Multiple_Environment_Java_Owner_Library"/>
     </classes>
   </test> 
    
