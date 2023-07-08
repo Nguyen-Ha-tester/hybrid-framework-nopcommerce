@@ -30,7 +30,6 @@ public class Level_24_Multiple_Environment_Java_Owner_Library extends BaseTest {
 	@Parameters({ "browser", "environment" })
 	@BeforeClass
 	public void beforeClass(String browserName, String environmentName) {
-		ConfigFactory.setProperty("env", environmentName);
 		environment = ConfigFactory.create(Environment.class); // Tạo ra 1 instance của class Environment, sử dụng
 		driver = getBrowserDriver(browserName, environment.appURL());
 		// Gọi về class environment -> class environment gọi về file properties để lấy dữ liệu
@@ -43,9 +42,6 @@ public class Level_24_Multiple_Environment_Java_Owner_Library extends BaseTest {
 		userData = UserDataMapper.getUserData();
 		email = userData.getEmail() + generateFakeNumber() + "@gmail.com";
 
-		// Trường hợp file json có key trong mảng
-		// System.out.println(userData.getSubjects().get(0).getName()); // lấy value của key "name" trong mảng thứ 0 trong object subject
-		// System.out.println(userData.getSubjects().get(1).getName()); // lấy value của key "name" trong mảng thứ 1 trong object subject
 	}
 
 	@Test
